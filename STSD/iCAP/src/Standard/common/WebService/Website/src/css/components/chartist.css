@@ -1,0 +1,200 @@
+/* line 14, ../../sass/components/chartist.sass */
+.ct-label {
+  fill: var(--BG_COLOR_07);
+  font-size: 14px;
+}
+
+/* line 18, ../../sass/components/chartist.sass */
+.ct-bar {
+  stroke-width: 10px;
+}
+/* line 20, ../../sass/components/chartist.sass */
+.ct-bar:nth-child(1) {
+  stroke: #0d53b7;
+}
+/* line 22, ../../sass/components/chartist.sass */
+.ct-bar:nth-child(2) {
+  stroke: #804e95;
+}
+/* line 24, ../../sass/components/chartist.sass */
+.ct-bar:nth-child(3) {
+  stroke: #66c2c3;
+}
+/* line 26, ../../sass/components/chartist.sass */
+.ct-bar:nth-child(4) {
+  stroke: #f29943;
+}
+/* line 28, ../../sass/components/chartist.sass */
+.ct-bar:nth-child(5) {
+  stroke: #e51c3f;
+}
+
+/* line 33, ../../sass/components/chartist.sass */
+.ct-series-a .ct-slice-donut {
+  stroke: #4eaae0;
+}
+
+/* line 35, ../../sass/components/chartist.sass */
+.ct-series-b .ct-slice-donut {
+  stroke: #0d53b7;
+}
+
+/* line 37, ../../sass/components/chartist.sass */
+.ct-series-c .ct-slice-donut {
+  stroke: #665aa4;
+}
+
+/* line 39, ../../sass/components/chartist.sass */
+.ct-series-d .ct-slice-donut {
+  stroke: #804e95;
+}
+
+/* line 41, ../../sass/components/chartist.sass */
+.ct-series-e .ct-slice-donut {
+  stroke: #0d7b78;
+}
+
+/* line 43, ../../sass/components/chartist.sass */
+.ct-series-f .ct-slice-donut {
+  stroke: #66c2c3;
+}
+
+/* line 45, ../../sass/components/chartist.sass */
+.ct-series-g .ct-slice-donut {
+  stroke: #f6c758;
+}
+
+/* line 47, ../../sass/components/chartist.sass */
+.ct-series-h .ct-slice-donut {
+  stroke: #f29943;
+}
+
+/* line 49, ../../sass/components/chartist.sass */
+.ct-series-i .ct-slice-donut {
+  stroke: #e9607e;
+}
+
+/* line 51, ../../sass/components/chartist.sass */
+.ct-series-j .ct-slice-donut {
+  stroke: #e51c3f;
+}
+
+/* line 55, ../../sass/components/chartist.sass */
+.ct-series-a .ct-slice-pie {
+  fill: #4eaae0;
+  stroke: white;
+  stroke-width: 2px;
+}
+
+/* line 59, ../../sass/components/chartist.sass */
+.ct-series-b .ct-slice-pie {
+  fill: #0d53b7;
+  stroke: white;
+  stroke-width: 2px;
+}
+
+/* line 63, ../../sass/components/chartist.sass */
+.ct-series-c .ct-slice-pie {
+  fill: #665aa4;
+  stroke: white;
+  stroke-width: 2px;
+}
+
+/* line 67, ../../sass/components/chartist.sass */
+.ct-series-d .ct-slice-pie {
+  fill: #804e95;
+  stroke: white;
+  stroke-width: 2px;
+}
+
+/* line 71, ../../sass/components/chartist.sass */
+.ct-series-e .ct-slice-pie {
+  fill: #0d7b78;
+  stroke: white;
+  stroke-width: 2px;
+}
+
+/* line 75, ../../sass/components/chartist.sass */
+.ct-series-f .ct-slice-pie {
+  fill: #66c2c3;
+  stroke: white;
+  stroke-width: 2px;
+}
+
+/* line 79, ../../sass/components/chartist.sass */
+.ct-series-g .ct-slice-pie {
+  fill: #f6c758;
+  stroke: white;
+  stroke-width: 2px;
+}
+
+/* line 83, ../../sass/components/chartist.sass */
+.ct-series-h .ct-slice-pie {
+  fill: #f29943;
+  stroke: white;
+  stroke-width: 2px;
+}
+
+/* line 87, ../../sass/components/chartist.sass */
+.ct-series-i .ct-slice-pie {
+  fill: #e9607e;
+  stroke: white;
+  stroke-width: 2px;
+}
+
+/* line 91, ../../sass/components/chartist.sass */
+.ct-series-j .ct-slice-pie {
+  fill: #e51c3f;
+  stroke: white;
+  stroke-width: 2px;
+}
+
+/* line 97, ../../sass/components/chartist.sass */
+.ct-series-a .ct-point {
+  stroke: #4eaae0;
+}
+
+/* line 99, ../../sass/components/chartist.sass */
+.ct-series-b .ct-point {
+  stroke: #0d53b7;
+}
+
+/* line 101, ../../sass/components/chartist.sass */
+.ct-series-c .ct-point {
+  stroke: #665aa4;
+}
+
+/* line 103, ../../sass/components/chartist.sass */
+.ct-series-d .ct-point {
+  stroke: #804e95;
+}
+
+/* line 105, ../../sass/components/chartist.sass */
+.ct-series-e .ct-point {
+  stroke: #0d7b78;
+}
+
+/* line 107, ../../sass/components/chartist.sass */
+.ct-series-f .ct-point {
+  stroke: #66c2c3;
+}
+
+/* line 109, ../../sass/components/chartist.sass */
+.ct-series-g .ct-point {
+  stroke: #f6c758;
+}
+
+/* line 111, ../../sass/components/chartist.sass */
+.ct-series-h .ct-point {
+  stroke: #f29943;
+}
+
+/* line 113, ../../sass/components/chartist.sass */
+.ct-series-i .ct-point {
+  stroke: #e9607e;
+}
+
+/* line 115, ../../sass/components/chartist.sass */
+.ct-series-j .ct-point {
+  stroke: #e51c3f;
+}

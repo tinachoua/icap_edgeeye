@@ -1,0 +1,14 @@
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DBChecker/bin/Release/netcoreapp1.1/DBChecker.deps.json
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DBChecker/bin/Release/netcoreapp1.1/DBChecker.runtimeconfig.json
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DBChecker/bin/Release/netcoreapp1.1/DBChecker.runtimeconfig.dev.json
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DBChecker/bin/Release/netcoreapp1.1/DBChecker.dll
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DBChecker/bin/Release/netcoreapp1.1/DBChecker.pdb
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DBChecker/bin/Release/netcoreapp1.1/ShareLibrary.dll
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DBChecker/bin/Release/netcoreapp1.1/ShareLibrary.pdb
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DBChecker/obj/Release/netcoreapp1.1/DBChecker.csprojAssemblyReference.cache
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DBChecker/obj/Release/netcoreapp1.1/DBChecker.csproj.CoreCompileInputs.cache
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DBChecker/obj/Release/netcoreapp1.1/DBChecker.AssemblyInfoInputs.cache
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DBChecker/obj/Release/netcoreapp1.1/DBChecker.AssemblyInfo.cs
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DBChecker/obj/Release/netcoreapp1.1/DBChecker.csproj.CopyComplete
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DBChecker/obj/Release/netcoreapp1.1/DBChecker.dll
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DBChecker/obj/Release/netcoreapp1.1/DBChecker.pdb

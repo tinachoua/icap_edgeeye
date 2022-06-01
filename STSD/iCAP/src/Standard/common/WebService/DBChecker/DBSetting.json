@@ -1,0 +1,1 @@
+{"AdminDBConnectionString":"server=172.16.92.123;userid=root;pwd=admin;port=3389;database=icap;persistsecurityinfo=True","DataDBConnectionString":"mongodb://172.16.92.123:27017","RedisConnectionString":"172.16.92.123"}

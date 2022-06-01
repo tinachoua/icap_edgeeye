@@ -1,0 +1,111 @@
+<!-- #region CPU Information -->
+<div class="col-md-8">
+    <div class="subpanel-CPU widget sub-page" style="display: none;" name='cpu'>
+        <div class="row cardbox panel-default dev_overview fixed">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-md-8">
+                        CPU Information
+                    </div>
+                    <div class="col-md-4 text-right">
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body pad0">
+                <table class="table table-striped">
+                    <tbody id="subpanel-CPU-data">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="cpu-loading" class="subpanel-CPU widget sub-page" name='cpu'></div>
+</div>
+
+<div class="col-md-4 subpanel-CPU widget sub-page" id="cpu-info-dynamic" style="display: none;" name='cpu'>
+    <div class="cardbox" style="padding: 5px 10px;border-left: 4px solid rgb(90,98,105);">
+        <div style="font-size: 12px;color: #888;">
+            CPU Frequency
+        </div>
+        <div style="padding-top:10px;">
+            <div style="float:left">
+                <i class="fa fa-heartbeat" style="font-size: 40px;padding-left: 20px;"></i>
+            </div>
+            <div class="text-right">
+                <span id="frequency-value" class="text-right" style="font-weight: 700;height: 40px;line-height: 38px;font-size: 40px;">N/A</span>
+                <span class="fan-unit">MHz</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="cardbox" style="padding: 5px 10px;border-left: 4px solid rgb(90,98,105);">
+        <div style="font-size: 12px;color: #888;">
+            CPU Fan
+        </div>
+        <div style="padding-top:10px;">
+            <div style="float:left;padding-left: 20px">
+                <div class="TTIcon06 icon-Fan" style="font-size: 35px;"></div>
+            </div>
+            <div class="text-right">
+                <span id="fan-value" class="text-right" style="font-weight: 700;height: 40px;line-height: 38px;font-size: 40px;">N/A</span>
+                <span class="fan-unit">RPM</span>
+            </div>
+        </div>
+    </div>
+
+    <div style="overflow: hidden;">
+        <!-- Tab panes -->
+        <div class="tab-content cardbox" style="padding: 5px 10px;border-left: 4px solid rgb(90,98,105);margin: 0;">
+            <div style="border-bottom: 1px dashed #888;;color: #888;">
+                <!-- Nav tabs -->
+                <div class="nav" id="myTab" role="tablist">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a data-toggle="tab" href="#tab-core-freq" aria-selected="true">
+                                <i class="fa fa-heartbeat" aria-hidden="true" style="font-size: 25px; padding: 5px;margin-right: 5px;"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#tab-core-loading" aria-selected="false">
+                                <i class="fa fa-spinner" aria-hidden="true" style="font-size: 25px; padding: 5px;margin-right: 5px;"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#tab-core-temp" aria-selected="false">
+                                <i class="fa fa-thermometer-full" aria-hidden="true" style="font-size: 25px; padding: 5px;margin-right: 5px;"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#tab-core-voltage" aria-selected="false">
+                                <i class="fa fa-bolt" aria-hidden="true" style="font-size: 25px; padding: 5px;margin-right: 5px;"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="tab-pane active" id="tab-core-freq" role="tabpanel">
+                <span style="font-size: 12px;color: #888;">
+                    Frequency -
+                </span>
+            </div>
+            <div class="tab-pane" id="tab-core-loading" role="tabpanel">
+                <span style="font-size: 12px;color: #888;">
+                    Loading -
+                </span>
+            </div>
+            <div class="tab-pane" id="tab-core-temp" role="tabpanel">
+                <span style="font-size: 12px;color: #888;">
+                    Temperature -
+                </span>
+            </div>
+            <div class="tab-pane" id="tab-core-voltage" role="tabpanel">
+                <span style="font-size: 12px;color: #888;">
+                    Voltage -
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- #endregion -->

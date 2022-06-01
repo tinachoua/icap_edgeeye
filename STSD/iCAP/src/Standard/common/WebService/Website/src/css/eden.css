@@ -1,0 +1,15 @@
+.circle-spin{
+    animation: spinAction 1.5s infinite linear;
+}
+
+@keyframes spinAction {
+    from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
+  }
+
+.icap-button-hover:hover {
+    box-shadow: 0 0 6px #000000 8%;
+    cursor: pointer;  
+    background-color: #EFEFEF  ;
+    border: 1px solid #000000 70%  ;
+}

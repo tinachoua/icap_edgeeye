@@ -1,0 +1,43 @@
+.subpanel-MEM .dev_overview {
+    background-color: #b9b9b9;
+}
+.subpanel-MEM .dev_overview .title {
+    padding: 8px 8px 8px 25px;
+    font-size: 24px;
+}
+
+.subpanel-MEM .dev_overview .tab-content+.tab-content {
+    border-left: 4px solid rgb(90,98,105);
+    margin: 0;
+    overflow: auto;
+}
+.subpanel-MEM .dev_overview .tab-content.long {
+    height: 445px;
+}
+.subpanel-MEM .dev_overview .tab-content.short {
+    height: 155px;
+}
+.subpanel-MEM .dev_overview .table{
+    margin-bottom: 0;
+}
+.subpanel-MEM .note{
+    width: 100%;
+    text-align: right;
+}
+.subpanel-MEM .feature{
+    display: flex;
+    flex-direction: column;
+    height: 537px;
+}
+
+.subpanel-MEM .feature .item1{
+    overflow: hidden;
+    flex-basis: 228px;
+}
+.subpanel-MEM .feature .item2{
+    flex-grow: 1;
+}
+
+.inno-logo{
+    background-image: url('../assets/innoage.png')  no-repeat;
+}

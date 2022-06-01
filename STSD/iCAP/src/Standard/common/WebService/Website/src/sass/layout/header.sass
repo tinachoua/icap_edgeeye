@@ -1,0 +1,246 @@
+.wrapper
+    #nav
+        display: block
+        width: 250px
+        height: 100%
+        //background-image: url('../assets/images/main-bg.png')
+        background-repeat: no-repeat
+        background-color: var(--FONT_COLOR_D);
+        background-position: -264px 245px !important
+        color: #ffffff
+        transition: all 0.3s
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2)
+    .cbp-spmenu
+        position: fixed
+        ul
+            padding-top: 50px
+            li
+                padding: 10px
+                transition: all 0.3s
+            li:hover
+                background: #ffffff
+                color: #337ab7
+            a
+                font-size: 1.1em
+                color: #ffffff
+                text-decoration: none
+            a:active
+                background: #afdefa
+                color: #47a3da
+        img
+            margin: 0 10px 0 5px
+        .sidebar-header
+            padding: 50px 0 10px 0
+        .sidebar-user
+            padding: 20px 0
+            background: var(--BG_COLOR_02);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+            p
+                color: #ffffff
+                padding: 5px 0
+                font-family: monospace
+                font-size: 16px
+                font-weight: 600
+                line-height: 16px
+                margin: 0
+            small
+                color: #c1c1c1
+                font-size: 12px
+                font-weight: 400
+                font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif
+        #dismiss
+            text-align: center
+            background-color: var(--FONT_COLOR_D);
+            position: absolute
+            top: 15px
+            right: 20px
+            cursor: pointer
+            -webkit-transform: all 0.3s
+            -o-transform: all 0.3s
+            transition: all 0.3s
+        #dismiss:hover
+            opacity: 0.8
+    .cbp-spmenu-left
+        left: -250px
+        top: 0
+        z-index: 999
+    .cbp-spmenu-left.cbp-spmenu-open
+        left: 0
+        top: 0
+    .navbar
+        padding: 0 10px
+        background: var(--BG_COLOR_02);
+        border: none
+        border-radius: 0
+        margin-bottom: 0
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1)
+        .navbar-header
+            .btn
+                background: var(--BG_COLOR_02);
+                color: var(--BG_COLOR_03)
+                padding: 10px
+            .btn:hover
+                color: #fff
+    .navbar-btn
+        box-shadow: none
+        outline: none !important
+        border: none
+    .line
+        width: 100%
+        height: 1px
+        border-bottom: 1px dashed #dddddd
+        margin: 40px 0
+    .navbar-right
+        float: right
+        margin-bottom: 0
+        margin-right: -15px
+        a
+            color: #ffffff
+            text-decoration: none
+        li
+            list-style-type: none
+            padding: 15px 20px
+            float: left
+        li:hover
+            background-color: var(--FONT_COLOR_D);
+        i
+            font-size: 18px
+        .t02
+            white-space: mowrap
+            overflow: hidden
+            text-overflow: ellipsis
+            display: inline-block
+            max-width: 100%
+        .badge
+            background-color: #ff0018
+            font-size: 12px
+            line-height: 20px
+            margin: 5px
+            padding: 0 2px
+            text-align: center
+            -webkit-box-sizing: border-box
+            box-sizing: border-box
+            -webkit-border-radius: 50%
+            border-radius: 50%
+            height: 20px
+            width: 20px
+            position: absolute
+            bottom: 20px
+            right: 2px
+        .dropdown-menu
+            right: 0
+            left: auto
+            background-color: #efefef
+            li
+                list-style-type: none
+                padding: 8px 5px
+                border-bottom: 1px solid #eeeeee
+                width: 100%
+            li:hover
+                background-color: #efefef
+            a
+                color: var(--BG_COLOR_03)
+                background-color: #efefef
+                padding: 0px
+            a:hover
+                color: var(--FONT_COLOR_D);
+                background-color: #efefef
+        .menu-event
+            margin-right: -55px
+            width: 300px
+            height: auto
+            max-height: 250px
+            overflow-x: hidden
+            li
+                width: 100%
+                a
+                    overflow: hidden
+                    line-height: 15px
+                    .span-left
+                        font-size: 14px
+                        padding: 0
+                        width: 60%
+                    .span-right
+                        font-size: 12px
+                        padding: 0
+                        width: 40%
+                        overflow: hidden
+                        display: inline-block
+                        i
+                            font-size: 12px
+
+    .tab-primary
+        position: relative
+        background: var(--BG_COLOR_03)
+        & .tab-list
+            vertical-align: top
+            overflow: hidden
+            overflow-x: auto
+            & .list
+                display: inline-block
+                white-space: nowrap
+                & a
+                    vertical-align: top
+                    display: inline-block
+                    padding: 12px 20px
+                    color: #fff
+                    font-size: 14px
+                    letter-spacing: .5px
+                    font-weight: 600
+                & a:hover
+                    text-shadow: 0px 0px 10px rgba(225,225,225,0.8)
+                & .divider
+                    vertical-align: top
+                    display: inline-block
+                    width: 1px
+                    height: 14px
+                    background: #979797
+                    margin: 14px 0
+            & select
+                vertical-align: top
+                display: inline-block
+                margin: 0
+                background: var(--BG_COLOR_03)
+                border: 1px solid #979797
+                color: #fff
+    
+    .tab-secondary
+        position: relative
+        background: #fff
+        & .tab-list
+            vertical-align: top
+            overflow: hidden
+            overflow-x: auto
+            & .list
+                display: inline-block
+                white-space: nowrap
+                & a
+                    vertical-align: top
+                    display: inline-block
+                    padding: 8px 18px
+                    color: var(--FONT_COLOR_D);
+                    font-size: 14px
+                    letter-spacing: .5px
+                & a:hover
+                    background: #fff
+                    color: var(--FONT_COLOR_D);
+                    border-bottom: 2px solid red
+                & .divider
+                    vertical-align: top
+                    display: inline-block
+                    width: 1px
+                    height: 12px
+                    background: #979797
+                    margin: 13px 0
+                & .hover
+                    background: #fff
+                    color: var(--FONT_COLOR_D);
+                    border-bottom: 2px solid red
+
+    #sidebarCollapse
+        i
+            font-size: 18px
+            margin-top: 5px
+            color: #ffffff
+        i:hover
+            opacity: 0.8

@@ -1,0 +1,54 @@
+{
+  /** Setup Application */
+  "SSL": false,
+  /** MOCK | ENABLE */
+  "OOB": "ENABLE",
+  /** Logo */
+  "LOGINFORM_LEFT_LOGO" : "avalue/company-logo-blue.svg",
+  "LOGINFORM_RIGHT_LOGO": "avalue/logo_short-blue.svg",
+  "HEADER_LOGO": "avalue/logo_long-white.svg",
+  "LEFT_SIDEBAR_TOP_LOGO": "avalue/logo_short-white.svg",
+  "LEFT_SIDEBAR_BOTTOM_LOGO": "avalue/company-logo-white.svg",
+
+  "LOGINFORM_LOGO_SIZE":{
+    "HEIGHT": "38px",
+    "WIDTH": "91px"
+  },
+  "LEFT_SIDEBAR_BOTTOM_LOGO_SIZE":{
+    "HEIGHT": "38px",
+    "WIDTH": "91px"
+  },
+  "HEADER_LOGO_SIZE":{
+    "HEIGHT": "18px"
+  },
+  /** Style */
+  /** Background Colors */
+  "BG_COLOR_01": "rgb(0, 64, 152)",
+  "BG_COLOR_02": "rgb(0, 64, 152)",
+  "BG_COLOR_03": "rgb(114, 113, 113)",
+  "BG_COLOR_04": "rgb(159, 217, 246)",
+  "BG_COLOR_05": "rgb(0, 104, 183)",
+  "BG_COLOR_06": "rgba(237, 240, 243)",
+  "BG_COLOR_07": "rgba(255, 255, 255)",
+
+  /** Font Colors */
+  "FONT_COLOR_A": "rgb(255, 255, 255)",
+  "FONT_COLOR_B": "rgb(237, 240, 243)",
+  "FONT_COLOR_C": "rgb(137, 137, 137)",
+  "FONT_COLOR_D": "rgb(35, 24, 21)",
+  "FONT_COLOR_E": "rgb(0, 104, 183)",
+
+  /** Chart Colors */
+  "HIGHLIGHT_COLOR":  "rgb(233, 71, 9)",
+  "CHART_BASE_COLOR_A": "rgb(0, 64, 152)",
+  "CHART_BASE_COLOR_B": "rgb(0, 91, 172)",
+  "CHART_BASE_COLOR_C": "rgb(0, 117, 194)",
+  "CHART_BASE_COLOR_D": "rgb(0, 140, 214)",
+  "CHART_BASE_COLOR_E": "rgb(0, 160, 233)",
+  "CHART_BASE_COLOR_F": "rgb(237, 239, 242)",
+
+  /** Customize */
+  "CUSTOMIZE":{
+    "UNDRAG_WIDGET_HEADER_COLOR": "rgba(255, 255, 255)"
+  }
+}

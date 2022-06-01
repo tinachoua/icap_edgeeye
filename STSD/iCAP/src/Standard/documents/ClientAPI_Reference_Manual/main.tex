@@ -1,0 +1,103 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[left=1.9cm,right=1.95cm,top=1.8cm,bottom=1.9cm]{geometry}
+\usepackage{graphicx}
+\usepackage[unicode]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontspec}
+\usepackage{balance}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{pdfpages}
+\usepackage{layout}
+%\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{sectsty}
+\usepackage{courier}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{dirtree}
+\usepackage{forest}
+\usepackage{tabularx}
+\usepackage[toc,page]{appendix}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont{Verdana}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\sectionfont{\fontsize{18}{18}\selectfont}
+\subsectionfont{\fontsize{16}{16}\selectfont}
+\subsubsectionfont{\fontsize{14}{14}\selectfont}
+
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true, basicstyle=\small}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{\vspace*{0cm}\includegraphics[height=1.13cm,width=2.73cm]{inno_logo.png}}
+\rfoot{\thepage}
+
+\lstset{
+   language=sh,
+   breaklines=true
+   basicstyle=\ttfamily
+   showstringspaces=false,
+   columns=fullflexible
+}
+
+\renewcommand*\contentsname{Table of Contents}
+\makeatletter
+\renewcommand\tableofcontents{%
+	  \null\hfill\textbf{\Large\contentsname}\hfill\null\par
+	    \@mkboth{\MakeUppercase\contentsname}{\MakeUppercase\contentsname}%
+	      \@starttoc{toc}%
+	      }
+	      \makeatother
+
+\definecolor{Gray}{gray}{0.8}
+
+\title{innodisk Cloud Administration Platform (iCAP) Design Document}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcommand{\bt}{\color{blue}}
+\newcommand{\bk}{\color{black}}
+
+\begin{document}
+\headheight=36.50224pt
+\textheight=700pt
+\setlength{\baselineskip}{25pt}
+\includepdf[pages={-}]{front.pdf}
+\newpage
+\pagenumbering{roman}
+\tableofcontents
+%\newpage
+%\headsep=0pt
+%\large{\bf{Revision History}}
+%\newpage
+\include{RevisionHistory}
+%\setlength{\baselineskip}{25pt}
+\pagenumbering{arabic}
+\include{doc/Introduction}
+\include{doc/clientserviceapi}
+\include{doc/exampleforuse}
+
+\end{document}

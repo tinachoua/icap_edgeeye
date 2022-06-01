@@ -1,0 +1,1 @@
+export const TPYE_GOGGLEMAP = 'googleMap';

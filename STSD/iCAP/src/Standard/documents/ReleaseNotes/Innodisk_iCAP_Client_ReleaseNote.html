@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Innodisk iCAP Server Release Notes</title>
+</head>
+<style>
+	h1 {
+		color: #16272E;
+	}
+	h2 {
+		color: #16272E;
+	}
+	h4 {
+		color: #596D78;
+	}
+	table {
+	    font-family: arial, sans-serif;
+	    border-collapse: collapse;
+	    width: 100%;
+	}
+
+	td, th {
+	    border: 1px solid #dddddd;
+	    text-align: left;
+	    padding: 8px;
+	    
+	}
+
+	tr:nth-child(even) {
+	    background-color: #dddddd;
+	}
+</style>
+<body style="font-size: 12pt;">
+	<h1>
+		Innodisk&reg; iCAP Client Service Release Notes
+	</h1>
+	<h4 align="right">
+		<b>Last release date:</b> 2021-02-02
+	</h4>
+	<hr>
+		<p><a href="#_Support_Platforms">Support Operating Systems</a></p>
+		<p><a href="#_Component_Ver">Package Version List</a></p>
+		<p><a href="#_Known_Issues">Known Issues</a></p>
+		<p><a href="#_Revision">Revision History</a></p>
+
+	<hr>
+	<h2><a name="_Support_Platforms"></a>Support Operating Systems</h2>
+	Microsoft Windows Server 2016 64-bits<br>
+	Microsoft Windows Server 2012/ 2012 R2 64-bits<br>
+	Microsoft Windows Server 2008/ 2008 R2 64-bits<br>
+	Microsoft Windows 10/8.1/7 kernel 32/64-bits<br>
+	Ubuntu 16.04 LTS 64-bits<br>
+	Debian 8 64-bits
+	<hr>
+	<h2><a name="_Component_Ver"></a>Package Version List</h2>
+	<table style="width: 600px;">
+	  <tr>
+	    <th>Package name</th>
+	    <th>Version</th>
+	  </tr>
+	  <tr>
+	    <td>iCAP_ClientService_win32</td>
+	    <td>1.6.4</td>
+	  </tr>
+	  <tr>
+	    <td>iCAP_ClientService_linux</td>
+	    <td>1.6.4</td>
+	  </tr>
+	</table>
+	<hr>
+	<h2><a name="_Known_Issues"></a>Known Issues</h2>
+		There does not have any known issues to be found.
+	<hr>
+	<h2><a name="_Revision"></a>Revision History</h2>
+		<table style="width: 800px;">
+			<tr>
+				<th style="width: 100px;">Version</th>
+				<th style="width: 100px;">Release Date</th>
+				<th>Comments</th>
+			</tr>
+			<tr>
+				<td>V 1.6.4</td>
+				<td>2021-02-02</td>
+				<td>
+					Bug fixes:<br>
+					1. The client updates the device location but the server still displays the old location.<br>
+					2. The indicator light on the dashboard is not be updated.
+				</td>
+			</tr>
+			<tr>
+				<td>V 1.6.3</td>
+				<td>2021-01-20</td>
+				<td>
+					1. Change the rules for identifying devices.<br>
+					2. Change the delayed auto-start setting.
+				</td>
+			</tr>
+			<tr>
+				<td>V 1.6.2</td>
+				<td>2021-01-04</td>
+				<td>
+					1. Solved the errors of getting information of other brands' memory products.
+				</td>
+			</tr>
+			<tr>
+				<td>V 1.6.1</td>
+				<td>2020-12-15</td>
+				<td>
+					1. Fixed an issue where the service could not be started on Windows 7.
+				</td>
+			</tr>
+			<tr>
+				<td>V 1.6.0</td>
+				<td>2020-10-08</td>
+				<td>
+					1. Support NVMe SSD<br>
+					2. Provide more system information on the ARM platform
+				</td>
+			</tr>
+			<tr>
+				<td>V 1.5.1</td>
+				<td>2020-09-07</td>
+				<td>
+					1. Intergrate the new version of DFI EAPI to Windows client
+				</td>
+			</tr>
+			<tr>
+				<td>V 1.5.0</td>
+				<td>2020-07-03</td>
+				<td>
+					1. Windows client provide dynamic information about the CPU<br>
+					2. Windows client provide SPD code for Innodisk memory<br>
+					3. Intergrate DFI EAPI to Windows client
+				</td>
+			</tr>
+			<tr>
+				<td>V 1.4.0</td>
+				<td>2019-10-04</td>
+				<td>
+					1. Fix log checker<br>
+					2. Fix multiple name on same device<br>
+					3. Windows client support RAID<br>
+					4. Fix storage display
+				</td>
+			</tr>
+			<tr>
+				<td>V 1.3.3</td>
+				<td>2019-02-19</td>
+				<td>
+					1. Fix log banner<br>
+					2. Stability enhancement
+				</td>
+			</tr>
+			<tr>
+				<td>V 1.3.2</td>
+				<td>2018-07-18</td>
+				<td>
+					1. Add setting webpage<br>
+					2. Add threshold checker & analyzer
+				</td>
+			</tr>
+			<tr>
+				<td>V 1.2.1</td>
+				<td>2017-12-06</td>
+				<td>
+					1. Add reconnection mechanism<br>
+					2. Add linux installation & uninstall script
+				</td>
+			</tr>
+			<tr>
+				<td>V 1.1.1</td>
+				<td>2017-11-30</td>
+				<td>
+					1. Insert more logging data
+				</td>
+			</tr>
+			<tr>
+				<td>V 1.1.0</td>
+				<td>2017-11-21</td>
+				<td>
+					1. Add linux version for Ubuntu 16.04 LTS
+				</td>
+			</tr>
+			<tr>
+				<td>V 1.0.0</td>
+				<td>2017-10-31</td>
+				<td>The first release for free trial
+				</td>
+			</tr>
+		</table>
+	<hr>
+	<p>&copy;2017-2021 Innodisk Corporation. All Rights Reserved.&nbsp; <a href="http://www.innodisk.com">http://www.innodisk.com</a></p>
+</body>
+</html>

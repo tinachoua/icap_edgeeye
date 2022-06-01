@@ -1,0 +1,65 @@
+
+.dfi-background{
+    background-color: rgb(242, 242, 242);
+}
+
+.eapi-icon-wrapper{
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 16px;
+    line-height: 200px;
+    text-align: center;
+    vertical-align: top;
+    width: 15%;
+}
+
+.eapi-icon-wrapper > .icon{
+    background-repeat: no-repeat;
+    background-size: 120px 120px;
+    height: 120px;
+    width: 120px;
+}
+
+.icon.temp {
+    background-image: url('../../assets/images/temperature.svg') ;
+}
+
+.icon.fan {
+    background-image: url('../../assets/images/fan.svg') ;
+}
+
+.icon.voltage {
+    background-image: url('../../assets/images/voltage.svg') ;
+}
+
+
+
+.EAPI_table{
+    display: inline-block;
+    width: 85%;
+}
+.EAPI_table table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 2px #888888 solid;
+    width: 90%;
+    height: 200px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+.EAPI_table td {
+    border: 1px black solid;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    overflow: hidden;
+    word-break: normal;
+}
+.EAPI_table td:first-child{
+    font-weight: bold;
+    width: 15%;
+}
+.EAPI_table .item {
+    border-color: inherit;
+    text-align: left;
+    padding-left: 5px;
+}

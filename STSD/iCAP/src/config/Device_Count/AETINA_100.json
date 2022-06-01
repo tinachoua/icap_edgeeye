@@ -1,0 +1,71 @@
+{
+  "TW": [
+    {
+      "Total": 1,
+      "Spec": {
+        "CANBus": false,
+        "GPU": true,
+        "OOB": true
+      },
+      "Location": {
+        "Longitude": 121.634247,
+        "Latitude": 25.058798
+      },
+      "BranchIdlist":[1]
+    },
+    {
+      "Total": 19,
+      "Spec": {
+        "CANBus": false,
+        "GPU": true,
+        "OOB": false
+      },
+      "BranchIdlist":[1]
+    }
+  ],
+  "USA": [
+    {
+      "Total": 20,
+      "Spec": {
+        "CANBus": false,
+        "GPU": true,
+        "OOB": false
+      },
+      "BranchIdlist":[1]
+    }
+  ],
+  "JP": [
+    {
+      "Total": 20,
+      "Spec": {
+        "CANBus": false,
+        "GPU": true,
+        "OOB": false
+      },
+      "BranchIdlist":[1]
+    }
+  ],
+  "NL": [
+    {
+      "Total": 20,
+      "Spec": {
+        "CANBus": false,
+        "GPU": true,
+        "OOB": false
+      },
+      "BranchIdlist":[1]
+    }
+  ],
+  "CN": [
+    {
+      "Total": 20,
+      "Spec": {
+        "CANBus": false,
+        "GPU": true,
+        "OOB": false
+      },
+      "BranchIdlist":[1]
+    }
+  ],
+  "Total": 100
+}

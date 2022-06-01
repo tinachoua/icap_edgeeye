@@ -1,0 +1,14 @@
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DashboardAPI/bin/Release/netcoreapp1.1/DashboardAPI.deps.json
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DashboardAPI/bin/Release/netcoreapp1.1/DashboardAPI.runtimeconfig.json
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DashboardAPI/bin/Release/netcoreapp1.1/DashboardAPI.runtimeconfig.dev.json
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DashboardAPI/bin/Release/netcoreapp1.1/DashboardAPI.dll
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DashboardAPI/bin/Release/netcoreapp1.1/DashboardAPI.pdb
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DashboardAPI/bin/Release/netcoreapp1.1/ShareLibrary.dll
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DashboardAPI/bin/Release/netcoreapp1.1/ShareLibrary.pdb
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DashboardAPI/obj/Release/netcoreapp1.1/DashboardAPI.csprojAssemblyReference.cache
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DashboardAPI/obj/Release/netcoreapp1.1/DashboardAPI.csproj.CoreCompileInputs.cache
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DashboardAPI/obj/Release/netcoreapp1.1/DashboardAPI.AssemblyInfoInputs.cache
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DashboardAPI/obj/Release/netcoreapp1.1/DashboardAPI.AssemblyInfo.cs
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DashboardAPI/obj/Release/netcoreapp1.1/DashboardAPI.csproj.CopyComplete
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DashboardAPI/obj/Release/netcoreapp1.1/DashboardAPI.dll
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DashboardAPI/obj/Release/netcoreapp1.1/DashboardAPI.pdb

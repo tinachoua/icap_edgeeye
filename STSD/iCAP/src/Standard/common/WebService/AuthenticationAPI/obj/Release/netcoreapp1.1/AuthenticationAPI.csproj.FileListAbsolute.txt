@@ -1,0 +1,14 @@
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/AuthenticationAPI/bin/Release/netcoreapp1.1/AuthenticationAPI.deps.json
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/AuthenticationAPI/bin/Release/netcoreapp1.1/AuthenticationAPI.runtimeconfig.json
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/AuthenticationAPI/bin/Release/netcoreapp1.1/AuthenticationAPI.runtimeconfig.dev.json
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/AuthenticationAPI/bin/Release/netcoreapp1.1/AuthenticationAPI.dll
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/AuthenticationAPI/bin/Release/netcoreapp1.1/AuthenticationAPI.pdb
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/AuthenticationAPI/bin/Release/netcoreapp1.1/ShareLibrary.dll
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/AuthenticationAPI/bin/Release/netcoreapp1.1/ShareLibrary.pdb
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/AuthenticationAPI/obj/Release/netcoreapp1.1/AuthenticationAPI.csprojAssemblyReference.cache
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/AuthenticationAPI/obj/Release/netcoreapp1.1/AuthenticationAPI.csproj.CoreCompileInputs.cache
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/AuthenticationAPI/obj/Release/netcoreapp1.1/AuthenticationAPI.AssemblyInfoInputs.cache
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/AuthenticationAPI/obj/Release/netcoreapp1.1/AuthenticationAPI.AssemblyInfo.cs
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/AuthenticationAPI/obj/Release/netcoreapp1.1/AuthenticationAPI.csproj.CopyComplete
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/AuthenticationAPI/obj/Release/netcoreapp1.1/AuthenticationAPI.dll
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/AuthenticationAPI/obj/Release/netcoreapp1.1/AuthenticationAPI.pdb

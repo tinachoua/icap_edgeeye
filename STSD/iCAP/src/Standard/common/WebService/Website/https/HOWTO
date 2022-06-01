@@ -1,0 +1,2 @@
+Replace the nginx.conf and Dockerfile.
+Add innodisk.com.crt and innodisk.com.key.(Only valid for *.innodisk.com)

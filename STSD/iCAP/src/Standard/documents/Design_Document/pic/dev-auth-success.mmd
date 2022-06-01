@@ -1,0 +1,7 @@
+sequenceDiagram
+Client Service->>+API Gateway: Send authentication token
+activate API Gateway
+Note right of API Gateway: Not over limitation <br/> or Device exists
+API Gateway-->>Client Service: Response HTTP 200 OK
+deactivate API Gateway
+Note over Client Service, API Gateway: Response payload: {"Cmd": "Auth",<br/> "DeviceId": DeviceId,<br/> "PWD": Password<br/>}

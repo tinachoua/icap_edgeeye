@@ -1,0 +1,119 @@
+<div id='map-setting' class="row mar0">
+    <div class="col-md-6">
+        <label for="maplist">My Customized Maps</label>
+        <select class="form-control"  data-container="body"  id="maplist" title = "--Please Select One--"></select>
+    </div>
+    <div class="col-md-12 btn-style-1">
+        <button class="btn btn-sm btn-dark" id='add'>
+            <i class="glyphicon glyphicon-plus"></i>
+            Add New
+        </button>
+        <button class="btn btn-sm btn-dark" id='edit'>
+            <i class="glyphicon glyphicon-edit"></i>
+                Edit
+        </button>
+        <button class="btn btn-sm btn-dark" id='delete'>
+            <i class="glyphicon glyphicon-trash"></i>
+            Delete
+        </button>
+    </div>
+    <div class='col-md-12 setup-marker-wrap'>
+        <div class='cardbox'>
+        <div id='widget-body' class='col-md-12 panel-body'>
+            <div id='map' class='img-preview'  draggable="true">
+                <img src='' alt='customized map'>
+            </div>
+        </div>
+        </div>
+        <div id='marker-bar-left' class="side-menu left">
+        <div class="menu-holder">
+            <button id='marker-bar-controller' class="menu" type="menu">
+            <i class="fa fa-bars"></i>
+            </button>
+            <p>Set Marker</p>
+        </div>
+        <div class="menu-body">
+            <div class='top'>
+            <div><label>My markers<label></div>
+            <div><select id='marker-list' class='form-control selectpicker'  data-size="12" data-live-search="true" data-dropup-auto="false" title = ""></select></div>
+            </div>
+            <div>
+            <label>Name *</label>
+            <input type'text' id='name-marker'>
+            </div>
+            <div>
+            <select id='device-list' class='form-control selectpicker' multiple data-size="6"  data-actions-box="true" data-live-search="true" data-dropup-auto="false"></select>
+            </div>
+            <div class= 'menu-btns'>
+            <button id='cancel' class="btn  btn-sm mar-bottom-15">Cancel</button>
+            <button id='save' class="btn  btn-sm mar-bottom-15">Save</button>
+            <button id='marker-delete' class="btn  btn-sm mar-bottom-15">
+                <i class="glyphicon glyphicon-trash"></i>
+            </button>
+            </div>
+            <p id='result'></p>
+        </div>
+        </div>
+        <div id='marker-bar-right' class="side-menu right"></div> 
+    </div>
+    <div class='col-md-12'>
+        <button id='remove-all' class="btn btn-sm btn-dark">Remove All Markers</button>
+    </div>
+    <div class="col-md-12 col-md-sm-12">
+        <div class="alert hide" role="alert" id="alert"></div>
+    </div>
+    <div class="modal fade white" id="modal" tabindex="-1" role="dialog" aria-labelledby="title-modal" aria-hidden="true">
+    <div class="modal-dialog" role="doc">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="title-modal"></h4>
+            </div>     
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                    <div class="col-md-6">
+                        <label for="map-name">Name *</label>
+                        <input class="form-control map-settings-field" id="map-name" placeholder="" spellcheck="false"  autocomplete="off" >
+                    </div>
+                    <div class='col-md-12'>
+                        <form id="file-upload-form" class="uploader">
+                        <input id="file-upload" type="file" name="fileUpload" accept="image/*" />
+                        <label for="file-upload" id="file-drag">
+                            <img id="file-image" src="#" alt="Preview" class="hidden">
+                            <div id="start">
+                            <i class="fa fa-download" aria-hidden="true"></i>
+                            <div>Select a file or drag here</div>
+                            <div id="notimage" class="hidden">Please select an image</div>
+                            <span id="file-upload-btn" class="btn btn-primary">Select a file</span>
+                            </div>
+                            <div id="response" class="hidden">
+                            <div id="messages"></div>
+                            <progress class="progress" id="file-progress" value="0">
+                            <span>0</span>%
+                            </progress>
+                            </div>
+                        </label>
+                        </form>
+                    </div>
+                    </div>                
+                </div>
+            </div>
+            <div class="modal-footer">                            
+                <button type="button" class="btn btn-sm btn-dark" data-dismiss="modal" >
+                    <span class="glyphicon glyphicon-remove"></span> 
+                    <span>Cancel</span> 
+                </button>        
+            </div>     
+            <div class="alert" role="alert" id="alert-modal"></div>  
+        </div>      
+    </div>
+    </div>
+</div>
+
+<div class="waitingModal">
+    <div class="faicon fa fa-spinner fa-spin">                
+    </div>        
+</div>

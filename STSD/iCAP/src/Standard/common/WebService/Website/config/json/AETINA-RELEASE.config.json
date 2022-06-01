@@ -1,0 +1,53 @@
+{
+  /** Setup Application */
+  "SSL": false,
+  /** MOCK | ENABLE */
+  "OOB": "ENABLE",
+  /** Logo */
+  "LOGINFORM_LEFT_LOGO" : "aetina/Login_aetina_91x38.png",
+  "LOGINFORM_RIGHT_LOGO": "aetina/Login_EdgeEye_100x50.png",
+  "HEADER_LOGO": "aetina/Header_EdgeEye_white95x25.png",
+  "LEFT_SIDEBAR_TOP_LOGO": "aetina/EdgeEye-140x70.png",
+  "LEFT_SIDEBAR_BOTTOM_LOGO": "aetina/LeftBottom_aetina_green91x38.png",
+
+  /** Style */
+  /** Background Colors */
+  "BG_COLOR_01": "#ff3737",      
+  "BG_COLOR_02": "#85b738",         
+  "BG_COLOR_03": "#366b6e",        
+  "BG_COLOR_04": "#ccff66",      
+  "BG_COLOR_05": "#eeeeee",       
+  "BG_COLOR_06": "#e4e9ea", 
+  "BG_COLOR_07": "#ffffff",
+
+  /** Font Colors */
+  "FONT_COLOR_A": "#ffffff",
+  "FONT_COLOR_B": "#888888",
+  "FONT_COLOR_C": "#58585b",
+  "FONT_COLOR_D": "#000000",
+  "FONT_COLOR_E": "#366b6e",
+
+  /** Chart Colors */
+  "HIGHLIGHT_COLOR":  "${BG_COLOR_01}",
+  "CHART_BASE_COLOR_A": "#333333",
+  "CHART_BASE_COLOR_B": "#366b6e",
+  "CHART_BASE_COLOR_C": "#888888",
+  "CHART_BASE_COLOR_D": "#87a6a8",
+  "CHART_BASE_COLOR_E": "#c3d2d3",
+  "CHART_BASE_COLOR_F": "#e4e9ea",
+
+  /** Customize */
+  "CUSTOMIZE":{
+    "WIDGET_HEADER_BG_COLOR": "#58585b",
+    
+    "SIDE_MENU_BG_COLOR": "#58585b",
+
+    "DASHBOARD_TOP_NAVBAR_BG_COLOR": "#ffffff",
+    "DASHBOARD_TOP_NAVBAR_COLOR": "#888888",
+    "DASHBOARD_TOP_NAVBAR_HEIGHTLIGHT_COLOR": "#333333",
+
+    "TOP_NAVBAR_BG_COLOR": "#87a6a8",
+    "TOP_SUB_NAVBAR_BG_COLOR": "#ffffff",
+    "DEVICE_LATEST_DATA_BG_COLOR": "rgb(255,255,190)"
+  }
+}

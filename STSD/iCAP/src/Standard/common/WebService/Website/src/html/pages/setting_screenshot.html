@@ -1,0 +1,39 @@
+<div class="col-md-6">
+    <label for="email">Picture save folder</label>
+    <input type="" id="picsavefolder" class="form-control" spellcheck="false" value="c:/pic" readonly>
+</div>
+
+<div class="col-md-12">
+    <hr>
+</div>
+
+
+<div class="col-md-12">
+    <label for="text">Picture Effective time</label>
+    <select class="form-control" id="time-list" style="width:48%">
+        <option value="1">1 day</option>
+        <option value="3">3 day</option>
+        <option value="7">7 day</option>
+        <option value="30">30 day</option>
+        <option value="90">90 day</option>
+    </select>
+</div>
+<div class="col-md-12">
+    <hr>
+</div>
+
+<div class="col-md-12">
+    <input id="screenshot-flag" type="checkbox" style="display: none">
+    <label for="screenshot-flag">Screen Shot on Events </label>
+</div>
+
+
+<div class="col-md-12">
+    <button class="btn btn-mini btn-dark" id="screenShotSetting-update">Update</button>
+    <hr>
+    <div class="alert alert-success" role="alert" id="update-success" style="display: none;">User successfully updated.
+    </div>
+    <div class="alert alert-warning" role="alert" id="delete-success" style="display: none;">User successfully deleted.
+        The page will refresh in 5 seconds.</div>
+    <div class="alert alert-danger" role="alert" id="fail" style="display: none;"></div>
+</div>

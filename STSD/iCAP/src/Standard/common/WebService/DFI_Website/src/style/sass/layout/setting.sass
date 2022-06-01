@@ -1,0 +1,136 @@
+.setting
+    .cardbox_left
+        overflow: hidden
+        /*border-right: 1px dashed #bababa*/
+        .nav
+            padding: inherit
+        ul
+            a
+                background: none
+                color: #596d78
+                height: 3rem
+                width: 3rem
+                line-height: 35px
+                border-radius: 50%
+                font-size: 2rem
+                padding: 0
+            a:hover
+                color: #0082BC
+                background: rgb(255,255,255)
+                border: 2px solid #0082BC
+                border-radius: 50%
+            a:active
+                color: #0082BC
+                background: rgb(255,255,255)
+                border: 2px solid #0082BC
+                border-radius: 50%
+            .active > a
+                color: #0082BC
+                cursor: none
+                background-color: rgb(255,255,255)
+                border: 2px solid #0082BC
+            .active > a:hover
+                border: 2px solid #0082BC
+
+        .nav-tabs
+            border-bottom: 0
+            > li
+                float: none
+                display: inline-block
+
+        .titleicon
+            padding: 20px 0
+            color: #0082BC
+    .cardbox_right
+        overflow: hidden
+        border-left: 1px dashed #bababa
+        select
+            margin-bottom: .5em
+            border-radius: 3px
+            border: 1px solid #bababa
+            padding: .5em
+        label
+            margin-bottom: .25em 
+        input
+            margin-bottom: .5em
+            border-radius: 3px
+            border: 1px solid #bababa
+            padding: .5em
+
+        input[type=checkbox] + label:before
+            font-family: FontAwesome
+            display: inline-block
+            margin-bottom: 0.6em
+        input[type=checkbox] + label:before
+            content: "\f096"
+        input[type=checkbox] + label:before
+            letter-spacing: 10px
+        input[type=checkbox]:checked + label:before
+            content: "\f046"
+        input[type=checkbox]:checked + label:before
+            letter-spacing: 5px
+
+/* DRAGGABLE START */
+#sortable, #widgetLibrary 
+    list-style-type: none 
+    margin: 0 
+    padding: 0 0 2.5em 
+    float: left 
+    margin-right: 10px 
+    width: 465px
+    background: #f1f1f1
+    border-style: dotted
+    li
+        margin: 3px 3px 3px 0 
+        padding: 1px 
+        float: left 
+        width: 150px 
+        height: 110px 
+        font-size: 1.2em 
+        background: #dde2e6
+        color: #16272e
+        border-style: dashed
+    big
+        margin: 3px 3px 3px 0 
+        padding: 1px 
+        float: left 
+        width: 455px 
+        height: 110px 
+        font-size: 1.2em 
+        text-align: center 
+        background: #dde2e6
+        color: #16272e
+@media (min-width: 768px)
+    .modal-xl
+        width: 90%
+        max-width: 1200px
+
+/*Center button for edit layout*/
+#parent
+    height: 200px
+    width: 100%
+    position: relative
+    #child
+        width: 100% 
+        margin: auto
+        text-align: center
+        bottom: 1px
+        position: absolute
+        color: rgb(253, 13, 13)
+
+.subject-info-box-1, .subject-info-box-2
+    float: left
+    width: 45%
+    select
+        height: 255px
+        padding: 0
+        option
+            padding: 4px 10px 4px 10px
+            &:hover
+                background: #eee
+.subject-info-arrows
+    float: left
+    width: 10%
+    input
+        width: 70%
+        margin-bottom: 5px

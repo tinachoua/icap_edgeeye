@@ -1,0 +1,231 @@
+<div class="col-md-6">
+    <label for="widgetlist">My Widget</label>
+    <select class=" selectpicker form-control"   data-size="10" id="widgetlist" data-container="body" title="--Please Select One--"  >    
+    </select>
+    <br><br>
+</div>
+<div class="col-md-12">    
+    <button type="button" class="btn btn-sm btn-dark" id="create-widget">
+        <span class="glyphicon glyphicon-plus"></span> Add Widget Catalog 
+    </button>
+    <button type="button" class="btn btn-sm btn-dark" id="edit-widget" data-toggle="modal" data-targer="#edit-widget-modal">
+        <span class="glyphicon glyphicon-edit"></span> Edit Context 
+    </button>    
+    <button type="button" class="btn btn-mini btn-dark" id="delete-widget" style="width:90px">
+        <span class="glyphicon glyphicon-trash"></span> Delete 
+    </button>
+    <hr>
+    <div class="alert alert-danger" role="alert" id="danger-widget-setting" style="display: none;" ></div>
+    <div class="alert alert-success" role="alert" id="success-widget-setting" style="display: none;" ></div>
+</div>
+
+<div class="modal fade" id="create-widget-modal" tabindex="-1" role="dialog" aria-labelledby="create-widget-modal-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="create-Widget-modal-label">Add New Widget Catelog</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="widget-name">Name *</label>
+                            <input type="text" class="form-control widget-settings-field" id="widget-name" placeholder="" spellcheck="false"  autocomplete="off" >
+                        </div>
+                    </div>                
+                </div>
+            </div>
+            <div class="modal-footer">                            
+                <button type="button" class="btn btn-mini btn-dark" data-dismiss="modal" >
+                    <span class="glyphicon glyphicon-remove"></span> Cancel 
+                </button>
+                <button type="button" class="btn btn-mini btn-dark" id = "submit-create-widget">
+                    <span class="glyphicon glyphicon-send"></span> Submit 
+                </button>               
+            </div>
+            <div class="alert alert-danger" role="alert" id="fail-create-widget" style="display: none; width:90%; margin: auto;"></div>
+            <div class="alert alert-success" role="alert" id="success-create-widget"  style=" display:none; width:90%; margin: auto;" >New widget created.</div>
+            <br id="blank-create-widget" style="display:none" />             
+        </div>      
+    </div>
+</div>
+
+<div class="modal fade" id="edit-widget-modal" tabindex="-1" role="dialog" aria-labelledby="edit-widget-modal-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="edit-widget-modal-label">Edit Context</h4>                
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid" style='height:700px;overflow-y: auto'>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <label for="widget-name">Widget Name *</label>
+                                <input type="text" class="form-control edit-event" id="widget-name-edit" placeholder="" spellcheck="false"  autocomplete="off"  >                        
+                        </div>
+                    </div>                  
+                    <hr  class = "chart-form" >
+                    <div class="row chart-form " style='margin-top: 30px'>
+                        <div class="col-md-6">
+                            <label for="chartlist">Chart *</label>
+                            <select class="form-control selectpicker edit-select edit-event" id="chartlist" title="--Please Select One--" ></select>                            
+                            <br><br>
+                        </div>                       
+                        <div class="col-md-6">
+                            <label for="widthlist">Width *</label>
+                            <select class="form-control edit-select edit-event" id="widthlist" title="--Please Select One--"  ></select>                            
+                        </div>                       
+                    </div>
+                    <div id='map-field'>
+                        <hr  class = "map-form street-map-form vector-map-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="device-location">Source *</label>
+                            <select class="form-control edit-select edit-event selectpicker" id="device-location-data-source" style="width:47%" >
+                                <option value="5">Device Location</option>
+                            </select>
+                            </div>
+                        </div>
+                        <div id='map-center-field'>
+                            <div class="row map-form street-map-form" style="margin-top:30px">
+                                <div class="col-md-6">
+                                    <label for="text">Center Longitude *</label>
+                                    <input class="form-control input-num-dot process-field" id="lng">    
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="text">Center Latitude *</label>
+                                    <input class="form-control input-num-dot process-field" id="lat">           
+                                </div>                                
+                            </div>
+                        </div>
+                        <div id='vector-map-field'>
+                            <div class ="row vector-map-form map-form" id='vector-map-field' style="margin-top:30px">
+                                <div class="col-md-6">
+                                    <label for="text">Location</label>
+                                    <select class = "form-control edit-select edit-event" id="vector-map-list" title="--Please Select One--">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id='process-field'>
+                        <hr>
+                        <div class="row" id='data-choose'>
+                            <div class="col-md-12 col-sm-12">
+                                <label style = "color: #5e676c">You can select one source data, or follow your rule setting.</label>
+                            </div>
+                            <div style="margin-top:55px">
+                                <div class="col-md-6">
+                                    <input id='source-radio' name='radio' type='radio'>
+                                    <label for="source-radio">Source *</label>
+                                    <select class="form-control edit-select edit-event"   id="datalist"   data-size="9" data-dropup-auto="false"  title = "--Please Select One--">
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                     <input id='rule-radio' name='radio' type='radio'>
+                                    <label for="rule-radio">My Threshold Rule *</label>
+                                    <select class="form-control edit-select edit-event"   id="rulelist"   data-size="6" data-dropup-auto="false"  title = "--Please Select One--">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row process"  id = "process-type" style='margin-top: 15px'>
+                            <div id='process-btn'>
+                            <hr>                   
+                            <div class="col-md-6">                     
+                            <label>Process *</label>
+                            </div>                
+                            <div class="col-md-12" style="margin-top:20px">                                                                     
+                                <button type="button" class="process-btn btn  btn-sm btn-default border edit-event for-number" id="percentage-btn" name='percentage' >Ratio <i class="fa fa-percent" aria-hidden="true" name='percentage'></i></button>
+                                <button type="button" class="process-btn btn  btn-sm btn-default border edit-event for-boolean selected" id="boolean-btn" name ='boolean' >Boolean <i class="fa fa-toggle-on" aria-hidden="true" name ='boolean'></i></button>
+                                <button type="button" class="process-btn btn  btn-sm btn-default border edit-event for-number" id="numerical-btn" name ='numerical' >Numerical <i class="fa fa-sort-numeric-asc" aria-hidden="true" name ='numerical'></i>   </button>   
+                            </div>
+                            <br>
+                            </div>
+                            <div id='process-form'>
+                                <div class="process-form"  id="percentage-form" style="display:none;margin-top:90px">
+                                    <div class="col-md-12"> 
+                                        <label>Denominator * (Ratio = Source ÷ Denominator X 100%)</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <select class="form-control edit-select edit-event selectpicker"  id="denominatorlist"  data-dropup-auto="false" data-size="5" title="--Please Select One--"  >                        
+                                        </select>
+                                    </div>       
+                                    <div class="col-md-12">
+                                        <br>
+                                        <label>Interval *  (The first field is must, and the others are optional.)</label>
+                                    </div>
+                                    <div class="col-md-12">                                                 
+                                        <input type="text" class="form process-field widget-settings-field percentage-field edit-event" id="percentage-interval-0" placeholder="A" spellcheck="false"  autocomplete="off" style="text-align: right;width: 70px;" ><a>&nbsp&nbsp</a>
+                                        <input type="text" class="form process-field widget-settings-field chart-text-hide percentage-field edit-event" id="percentage-interval-1" placeholder="B" spellcheck="false"  autocomplete="off" style="text-align: right;width: 70px;" ><a>&nbsp&nbsp</a>
+                                        <input type="text" class="form process-field widget-settings-field chart-text-hide percentage-field edit-event" id="percentage-interval-2" placeholder="C" spellcheck="false"  autocomplete="off" style="text-align: right;width: 70px;" ><a>&nbsp&nbsp</a>
+                                        <input type="text" class="form process-field widget-settings-field chart-text-hide percentage-field edit-event" id="percentage-interval-3" placeholder="D" spellcheck="false"  autocomplete="off" style="text-align: right;width: 70px;" ><a>&nbsp&nbsp</a>
+                                        <input type="text" class="form process-field widget-settings-field chart-text-hide percentage-field edit-event" id="percentage-interval-4" placeholder="E" spellcheck="false"  autocomplete="off" style="text-align: right;width: 70px;" >
+                                    </div>
+                                    <div class="chart" id ='percentage-chart'></div>
+                                </div>
+                                <div class="process-form" id="boolean-form" style="display:none" >                                     
+                                    <div class="col-md-6">
+                                        <br>
+                                        <label >Label *</label>
+                                        <input type="text" class="form-control boolean-label widget-settings-field process-field edit-event" id="top-label" placeholder="Top Label" spellcheck="false"  autocomplete="off"  >
+                                        <input type="text" class="form-control boolean-label widget-settings-field process-field edit-event" id="bottom-label" placeholder="Bottom Label" spellcheck="false"  autocomplete="off"  >                                                                     
+                                    </div>
+                                    <div class="chart" id ='boolean-chart'></div>
+                                </div>
+                                <div class="process-form"  id="numerical-form" style="display:none">              
+                                    <div class="col-md-12" >
+                                        <br>
+                                        <label>Interval *  (The first field is must, and the others are optional.)</label>
+                                    </div>
+                                    <div class="col-md-12">                                                
+                                        <input type="text"  class="widget-settings-field process-field numerical-field edit-event" id="numerical-interval-0" placeholder="A" spellcheck="false"  autocomplete="off" style="text-align: right;width: 70px;" ><a>&nbsp&nbsp</a>
+                                        <input type="text"  class="widget-settings-field process-field chart-text-hide numerical-field edit-event" id="numerical-interval-1" placeholder="B" spellcheck="false"  autocomplete="off" style="text-align: right;width: 70px;" ><a>&nbsp&nbsp</a>
+                                        <input type="text"  class="widget-settings-field process-field chart-text-hide numerical-field edit-event" id="numerical-interval-2" placeholder="C" spellcheck="false"  autocomplete="off" style="text-align: right;width: 70px;" ><a>&nbsp&nbsp</a>
+                                        <input type="text"  class="widget-settings-field process-field chart-text-hide numerical-field edit-event" id="numerical-interval-3" placeholder="D" spellcheck="false"  autocomplete="off" style="text-align: right;width: 70px;" ><a>&nbsp&nbsp</a>
+                                        <input type="text"  class="widget-settings-field process-field chart-text-hide numerical-field edit-event" id="numerical-interval-4" placeholder="E" spellcheck="false"  autocomplete="off" style="text-align: right;width: 70px;" >                           
+                                    </div>
+                                    <div class="chart" id ='numerical-chart'></div>
+                                </div>
+                            </div>                                                                                 
+                        </div>
+                    </div>
+                    <div id='group-field'>
+                        <hr  class = "group-form" id='between-process-group'>
+                        <div class="row group-form">
+                            <div class="col-md-12">
+                                <label for="grouplist">Setup Group *</label>
+                            </div>
+                            <div class="col-md-12">                           
+                                <select  id="grouplist" class="form-control edit-select edit-event" data-size="3" data-dropup-auto="false" multiple data-actions-box="true" ></select>
+                            </div>                     
+                        </div>
+                    </div>
+                </div>              
+            </div>                                 
+            <div class="modal-footer ">
+                <button type="button" class="btn btn-mini btn-dark edit-event" id ='ok-edit' >
+                        <span class="glyphicon glyphicon-ok"></span> 
+                        <span>Ok</span> 
+                </button>
+                <button type="button" class="btn btn-mini btn-dark" data-dismiss="modal"  >
+                    <span class="glyphicon glyphicon-remove"></span> Cancel 
+                </button>
+                <button type="button" class="btn btn-mini btn-dark edit-event" id ='apply-edit' >
+                        <span class="glyphicon glyphicon-pencil"></span> 
+                        <span>Apply</span> 
+                </button>
+            </div>
+            <div class="alert alert-danger edit-alert" role="alert" id="fail-edit" style="display:none;width:90%; margin: auto;"></div>
+            <div class="alert alert-success edit-alert" role="alert" id="success-edit" style="display:none;width:90%; margin: auto;"></div>   
+            <br id="alert-blank-edit" class = "edit-alert"/>   
+        </div>
+    </div>
+</div>

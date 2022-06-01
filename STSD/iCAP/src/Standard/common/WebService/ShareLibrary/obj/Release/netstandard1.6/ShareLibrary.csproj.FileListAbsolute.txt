@@ -1,0 +1,9 @@
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/ShareLibrary/bin/Release/netstandard1.6/ShareLibrary.deps.json
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/ShareLibrary/bin/Release/netstandard1.6/ShareLibrary.dll
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/ShareLibrary/bin/Release/netstandard1.6/ShareLibrary.pdb
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/ShareLibrary/obj/Release/netstandard1.6/ShareLibrary.csprojAssemblyReference.cache
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/ShareLibrary/obj/Release/netstandard1.6/ShareLibrary.csproj.CoreCompileInputs.cache
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/ShareLibrary/obj/Release/netstandard1.6/ShareLibrary.AssemblyInfoInputs.cache
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/ShareLibrary/obj/Release/netstandard1.6/ShareLibrary.AssemblyInfo.cs
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/ShareLibrary/obj/Release/netstandard1.6/ShareLibrary.dll
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/ShareLibrary/obj/Release/netstandard1.6/ShareLibrary.pdb

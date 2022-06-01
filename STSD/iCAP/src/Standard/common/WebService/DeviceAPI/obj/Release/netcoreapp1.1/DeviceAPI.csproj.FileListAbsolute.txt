@@ -1,0 +1,14 @@
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DeviceAPI/bin/Release/netcoreapp1.1/DeviceAPI.deps.json
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DeviceAPI/bin/Release/netcoreapp1.1/DeviceAPI.runtimeconfig.json
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DeviceAPI/bin/Release/netcoreapp1.1/DeviceAPI.runtimeconfig.dev.json
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DeviceAPI/bin/Release/netcoreapp1.1/DeviceAPI.dll
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DeviceAPI/bin/Release/netcoreapp1.1/DeviceAPI.pdb
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DeviceAPI/bin/Release/netcoreapp1.1/ShareLibrary.dll
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DeviceAPI/bin/Release/netcoreapp1.1/ShareLibrary.pdb
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DeviceAPI/obj/Release/netcoreapp1.1/DeviceAPI.csprojAssemblyReference.cache
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DeviceAPI/obj/Release/netcoreapp1.1/DeviceAPI.csproj.CoreCompileInputs.cache
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DeviceAPI/obj/Release/netcoreapp1.1/DeviceAPI.AssemblyInfoInputs.cache
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DeviceAPI/obj/Release/netcoreapp1.1/DeviceAPI.AssemblyInfo.cs
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DeviceAPI/obj/Release/netcoreapp1.1/DeviceAPI.csproj.CopyComplete
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DeviceAPI/obj/Release/netcoreapp1.1/DeviceAPI.dll
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/DeviceAPI/obj/Release/netcoreapp1.1/DeviceAPI.pdb

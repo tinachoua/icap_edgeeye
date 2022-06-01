@@ -1,0 +1,399 @@
+// LED color
+$led-success: #80db22
+$ledshadow-success: 0 0 0 4px rgba(128, 219, 34, .33)
+$led-warning: #F5A623
+$ledshadow-warning: 0 0 0 4px rgba(255, 160, 70, .33)
+$led-danger: #e2222f
+$ledshadow-danger: 0 0 0 4px rgba(226, 34, 47, .33)
+$led-none: rgb(90,98,105)
+$ledshadow-none: 0 0 0 4px rgba(152, 152, 152, .33)
+
+
+canvas
+    overflow: hidden
+    width: 100% !important
+    height: auto !important
+
+td > div > .cardbox 
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2)
+    background-color: rgb(255,255,255)
+    overflow: hidden
+    border-radius: 5px
+    border: 1px solid #efefef
+    margin: 10px 0
+    height: 80px
+
+.card-body
+    padding: 20px 0
+.cardbox
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2)
+    background-color: rgb(255,255,255)
+    overflow: hidden
+    border-radius: 5px
+    border: 1px solid #efefef
+    margin: 10px 0
+    & > .panel-heading
+        background: #dde2e6
+        color: #16272e
+        padding: 4px 12px
+        font-size: 18px
+    & > .panel-body
+        height: 235px
+        overflow: hidden
+        background-color: rgb(255, 255, 255)
+        & .date
+            height: auto
+            max-height: 235px
+            overflow-x: hidden
+            padding-right: 10px
+        & .date-footer
+            width: 100px
+            margin: 0 auto
+            display: inline-block
+        & small
+            font-size: 12px
+            color: rgb(90,98,105)
+            text-align: left
+        & .colorpie
+            width: 10px
+            height: 10px
+            border-radius: 10px
+            margin: 5px 5px 0 5px
+            float: left
+        & .num
+            font-size: 20px
+            font-weight: 700
+            padding-top: 2px
+            padding-bottom: 4px
+            border-bottom: 1px dashed #afafaf
+        & .nonum
+            border-right: none
+
+
+        // Device status
+        .text_header
+            font-size: 14px
+            padding-top: 8px
+        .text_bady
+            font-size: 60px
+            font-weight: bold
+        .title-success
+            color: rgb(90,98,105)
+        .title-warning
+            color: rgb(90,98,105)
+        .texthr
+            border-top: 1px dashed #999
+    // panel-body-small 
+    & > .panel-body-small
+        height: 94px
+        background-color: rgb(255, 255, 255)
+        line-height: 94px
+        font-size: 50px
+        font-weight: 700
+        & .icon-Fan
+            font-size: 50px
+            line-height: 94px
+            left: 50px
+        & .fan-unit
+            font-size: 18px
+            padding-right: 50px
+            padding-left: 10px
+        & .icon-static
+            padding-right: 18px
+
+
+/* LED */
+.led-success
+    display: inline-block
+    width: 10px
+    height: 10px
+    border-radius: 10px
+    background: $led-success
+    box-shadow: $ledshadow-success
+    margin-right: 5px
+.led-warning
+    display: inline-block
+    width: 10px
+    height: 10px
+    border-radius: 10px
+    background: $led-warning
+    box-shadow: $ledshadow-warning
+    margin-right: 5px
+.led-danger
+    display: inline-block
+    width: 10px
+    height: 10px
+    border-radius: 10px
+    background: $led-danger
+    box-shadow: $ledshadow-danger
+    margin-right: 5px
+.led-none
+    display: inline-block
+    width: 10px
+    height: 10px
+    border-radius: 10px
+    background: $led-none
+    box-shadow: $ledshadow-none
+    margin-right: 5px
+
+
+/* Branch_device */
+.branch_device
+    // navigation
+    .navigation
+        overflow: hidden
+        overflow-x: auto
+        display: block
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06), 0 1px 5px 0 rgba(0, 0, 0, 0.04)
+        position: relative
+    .navigation::-webkit-scrollbar
+        display: none
+    .pagination
+        a
+            cursor: pointer
+            padding: 5px 9px
+            margin-right: 4px
+            border-radius: 3px
+            border: solid 1px #c0c0c0
+            background: rgb(255, 255, 255)
+            box-shadow: inset 0px 1px 0px rgba(255,255,255, .8), 0px 1px 3px rgba(0,0,0, .1)
+            font-size: .875em
+            font-weight: bold
+            text-decoration: none
+            color: #717171
+            text-shadow: 0px 1px 0px rgba(255,255,255, 1)
+        a:hover
+            background: #fefefe
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FEFEFE), to(#f0f0f0))
+            background: -moz-linear-gradient(0% 0% 270deg,#FEFEFE, #f0f0f0)
+        a:active
+            border: solid 1px #c0c0c0
+            background: #616161
+            box-shadow: inset 0px 0px 8px rgba(0,0,0, .5), 0px 1px 0px rgba(255,255,255, .8)
+            color: #f0f0f0
+            text-shadow: 0px 0px 3px rgba(0,0,0, .5)
+        a.active
+            border: solid 1px #c0c0c0
+            background: #616161
+            box-shadow: inset 0px 0px 8px rgba(0,0,0, .5), 0px 1px 0px rgba(255,255,255, .8)
+            color: #f0f0f0
+            text-shadow: 0px 0px 3px rgba(0,0,0, .5)
+
+        
+    .title
+        font-size: 18px
+
+    // left led
+    .cardbox_right
+        //border-right: 1px dashed #BABABA
+        display: block
+        .butleft
+            position: relative
+            white-space: nowrap
+            overflow: hidden
+            overflow-x: auto
+            display: block
+            & .list-group-item
+                border-radius: 4px
+                margin: 5px 0
+                display: inline-block
+                color: #0082BC
+                cursor: pointer
+            & .list-group-item:hover
+                color: #23527c
+            & .fa-exclamation-triangle
+                color: rgb(199,51,60)
+                font-size: 16px
+    .cardbox_left
+        border-left: 1px dashed #BABABA
+    // remote but
+    .remote
+        margin-top: -40px
+        .remote_btn
+            list-style: none
+            text-align: center
+            padding: 0
+            & li
+                position: relative
+                display: inline-block
+                margin-right: -4px
+                padding: 0 10px
+            & .btn-circle
+                width: 50px
+                height: 50px
+                text-align: center
+                padding: 6px 0
+                font-size: 12px
+                line-height: 1.33
+                border-radius: 50%
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.175)
+                border: solid 1px #c0c0c0
+                color: #16272e
+                outline: none
+
+                &:hover
+                    background: #fefefe
+                    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FEFEFE), to(#f0f0f0))
+                    background: -moz-linear-gradient(0% 0% 270deg,#FEFEFE, #f0f0f0)
+                &:active
+                    border: solid 1px #c0c0c0
+                    background: #616161
+                    box-shadow: inset 0px 0px 8px rgba(0,0,0, .5), 0px 1px 0px rgba(255,255,255, .8)
+                    color: #f0f0f0
+                    text-shadow: 0px 0px 3px rgba(0,0,0, .5)
+                &.active
+                    border: solid 1px #c0c0c0
+                    background: #616161
+                    box-shadow: inset 0px 0px 8px rgba(0,0,0, .5), 0px 1px 0px rgba(255,255,255, .8)
+                    color: #f0f0f0
+                    text-shadow: 0px 0px 3px rgba(0,0,0, .5)
+    select
+        vertical-align: top
+        display: inline-block
+        margin: 0
+        background: #5E676C
+        border: 1px solid #979797
+        color: rgb(255,255,255)
+    .tab-container
+        position: relative
+        background: #5E676C
+        display: table
+        z-index: 99
+        width: 100%
+        display: block
+
+
+/* device */
+.subpanel-Overview
+    table
+        font-size: 14px !important
+.subpanel-OS, .subpanel-CPU, .subpanel-MB, .subpanel-MEM, .subpanel-Storage
+    .panel-body
+        td
+            font-size: 14px !important
+#cpu-loading-gauge, #mem-loading-gauge
+    canvas
+        margin-top: 10%
+        max-width: 330px
+.gauge
+    canvas
+        margin-top: 10%
+        margin-bottom: 0
+        margin-left: auto
+        margin-right: auto
+        max-width: 330px
+.dev_overview
+    .panel-body
+        overflow: auto
+        table
+            margin-bottom: 0
+.device_analyzer
+    .titlebut
+        border-left: 2px dashed #596D78
+        line-height: 40px
+    .titlebar
+        border-left: 2px dashed #596D78
+
+@media screen and (min-width: 320px) and (max-width: 1024px)
+    .branch_device
+        // .cardbox_right
+        //     border-right: 0px dashed #BABABA
+        //     height: auto
+        .cardbox_left
+            border-left: 0px dashed #BABABA
+            height: auto
+        .spanD
+            display: none
+        .tab-list a
+            padding: 18px 10px
+
+/* clock */
+.clock_font
+    color: #666
+    text-align: right
+.clock_card
+    background-color: aliceblue
+    text-align: center
+    height: 99px
+    line-height: 99px
+    width: 30%
+    span
+        font-size: 41px
+.newData
+    background-color: rgb(255,255,190)
+
+
+
+/* transform translate */
+@keyframes rotate
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
+
+.TTIcon06
+    animation: 5s linear 0s normal none infinite rotate
+    -webkit-animation: 5s linear 0s normal none infinite rotate
+    position: absolute
+
+@font-face
+    font-family: 'icomoon'
+    src:    url('../fonts/icomoon.eot?c1v807')
+    src:    url('../fonts/icomoon.eot?c1v807#iefix') format('embedded-opentype'),url('../fonts/icomoon.ttf?c1v807') format('truetype'),url('../fonts/icomoon.woff?c1v807') format('woff'),url('../fonts/icomoon.svg?c1v807#icomoon') format('svg')
+    font-weight: normal
+    font-style: normal
+
+[class^="icon-"], [class*=" icon-"]
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important
+    speak: none
+    font-style: normal
+    font-weight: normal
+    font-variant: normal
+    text-transform: none
+    line-height: 1
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+.icon-Fan::before 
+    content: "\e906"
+
+
+.ol-popup
+    position: absolute
+    background-color: white
+    -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2))
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2))
+    padding: 15px
+    border-radius: 10px
+    border: 1px solid #cccccc
+    bottom: 12px
+    left: -50px
+    min-width: 280px
+    font-family: Roboto, Arial, sans-serif
+    &:after, &:before
+        top: 100%
+        border: solid transparent
+        content: " "
+        height: 0
+        width: 0
+        position: absolute
+        pointer-events: none
+    &:after
+        border-top-color: white
+        border-width: 10px
+        left: 48px
+        margin-left: -10px
+    &:before
+        border-top-color: #cccccc
+        border-width: 11px
+        left: 48px
+        margin-left: -11px
+
+.ol-popup-closer
+    text-decoration: none
+    position: absolute
+    top: 2px
+    right: 8px
+    &:after
+        content: "✖"

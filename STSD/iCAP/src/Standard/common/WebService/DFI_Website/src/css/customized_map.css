@@ -1,0 +1,76 @@
+#dashboard-item .side-menu{
+  justify-content: center;
+  flex-wrap: wrap;
+  background: rgba(140, 181, 180, 0.9);
+  height: 100%;
+  width: 225px;
+  position: absolute;
+  /* top:0px;
+  left: 0px; */
+  top: -5px;
+  /* left: -5px; */
+  z-index: 10;
+  transition: .3s;
+  overflow-y: auto;
+  will-change: transform;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 5px;
+}
+
+#dashboard-item .side-menu.left{
+    left: 0px;
+    transform: translateX(-100%) translateZ(0);
+}
+#dashboard-item .side-menu.right{
+    right: 0;
+    transform: translateX(200%) translateZ(0);
+}
+#dashboard-item .side-menu.active {
+  transform: translateX(0) translateZ(0);
+}
+
+#dashboard-item .side-menu .content {
+    margin-top: 50px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 16px;
+}
+
+#dashboard-item .side-menu .content.hide{
+    display: none;
+}
+
+#dashboard-item .side-menu .content > .item {
+    color: #061b0b;
+    margin-bottom: 20px;
+}
+
+#dashboard-item .menu-body .top > div.normal{
+  background: url('../assets/images/marker-green.png') no-repeat;
+  background-size: 24px
+}
+
+#dashboard-item .menu-body .top > div.warning{
+  background: url('../assets/images/marker-red.png') no-repeat;
+  background-size: 24px
+}
+
+#dashboard-item .menu-body .top {
+  text-align: start;
+}
+
+#dashboard-item .menu-body .top label{
+  text-indent: 27px;
+  margin-bottom: 6px;
+  color: darkorange;
+  font-size: 22px;
+}
+
+#dashboard-item .name-select{
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+.bootstrap-select .btn {
+  margin: 0;
+}

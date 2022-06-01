@@ -1,0 +1,729 @@
+<div class="device_info">
+    <!-- #region Overview Information -->
+    <div class="cardbox subpanel-Overview">
+        <div class="panel-heading">
+            <div class="row">
+                <div id="devName" class="col col-xs-6">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 branch_device">
+            <img id="devimg" alt="" class="img-responsive" style="margin: 0 auto;">
+            <div id="OOB-service" class="remote" style="text-align: center;"></div>​
+        </div>
+        <div class="col-md-8" style="margin-top: 5%">
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <td><b>Operating System</b></td>
+                        <td id="overview-os"></td>
+                    </tr>
+                    <tr>
+                        <td><b>CPU Name</b></td>
+                        <td id="overview-cpu"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Memory capacity</b></td>
+                        <td id="overview-mem"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Storage capacity</b></td>
+                        <td id="overview-stor"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Device Status</b></td>
+                        <td id="overview-status"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row subpanel-Overview">
+        <div id="cpu-loading-gauge"></div>
+        <div id="mem-loading-gauge"></div>
+        <div id="stor-lifespan"></div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region Operating System Information -->
+    <div class="subpanel-OS" style="display: none;">
+        <div class="row cardbox panel-default dev_overview">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-md-8">
+                        Operating System Information
+                    </div>
+                    <div class="col-md-4 text-right">
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body pad0">
+                <table class="table table-striped">
+                    <tbody id="subpanel-OS-data">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region CPU Information -->
+    <div class="col-md-8">
+        <div class="subpanel-CPU" style="display: none;">
+            <div class="row cardbox panel-default dev_overview">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-8">
+                            CPU Information
+                        </div>
+                        <div class="col-md-4 text-right">
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body pad0">
+                    <table class="table table-striped">
+                        <tbody id="subpanel-CPU-data">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="cpu-loading" class="subpanel-CPU"></div>
+    </div>
+
+    <div class="col-md-4 subpanel-CPU" id="cpu-info-dynamic" style="display: none;">
+
+        <div class="cardbox" style="padding: 5px 10px;border-left: 4px solid rgb(90,98,105);">
+            <div style="font-size: 12px;color: #888;">
+                CPU Frequency
+            </div>
+            <div style="padding-top:10px;">
+                <div style="float:left">
+                    <i class="fa fa-heartbeat" style="font-size: 40px;padding-left: 20px;"></i>
+                </div>
+                <div class="text-right">
+                    <span id="frequency-value" class="text-right"
+                        style="font-weight: 700;height: 40px;line-height: 38px;font-size: 40px;">N/A</span>
+                    <span class="fan-unit">MHz</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cardbox" style="padding: 5px 10px;border-left: 4px solid rgb(90,98,105);">
+            <div style="font-size: 12px;color: #888;">
+                CPU Fan
+            </div>
+            <div style="padding-top:10px;">
+                <div style="float:left;padding-left: 20px">
+                    <div class="TTIcon06 icon-Fan" style="font-size: 35px;"></div>
+                </div>
+                <div class="text-right">
+                    <span id="fan-value" class="text-right"
+                        style="font-weight: 700;height: 40px;line-height: 38px;font-size: 40px;">N/A</span>
+                    <span class="fan-unit">RPM</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div style="overflow: hidden;">
+
+
+
+            <!-- Tab panes -->
+            <div class="tab-content cardbox" style="padding: 5px 10px;border-left: 4px solid rgb(90,98,105);margin: 0;">
+                <div style="border-bottom: 1px dashed #888;;color: #888;">
+
+                    <!-- Nav tabs -->
+                    <div class="nav" id="myTab" role="tablist">
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <a data-toggle="tab" href="#tab-core-freq" aria-selected="true">
+                                    <i class="fa fa-heartbeat" aria-hidden="true"
+                                        style="font-size: 25px; padding: 5px;margin-right: 5px;"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#tab-core-loading" aria-selected="false">
+                                    <i class="fa fa-spinner" aria-hidden="true"
+                                        style="font-size: 25px; padding: 5px;margin-right: 5px;"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#tab-core-temp" aria-selected="false">
+                                    <i class="fa fa-thermometer-full" aria-hidden="true"
+                                        style="font-size: 25px; padding: 5px;margin-right: 5px;"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#tab-core-voltage" aria-selected="false">
+                                    <i class="fa fa-bolt" aria-hidden="true"
+                                        style="font-size: 25px; padding: 5px;margin-right: 5px;"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-pane active" id="tab-core-freq" role="tabpanel">
+                    <span style="font-size: 12px;color: #888;">
+                        Frequency -
+                    </span>
+                </div>
+                <div class="tab-pane" id="tab-core-loading" role="tabpanel">
+                    <span style="font-size: 12px;color: #888;">
+                        Loading -
+                    </span>
+                </div>
+                <div class="tab-pane" id="tab-core-temp" role="tabpanel">
+                    <span style="font-size: 12px;color: #888;">
+                        Temperature -
+                    </span>
+                </div>
+                <div class="tab-pane" id="tab-core-voltage" role="tabpanel">
+                    <span style="font-size: 12px;color: #888;">
+                        Voltage -
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region Motherboard Information -->
+    <div class="col-md-12 subpanel-MB" style="display: none;">
+        <div class="row cardbox panel-default dev_overview">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-md-8">
+                        Motherboard Information
+                    </div>
+                    <div class="col-md-4 text-right">
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body pad0">
+                <table class="table table-striped">
+                    <tbody id="subpanel-MB-data">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region Memory Information -->
+    <!-- Memory Index and defice info -->
+    <div class="subpanel-MEM widget sub-page" style="display: none;" name='mem'>
+        <!-- <div class="col-md-12" id="showDate">Date:</div> -->
+        <div class="col-md-12">
+            <div id="mem-loading" class="subpanel-MEM widget sub-page" name='mem'></div>
+        </div>
+        <div class="col-md-12">
+            <h4 id='btn-indx-mem'>Memory Index :
+            </h4>
+        </div>
+        <div class="col-md-6">
+    
+            <div class="row cardbox dev_overview">
+                <div class="tab-content fixed">
+                    <div class="row" >
+                        <div class="col-md-8 title">
+                            <b>Product Information</b>
+                        </div>
+                        <div class="col-md-4 text-right">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content cardbox long">
+                    <table class="table table-striped">
+                        <tbody id="subpanel-mem-info-table">
+                            <tr>
+                                <td>
+                                    <b>Part Number</b>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Manufacturer</b>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>DRAM type</b>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Data Rate</b>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Capacity</b>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>DIMM Type</b>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Operating Temp. </b>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>CAS Latency</b>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>IC Configuration</b>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>IC Brand</b>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Serial Number</b>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Datecode</b>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Thermal Sensor Support</b>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class='note'>Information with * remark is only available for Innodisk standard
+                P/N</div>
+        </div>
+    
+        <div class="col-md-6 feature">
+            <div class='item1' style="overflow: hidden;">
+                <div class="row cardbox dev_overview">
+                    <div class="tab-content fixed">
+                        <div class="row">
+                            <div class="col-md-8 title">
+                                <b>Features</b>
+                            </div>
+                            <div class="col-md-4 text-right">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content cardbox short">
+                        <table class="table table-striped" id='feature-table'>
+                            <tr>
+                                <th>IC Grade</th>
+                                <td></td>
+    
+                            </tr>
+                            <tr>
+                                <th>Anti-sulfuration Feature</th>
+                                <td></td>
+    
+                            </tr>
+                            <tr>
+                                <th>30μ" Golden Finger</th>
+                                <td></td>
+    
+                            </tr>
+                            <tr>
+                                <th>Write Protection</th>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!-- Tab panes -->
+            </div>
+            <div class="item2">
+                <canvas id="tempChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region Storage Information -->
+    <div class="subpanel-Storage col-md-12" style="display: none;">
+        <h4 id="btn-indx-storage">Storage Index :</h4>
+        <div class="row cardbox panel-default dev_overview">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-md-8">
+                        Storage Information
+                    </div>
+                    <div class="col-md-4 text-right">
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body pad0">
+                <table class="table table-striped mem-0">
+                    <tbody>
+                        <tr>
+                            <td><b>Index</b></td>
+                            <td id="stor-id">N/A</td>
+                        </tr>
+                        <tr>
+                            <td><b>Model</b></td>
+                            <td id="stor-model">N/A</td>
+                        </tr>
+                        <tr>
+                            <td><b>Serial Number</b></td>
+                            <td id="stor-sn">N/A</td>
+                        </tr>
+                        <tr>
+                            <td><b>Firmware Version</b></td>
+                            <td id="stor-firmver">N/A</td>
+                        </tr>
+                        <tr>
+                            <td><b>Capacity</b></td>
+                            <td id="stor-cap">N/A</td>
+                        </tr>
+                        <tr>
+                            <td><b>P/E Cycle</b></td>
+                            <td id="stor-pe">N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region Network Card Information -->
+    <div class="subpanel-NET col-md-12" style="display: none;">
+        <h4 id="btn-indx-net">Network Card Index :</h4>
+        <div class="row cardbox panel-default dev_overview">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-md-8">
+                        Network Card Information
+                    </div>
+                    <div class="col-md-4 text-right">
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body pad0">
+                <table class="table table-striped mem-0">
+                    <tbody>
+                        <tr>
+                            <td><b>Index</b></td>
+                            <td id="net-id">N/A</td>
+                        </tr>
+                        <tr>
+                            <td><b>Name</b></td>
+                            <td id="net-name">N/A</td>
+                        </tr>
+                        <tr>
+                            <td><b>Type</b></td>
+                            <td id="net-type">N/A</td>
+                        </tr>
+                        <tr>
+                            <td><b>MAC Address</b></td>
+                            <td id="net-mac">N/A</td>
+                        </tr>
+                        <tr>
+                            <td><b>IPv4 Address</b></td>
+                            <td id="net-ipv4">N/A</td>
+                        </tr>
+                        <tr>
+                            <td><b>IPv4 Netmask</b></td>
+                            <td id="net-gateway">N/A</td>
+                        </tr>
+                        <tr>
+                            <td><b>IPv6 Address</b></td>
+                            <td id="net-ipv6">N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region External Information -->
+    <div class="subpanel-External col-md-12" style="display: none;">
+        <div class="row" id="ext-info"></div>
+    </div>
+    <!-- #endregion -->
+
+
+
+    <!-- #region Location Information -->
+    <div class="subpanel-Location col-md-12" style="display: none;">
+        <!-- <button>Google Map</button>
+        <button>Open Street Map</button>
+        <button>Vector Map</button> -->
+        <div id="subpanel-location">
+            <div class="col-md-12 pad0">
+                <div class="cardbox">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                <span>Device Location</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body text-center textcard pad0" style="position:relative">
+                    </div>
+                </div>
+            </div>
+        </div>
+         
+        <h4 class="row">
+            <div id="loc-long" class="col-md-offset-2 col-md-3"></div>
+            <div id="loc-lat" class="col-md-3"></div>
+            <div id="loc-status" class="col-md-3"></div>
+        </h4>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region GPU Information -->
+    <div class="col-md-8">
+        <div id="GPUBoard" class="subpanel-GPU widget sub-page" style="display: none;" name='gpu'>
+            <div class="row cardbox panel-default dev_overview">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-8">
+                            GPU Information
+                        </div>
+                        <div class="col-md-4 text-right">
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body pad0">
+                    <table class="table table-striped">
+                        <tbody id="subpanel-GPU-data">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="gpu-loading" class="subpanel-GPU" style="display: none;"></div>
+    </div>
+    <div class="col-md-4 subpanel-GPU widget sub-page" id="gpu-info-dynamic" style="display: none;" name='gpu'>
+        <div class="cardbox" style="padding: 5px 10px;border-left: 4px solid rgb(90,98,105);">
+            <div style="font-size: 12px;color: #888;">
+                GPU Core Clock
+            </div>
+            <div style="padding-top:10px;">
+                <div style="float:left">
+                    <i class="fa fa-heartbeat" style="font-size: 40px;padding-left: 20px;"></i>
+                </div>
+                <div class="text-right">
+                    <span id="gpuFrequencyValue" class="text-right"
+                        style="font-weight: 700;height: 40px;line-height: 38px;font-size: 40px;">N/A</span>
+                    <span class="fan-unit">MHz</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cardbox" style="padding: 5px 10px;border-left: 4px solid rgb(90,98,105);">
+            <div style="font-size: 12px;color: #888;">
+                GPU Temperature
+            </div>
+            <div style="padding-top:10px;">
+                <div style="float:left">
+                    <i class="fa fa-thermometer-full" style="font-size: 40px;padding-left:31px;"></i>
+                </div>
+                <div class="text-right">
+                    <span id="gpuTemperature" class="text-right"
+                        style="font-weight: 700;height: 40px;line-height: 38px;font-size: 40px">N/A</span>
+                    <span class="fan-unit">℃</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cardbox" style="padding: 5px 10px;border-left: 4px solid rgb(90,98,105);">
+            <div style="font-size: 12px;color: #888;">
+                Fan Temperature
+            </div>
+            <div style="padding-top:10px;">
+                <div style="float:left">
+                    <i class="fa fa-thermometer-full" style="font-size: 40px;padding-left:31px;"></i>
+                </div>
+                <div class="text-right">
+                    <span id="gpuFanTemperature" class="text-right"
+                        style="font-weight: 700;height: 40px;line-height: 38px;font-size: 40px">N/A</span>
+                    <span class="fan-unit">℃</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cardbox" style="padding: 5px 10px;border-left: 4px solid rgb(90,98,105);">
+            <div style="font-size: 12px;color: #888;">
+                Memory Used
+            </div>
+            <div style="padding-top:10px;">
+                <div style="float:left">
+                    <i class="fa fa-pie-chart" style="font-size: 40px;padding-left:31px;"></i>
+                </div>
+                <div class="text-right">
+                    <span id="gpuMemoryUsed" class="text-right"
+                        style="font-weight: 700;height: 40px;line-height: 38px;font-size: 40px">0.5/7.9</span>
+                    <span class="fan-unit">%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #region GPU Information End -->
+
+    <!-- #region OOB Information -->
+    <div class="col-md-12">
+        <div class="subpanel-OOB widget sub-page" style="display: none;" name='oob'>
+            <h4>InnoAGE Index :<span id="btn-indx-innoage"></span></h4>
+            <div class="col-md-12 pad0 cardbox">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col col-xs-6">
+                            InnoAGE Information
+                        </div>
+                    </div>
+                </div>
+                <div class="body-wrapper">
+                    <div class="body-left-wrapper">
+                        <img id='InnoAGE-logo'/>
+                    </div>
+                    <div class="body-right-wrapper">
+                        <h1>InnoAGE SSD</h1>
+                        <div class="status-wrapper">
+                            <div><span id='innoage-status' class="led grey"></span><span class="text-wrapper">Azure Sphere</span></div>
+                            <div><span id='power-status' class="led orange"></span><span class="text-wrapper">Power Status</span></div>
+                            <div><span id='hd-status' class="led orange"></span><span class="text-wrapper">HD Status</span></div>
+                        </div>
+                        <div class="oob-wrapper">
+                            <div id="OOBTab-service"></div>​
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 pad0 cardbox">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col col-xs-6">
+                            Detail Information
+                        </div>
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <table class="table">
+                        <tbody style="border-bottom: 1px solid #ddd;">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #region OOB Information End -->
+
+    <!-- #region Information -->
+    <div class="col-md-12">
+        <div class="subpanel-EAPI widget"  name='eapi' style="display: none;">
+            <div style="font-size: 0;">
+                <div class="eapi-icon-wrapper" name="temp">
+                    <img class="icon temp"></img>
+                </div>
+                <div class="EAPI_table" style="display: inline-block;width: 85%;">
+                    <table id='temp-table'>
+                        <tbody style="height: 100px;">
+                            <tr>
+                                <td class="item">CPU</td>
+                                <td class="item">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="item">System</td>
+                                <td class="item">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+            <div style="font-size: 0;">
+                <div class="eapi-icon-wrapper" name="fans">
+                    <img class="icon fan"></img>
+                </div>
+                <div class="EAPI_table" style="display: inline-block;width: 85%;">
+                    <table style="height: 200px;" id='fan-table'>
+                        <tbody>
+                            <tr>
+                                <td class="item">CPU</td>
+                                <td class="item"></td>
+                            </tr>
+                            <tr>
+                                <td class="item">System</td>
+                                <td class="item"></td>
+                            </tr>
+                            <tr>
+                                <td class="item">System2</td>
+                                <td class="item"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+            <div style="font-size: 0;">
+                <div class="eapi-icon-wrapper" name="voltage">
+                    <img class="icon voltage"></img>
+                </div>
+                <div class="EAPI_table" style="display: inline-block;width: 85%;">
+                    <table id='voltage-table'>
+                        <tbody>
+                            <tr>
+                                <td class="item">VCORE</td>
+                                <td class="item"></td>
+                                <td class="item" style="font-weight: bold;">+12V</td>
+                                <td class="item"></td>
+                            </tr>
+                            <tr>
+                                <td class="item">VBAT</td>
+                                <td class="item"></td>
+                                <td class="item" style="font-weight: bold;">3VSB</td>
+                                <td class="item"></td>
+                            </tr>
+                            <tr>
+                                <td class="item">5V</td>
+                                <td class="item"></td>
+                                <td class="item" style="font-weight: bold;">VDDQ</td>
+                                <td class="item"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #region Information end-->
+
+</div>
+<div class="waitingModal">
+    <div class="faicon fa fa-spinner fa-spin"></div>
+</div>

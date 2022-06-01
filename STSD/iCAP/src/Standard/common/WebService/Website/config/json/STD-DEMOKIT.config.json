@@ -1,0 +1,51 @@
+{
+  /** Setup Application */
+  "SSL": true,
+  /** MOCK | ENABLE */
+  "OOB": "MOCK",
+  /** Logo */
+  "LOGINFORM_LEFT_LOGO" : "logo-innodisk.png",
+  "LOGINFORM_RIGHT_LOGO": "logo-icap-red.png",
+  "HEADER_LOGO": "logo-icap.png",
+  "LEFT_SIDEBAR_TOP_LOGO": "logo-icap-red.png",
+  "LEFT_SIDEBAR_BOTTOM_LOGO": "logo-innodisk.png",
+
+  "LOGINFORM_LOGO_SIZE":{
+    "HEIGHT": "38px",
+    "WIDTH": "91px"
+  },
+  "LEFT_SIDEBAR_BOTTOM_LOGO_SIZE":{
+    "HEIGHT": "38px",
+    "WIDTH": "91px"
+  },
+
+  /** Style */
+  /** Background Colors */
+  "BG_COLOR_01": "rgb(255, 0, 23)",          /**#ff0017*/
+  "BG_COLOR_02": "rgb(22, 39, 46)",          /**#16272e*/
+  "BG_COLOR_03": "rgb(94, 103, 108)",        /**#5e676c*/
+  "BG_COLOR_04": "rgb(255, 250, 205)",       /**#fffacd*/
+  "BG_COLOR_05": "rgb(221, 226, 230)",       /**#dde2e6*/
+  "BG_COLOR_06": "rgb(239, 243, 246)",       /**#eff3f6*/
+  "BG_COLOR_07": "rgb(255, 255, 255)",       /**#ffffff*/
+
+  /** Font Colors */
+  "FONT_COLOR_A": "rgb(255, 255, 255)",      /**#ffffff*/
+  "FONT_COLOR_B": "rgb(136, 136, 136)",      /**#888888*/
+  "FONT_COLOR_C": "rgb(153, 153, 153)",      /**#999999*/
+  "FONT_COLOR_D": "rgb(22, 39, 46)",         /**#16272e*/
+  "FONT_COLOR_E": "rgb(51, 122, 183)",       /**#337ab7*/
+
+  /** Chart Colors */
+  "HIGHLIGHT_COLOR":  "rgb(255, 0, 23)",
+  "CHART_BASE_COLOR_A": "rgb(22, 39, 46)",
+  "CHART_BASE_COLOR_B": "rgb(35, 78, 119)",
+  "CHART_BASE_COLOR_C": "rgb(109, 174, 219)",
+  "CHART_BASE_COLOR_D": "rgba(109, 174, 219, 0.7)",
+  "CHART_BASE_COLOR_E": "rgba(109, 174, 219, 0.4)",
+  "CHART_BASE_COLOR_F": "rgb(221, 226, 230)",
+
+  /** Customize */
+  "CUSTOMIZE":{
+  }
+}

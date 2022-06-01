@@ -1,0 +1,132 @@
+@charset "UTF-8";
+.event .dataTables_wrapper {
+  overflow-y: auto;
+  font-size: 14px;
+}
+.event .dataTables_wrapper label {
+  padding: 10px 10px 0 10px;
+}
+.event .dataTables_wrapper select {
+  border-radius: 3px;
+  border: 1px solid #bababa;
+  padding: 0.2em;
+}
+.event .dataTables_wrapper table {
+  font-size: 14px !important;
+}
+.event .dataTables_wrapper table td {
+  padding: 5px 10px;
+  vertical-align: middle;
+}
+.event .dataTables_wrapper .dataTables_filter input {
+  border-radius: 3px;
+  border: 1px solid #bababa;
+  padding: 0.2em;
+}
+.event .dataTables_wrapper .dataTables_paginate {
+  padding: 5px;
+}
+.event .dataTables_wrapper .dataTables_paginate .paginate_button {
+  min-width: 30px;
+  height: 30px;
+  line-height: 28px;
+  background: var(--BG_COLOR_07);
+  border: none;
+  text-align: center;
+  padding: 0 8px;
+  font-size: 14px;
+  vertical-align: baseline;
+  outline: 0;
+  box-shadow: none;
+  color: var(--FONT_COLOR_D);;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.event .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  border-radius: 3px;
+  border-bottom: 1px solid #aaa;
+  color: var(--BG_COLOR_02) !important;
+}
+.event .dataTables_wrapper .dataTables_paginate .current {
+  border-radius: 3px;
+  border: 1px solid #aaa;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.8), 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.event .dataTables_wrapper .dataTables_paginate .disabled {
+  opacity: 0.5;
+}
+.event .dataTables_wrapper .dataTables_paginate .disabled:hover {
+  border: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 640px) {
+  .dataTables_length {
+    text-align: left !important;
+  }
+
+  .dataTables_filter {
+    text-align: left !important;
+    margin-top: 0 !important;
+  }
+}
+/* add waiting css */
+.waitingModal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+}
+.waitingModal .faicon {
+  font-size: 36px;
+  color: var(--BG_COLOR_03);
+  top: 40%;
+  position: relative;
+}
+
+body.loading .waitingModal {
+  overflow: hidden;
+  display: block;
+  z-index: 2147483647;
+  text-align: center;
+}
+
+/* add table open and close icon */
+tbody td.details-control:before {
+  font-family: FontAwesome;
+  content: "\f139";
+  color: green;
+  font-size: 18px;
+  cursor: pointer;
+}
+tbody tr.shown td.dteails-control-control:before {
+  font-family: FontAwesome;
+  content: "\f13a";
+  color: red;
+  font-size: 18px;
+  cursor: pointer;
+}
+tbody td.no-content:before {
+  font-family: FontAwesome;
+  content: "\f056";
+  color: gray;
+  font-size: 18px;
+}
+
+tfoot td.email {
+  cursor: pointer;
+}
+
+.modal-background {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  opacity: .5;
+}

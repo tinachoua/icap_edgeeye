@@ -1,0 +1,14 @@
+unsigned char vendorCode[] =
+	"GL4LBd2lJb4vbNNQXHd2tOcoQlCQ9MXkmItJM2xSIe9s5wQawXImCbDx3O9LisTsWMomJXmIcZB0o07i"
+	"HJSzGtpOe1bOXIFHVchHjkLC63EU18/4vjBrmFRh2+kNElLSF08O68DyBWP8TVYXgNFwzZ+JsrgVF5kp"
+	"w5+SyvMsfjfZUngpx7OXNYdWC1seYFFjCuJOWTpDeBx3edOwXnQ0oKNvUI32ogxMw5ZXpcsFXguA08ru"
+	"4a2cB76OQLCWE6g++io+X1g2quwb6Nr9u/V6ljygsgDVXuU4O19OS8lz8SMgPsHjyqVnVnRP+hXY4WFt"
+	"KP5xszRX9l+azslesubQxrjys83C/T4hGn0sf1ru1fKeCC4OGBkjXtk1aycMxY6GfG3ntgBe6iKbulsh"
+	"OJl9m573/zrcavozKK+aDsFU245lYRqs4QPCBr83VRDMI4u0klxWolU/MUyUuARt9nGnqdKBkdp5udAG"
+	"J1NIp9adCeLemIB5rAwHn/ppP2S9jFFdiET5vWVtcyIurEYiDYSkqcsDsGYUvFHKieyeRIwzHRvWBk4q"
+	"9hrfxlRtmTrD9rWg2kxWUimwryrFxBY9gydUTScJQilkVqVzS/jtgZWKtvTr3d9ckqcyX0Zgksw27moa"
+	"tgG7DvIc/kMRapC5QHmGF5RS+QmlA8Z//qJFQ6VbhyApzJHCphetrvbok86cVDL9rXk70V3DVlB23zB9"
+	"TmIvoijRh4F+gB432oeuEx3GGbNAAfEbApvf+51UHurYSAPJPkCnKx3HuHt9Qt+pr8YSvmKB4bsZsgfQ"
+	"HxEfKk+EW9DNdx6ykh17FNPfZwZE0CLHdSACVGmbzgXnXKXORnUjmKZLJAcSx2KLLsNgM7e0iAbY4VkB"
+	"2spW7Fy8Mnf8JJYbGhV1HQQdLHhdamb+88dsIdHoOzgNysN8PgBR/YuuX5stDtxUTEWVGlbF6r/YKovc"
+	"mV2BF9/bZQ60023QIYnfvQ==";

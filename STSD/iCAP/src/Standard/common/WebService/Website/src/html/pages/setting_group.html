@@ -1,0 +1,151 @@
+<div class="col-md-6 col-sm-6">
+    <label for="grouplist">My Group</label>
+    <select class="selectpicker form-control"  data-container="body"  id="grouplist" title = "--Please Select One--">    
+    </select>
+</div>
+<div class="col-md-2 col-sm-2">
+    <button type="button" class="btn btn-mini btn-dark" id = "create" style = "position: relative;top: 5px;width: 90px">
+        <i class="fa fa-plus" aria-hidden="true" style="margin-right: 5px"></i> 
+        <span>Add</span> 
+    </button>
+    
+    <button type="button" class="btn btn-mini btn-dark" id = "rename" style = "position: relative;top: 11px;width: 90px">
+        <i class="fa fa-wrench" aria-hidden="true" style="margin-right: 5px"></i> 
+        <span>Rename</span>
+    </button>
+</div>
+
+<div class= "col-md-12 col-sm-12">
+    <hr>
+</div>
+<div class="col-md-12 col-sm-12 row " style = 'margin: 0'>
+    <div class="subject-info-box-1">
+        <label class = 'event label-box' for="box-repo" id = "label-box-repo" size="4"></label>
+        <input class = 'event input-filter' id="search-box-repo" type="text" placeholder="Search..." autocomplete="off" style="width: 100%" spellcheck="false"/>
+        <br />
+        <font id ='find-count-repo' size="2" style = "color: #808080; font-style: italic">&nbsp</font>
+        <select multiple="multiple" id='box-repo' class="form-control box">
+        </select>
+    </div>
+    <div class="subject-info-arrows text-center">
+        <br><br><br>
+        <input type='button' id='btnAllRight' value='>>' class="btn btn-default event" /><br />
+        <input type='button' id='btnRight' value='>' class="btn btn-default event" /><br />
+        <input type='button' id='btnLeft' value='<' class="btn btn-default event" /><br />
+        <input type='button' id='btnAllLeft' value='<<' class="btn btn-default event" />
+    </div>    
+    <div class="subject-info-box-2">
+        <label for="box-target" id = "label-box-target" class = 'event label-box'></label>
+        <input id="search-box-target" type="text" placeholder="Search..." autocomplete="off" style="width: 100%" class = 'event input-filter' spellcheck="false"/>
+        <br />
+        <font id = 'find-count-target' size="2" style = "color: #808080; font-style: italic">&nbsp</font>
+        <select multiple="multiple" id='box-target' class="form-control box">
+        </select>
+    </div>
+</div>
+
+
+<div class="col-lg-12 col-md-12 col-sm-12" style="text-align: right">
+    <button type="button" class="btn btn-mini btn-dark " id="delete"style='margin-left:-21px;width: 90px;' >
+        <span class="glyphicon glyphicon-trash"></span> 
+        <span>Delete</span> 
+    </button>
+    <button type="button" class="btn btn-mini btn-dark edit-event " id ='save'>
+            <span class="glyphicon glyphicon-floppy-disk"></span> 
+            <span>Save</span> 
+    </button>
+</div>
+
+<div class="col-md-12 col-sm-12">
+    <br id='blank-alert' class ='alert' style='display:none;'/>
+    <div class="alert alert-danger alert-group-setting" role="alert" id="danger-group-setting" style="display: none;" ></div>
+    <div class="alert alert-success alert-group-setting" role="alert" id="success-group-setting" style="display: none;" ></div>
+</div>
+<div class="waitingModal">
+    <div class="faicon fa fa-spinner fa-spin"></div>        
+</div> 
+
+<div class="modal fade" id="create-group-modal" tabindex="-1" role="dialog" aria-labelledby="create-group-modal-label" aria-hidden="true">
+    <!-- <br><br><br><br><br><br><br><br> -->
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="create-group-modal-label">Add New Group</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="group-name">Name *</label>
+                            <input type="text" class="form-control group-settings-field" id="group-name" placeholder="" spellcheck="false"  autocomplete="off" >
+                        </div>
+                    </div>                
+                </div>
+            </div>
+            <div class="modal-footer">                      
+                <button type="button" class="btn btn-mini btn-dark" data-dismiss="modal" >
+                    <span class="glyphicon glyphicon-remove"></span> 
+                    <span>Cancel</span> 
+                </button>
+                <button type="button" class="btn btn-mini btn-dark" id = "submit-create-group">
+                    <span class="glyphicon glyphicon-send"></span> 
+                    <span>Submit</span> 
+                </button>
+            </div>
+            <div class="alert alert-create-name alert-danger" role="alert" id="fail-create-group" style="display: none; width:90%; margin: auto;"></div>
+            <div class="alert alert-create-name alert-success" role="alert" id="success-create-group"  style=" display:none; width:90%; margin: auto;" >New group created.</div>
+            <br id="blank-alert-create-group" style="display:none" class = "alert-create-name" />             
+        </div>      
+    </div>
+    <div class="waitingModal">
+        <div class="faicon fa fa-spinner fa-spin">                
+        </div>        
+    </div>  
+</div>
+
+<div class="modal fade" id="rename-modal" tabindex="-1" role="dialog" aria-labelledby="rename-modal-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="rename-modal-label">Rename</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="change-group-name">Name *</label>
+                            <input type="text" class="form-control group-settings-field" id="change-group-name" placeholder="" spellcheck="false"  autocomplete="off" >
+                        </div>
+                    </div>                
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-mini btn-dark" id = "ok-rename">
+                    <span class="glyphicon glyphicon-ok"></span> 
+                    <span>Ok</span> 
+                </button>                            
+                <button type="button" class="btn btn-mini btn-dark" data-dismiss="modal" >
+                    <span class="glyphicon glyphicon-remove"></span> 
+                    <span>Cancel</span> 
+                </button>
+                <button type="button" class="btn btn-mini btn-dark" id = "apply-rename">
+                    <span class="glyphicon glyphicon-pencil"></span> 
+                    <span>Apply</span>
+                </button>               
+            </div>
+            <div class="alert alert-danger alert-rename" role="alert" id="fail-rename" style="display: none; width:90%; margin: auto;"></div>
+            <div class="alert alert-success alert-rename" role="alert" id="success-rename"  style=" display:none; width:90%; margin: auto;" >New group created.</div>
+            <br id="blank-alert-rename" class = 'alert-rename' style="display:none" />             
+        </div>      
+    </div>
+    <div class="waitingModal">
+        <div class="faicon fa fa-spinner fa-spin">                
+        </div>        
+    </div>  
+</div>

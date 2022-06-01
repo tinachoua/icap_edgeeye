@@ -1,0 +1,280 @@
+\section{Client Service API}
+The API are including two type define of callback functions, and ten functions.
+In this section, we will describe the iCAP client service API.
+
+\subsection{Typedefs}
+
+\subsubsection {{\color{blue} double} (*GetValueFunc)({\color{blue} void})}
+This callback function are use for response external sensor data to the iCAP client service.
+\begin{table}[H]
+	\large
+	\begin{tabular}{|L{2cm}|L{14cm}|}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{|l|}{Parameters}\\
+		\hline
+		\multicolumn{2}{|l|}{None.}\\
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{|l|}{Returns}\\
+		\hline
+		{\color{blue}double} & The external sensor data.\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsubsection {{\color{blue} int} (*SendRemoteFunc)({\color{blue} void}*)}
+This callback function are use for receive the remote command from the iCAP client service.
+\begin{table}[H]
+	\large
+	\begin{tabular}{|L{2cm}|L{14cm}|}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{|l|}{Parameters}\\
+		\hline
+		{\color{blue}void}* & The char pointer of the remote command string.\\
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{|l|}{Returns}\\
+		\hline
+		\multirow{2}{*}{\color{blue}int} & 0 : Get remote command successful.\\
+										 & 1 : Get remote command fail.\\
+		\hline
+	\end{tabular}
+\end{table}
+\newpage
+
+\subsection{Functions}
+The following are list the functions:
+\subsubsection {{\color{blue}int} iCAP\_Connect()}
+Connect to iCAP client service.
+\begin{table}[H]
+	\large
+	\begin{tabular}{|L{2cm}|L{14cm}|}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{|l|}{Parameters}\\
+		\hline
+		\multicolumn{2}{|l|}{None.}\\
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{|l|}{Returns}\\
+		\hline
+		\multirow{2}{*}{\color{blue}int} & 0 : Connection successful.\\
+										 & 1 : Connection fail.\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsubsection {{\color{blue}int} iCAP\_Disconnect()}
+Disconnect to iCAP client service.
+\begin{table}[H]
+	\large
+	\begin{tabular}{|L{2cm}|L{14cm}|}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{|l|}{Parameters}\\
+		\hline
+		\multicolumn{2}{|l|}{None.}\\
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{|l|}{Returns}\\
+		\hline
+		\multirow{2}{*}{\color{blue}int} & 0 : Disconnection successful.\\
+										 & 1 : Disconnection fail.\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsubsection {{\color{blue}int} iCAP\_GetClientStatus()}
+Check client service status.
+\begin{table}[H]
+	\large
+	\begin{tabular}{|L{2cm}|L{14cm}|}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{|l|}{Parameters}\\
+		\hline
+		\multicolumn{2}{|l|}{None.}\\
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{|l|}{Returns}\\
+		\hline
+		\multirow{5}{*}{\color{blue}int} & 0 : Client service is working.\\
+										 & 1 : Client service is not working, connection to broker fail.\\
+										 & 2 : Client service is not working, core service not response.\\
+										 & 3 : Client service is not working, number of device already out of limit.\\
+										 & 4 : Client service is not running.\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsubsection {{\color{blue}char}* iCAP\_GetLastErrorMsg()}
+Get last error message.
+\begin{table}[H]
+	\large
+	\begin{tabular}{|L{2cm}|L{14cm}|}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{|l|}{Parameters}\\
+		\hline
+		\multicolumn{2}{|l|}{None.}\\
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{|l|}{Returns}\\
+		\hline
+		{\color{blue}char}* & Last error char string.\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsubsection {{\color{blue}int} iCAP\_SetResponseInterval({\color{blue}unsigned int} ms)}
+Set data upload interval.
+\begin{table}[H]
+	\large
+	\begin{tabular}{|L{4cm}|L{2cm}|L{10cm}|}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{3}{|l|}{Parameters}\\
+		\hline
+		{\color{blue}unsigned int} & ms & Time in milliseconds.\\
+		\rowcolor{Gray}
+		\multicolumn{3}{|l|}{Returns}\\
+		\hline
+		\multirow{2}{*}{\color{blue}int} & \multicolumn{2}{|l|}{0 : Success.}\\
+										 & \multicolumn{2}{|l|}{1 : Fail.}\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsubsection {{\color{blue}int} iCAP\_AddExternalSensor({\color{blue}char}* name, {\color{blue}char}* unit, {\color{blue}\mbox{unsigned} char} type, {\color{blue}GetValueFunc} func)}
+Add external sensor.
+\begin{table}[H]
+	\large
+	\begin{tabular}{|L{4cm}|L{2cm}|L{10cm}|}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{3}{|l|}{Parameters}\\
+		\hline
+		{\color{blue}char}* & name & The external sensor identity name.\\
+		\hline
+		{\color{blue}char}* & unit & The external sensor unit.\\
+		\hline
+		{\color{blue}unsigned char} & \multirow{2}{*}{type} & 0 : Numberical.\\
+		{\color{blue}}	   &					   & 1 : Switch.\\
+		\hline
+		{\color{blue}GetValueFunc} & func & The callback function of external sensor data.\\
+		\rowcolor{Gray}
+		\multicolumn{3}{|l|}{Returns}\\
+		\hline
+		\multirow{2}{*}{\color{blue}int} & \multicolumn{2}{|l|}{0 : Success.}\\
+										 & \multicolumn{2}{|l|}{1 : Fail.}\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsubsection {{\color{blue}int} iCAP\_RemoveExternalSensor({\color{blue}char}* name)}
+Remove external sensor.
+\begin{table}[H]
+	\large
+	\begin{tabular}{|L{4cm}|L{2cm}|L{10cm}|}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{3}{|l|}{Parameters}\\
+		\hline
+		{\color{blue}char}* & name & The external sensor identity name.\\
+		\rowcolor{Gray}
+		\multicolumn{3}{|l|}{Returns}\\
+		\hline
+		\multirow{2}{*}{\color{blue}int} & \multicolumn{2}{|l|}{0 : Success.}\\
+										 & \multicolumn{2}{|l|}{1 : Fail.}\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsubsection {{\color{blue}int} iCAP\_AddRemoteDevice({\color{blue}char}* name, {\color{blue}char}* unit, {\color{blue}\mbox{unsigned} char} type, {\color{blue}SendRemoteFunc} func)}
+Add remote device.
+\begin{table}[H]
+	\large
+	\begin{tabular}{|L{4cm}|L{2cm}|L{10cm}|}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{3}{|l|}{Parameters}\\
+		\hline
+		{\color{blue}char}* & name & The remote device identity name.\\
+		\hline
+		{\color{blue}char}* & unit & The remote device unit.\\
+		\hline
+		{\color{blue}unsigned char} & \multirow{3}{*}{type} & 0 : Numberical.\\
+							   	    &					    & 1 : Switch.\\
+							   	    &					    & 2 : String.\\
+		\hline
+		{\color{blue}SendRemoteFunc} & func & The callback function of remote device.\\
+		\rowcolor{Gray}
+		\multicolumn{3}{|l|}{Returns}\\
+		\hline
+		\multirow{2}{*}{\color{blue}int} & \multicolumn{2}{|l|}{0 : Success.}\\
+										 & \multicolumn{2}{|l|}{1 : Fail.}\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsubsection {{\color{blue}int} iCAP\_RemoveRemoteDevice({\color{blue}char}* name)}
+Remove remote device.
+\begin{table}[H]
+	\large
+	\begin{tabular}{|L{4cm}|L{2cm}|L{10cm}|}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{3}{|l|}{Parameters}\\
+		\hline
+		{\color{blue}char}* & name & The remote device identity name.\\
+		\rowcolor{Gray}
+		\multicolumn{3}{|l|}{Returns}\\
+		\hline
+		\multirow{2}{*}{\color{blue}int} & \multicolumn{2}{|l|}{0 : Success.}\\
+										 & \multicolumn{2}{|l|}{1 : Fail.}\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsubsection {{\color{blue}int} iCAP\_EventTrigger()}
+Trigger the iCAP client service to upload data immediately.
+\begin{table}[H]
+	\large
+	\begin{tabular}{|L{2cm}|L{14cm}|}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{|l|}{Parameters}\\
+		\hline
+		\multicolumn{2}{|l|}{None.}\\
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{|l|}{Returns}\\
+		\hline
+		\multirow{2}{*}{\color{blue}int} & 0 : Success.\\
+										 & 1 : Fail.\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsubsection {{\color{blue}int} iCAP\_SendLogout()}
+Trigger to the iCAP client service to logout immediately.\\
+{\small $\ast$ Call this function only before on the device need to reboot or shutdown.}
+\begin{table}[H]
+	\large
+	\begin{tabular}{|L{2cm}|L{14cm}|}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{|l|}{Parameters}\\
+		\hline
+		\multicolumn{2}{|l|}{None.}\\
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{|l|}{Returns}\\
+		\hline
+		\multirow{2}{*}{\color{blue}int} & 0 : Success.\\
+										 & 1 : Fail.\\
+		\hline
+	\end{tabular}
+\end{table}

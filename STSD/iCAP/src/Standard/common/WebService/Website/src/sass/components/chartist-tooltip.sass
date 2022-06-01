@@ -1,0 +1,30 @@
+.chartist-tooltip
+    position: absolute
+    display: block
+    opacity: 0
+    min-width: 4em
+    padding: .4em
+    background: rgba(255, 255, 255, 0.9)
+    border: 1px dashed #999
+    border-radius: 3px
+    color: #453D3F
+    font-weight: 700
+    text-align: center
+    pointer-events: none
+    z-index: 999
+    -webkit-transition: opacity .2s linear
+    -moz-transition: opacity .2s linear
+    -o-transition: opacity .2s linear
+    transition: opacity .2s linear
+    margin-top: 60px
+    margin-left: 20px
+.chartist-tooltip.tooltip-show
+    opacity: 1
+.ct-area, .ct-line
+    pointer-events: none
+.ct-perfect-fourth
+    position: absolute
+// .ct-chart
+//     position: absolute
+//     height: 230px
+//     width: 100%

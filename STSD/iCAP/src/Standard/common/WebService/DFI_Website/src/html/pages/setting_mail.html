@@ -1,0 +1,111 @@
+
+    <div>
+    <div class="col-md-6">
+        <label for="smtp-addr">SMTP Address *</label>
+        <input class="form-control" id="smtp-addr" spellcheck="false" >
+    </div>
+    <!--style>
+    /*在chrome下移除input[number]的上下箭头*/
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button{
+        -webkit-appearance: none !important;
+        margin: 0;
+    }
+    /*在firefox下移除input[number]的上下箭头*/
+    input[type="number"]{-moz-appearance:textfield;}
+    </style-->
+    <div class="col-md-6">
+        <label for="portNumber">Port Number *</label>
+        <input type="text" class="form-control input-num" id="port-number" oninput="if(value.length>9)value=value.slice(0,9)" placeholder="(None:25, SSL:465, TLS:587)" />
+    </div>
+    </div>
+
+    <div class="col-md-6" style="margin-top:10px">
+        <label for="email-from">E-mail Address *</label>
+        <input type="email"  class="form-control" id="email-from"  autocomplete="off"  spellcheck="false" />
+    </div>
+    <div class="col-md-6" style="margin-top:10px">
+        <label for="email-pwd">Password *</label>
+        <input class="form-control" id="email-pwd" type="password" autocomplete="new-password" spellcheck="false" />
+    </div>
+
+    <div class="col-md-6" style="margin-top:10px">
+        <label for="resendInterval">Event Resend Interval (hrs) *</label>
+        <input type="text"  class="form-control input-num" id="interval" value="12" oninput="if(value.length>9)value=value.slice(0,9)" />
+    </div>
+
+<!-- <form id="myform" class="col-md-12">
+   <input type="checkbox" name="check1" value="check1" >
+</form> -->
+<!-- <div class="col-md-12">
+    <input id="email-enableSSL" type="checkbox" style="display: none"/>
+    <label for="email-enableSSL">Enable SSL</label>
+</div> -->
+<div class="col-md-12" style="margin-top:10px">
+    <label for="resendInterval">Encryption *</label>  
+</div>
+<div class="col-md-12">
+    <div>
+        <span class="radio">
+            <input id="none-radio" name="radio" type="radio" checked>
+            <label for="none-radio" class="radio-label">None</label>
+        </span>
+        <span class="radio">
+            <input id="ssl-radio" name="radio" type="radio">
+            <label for="ssl-radio" class="radio-label">Enable SSL</label>
+        </span>
+        <span class="radio">
+            <input id="tls-radio" name="radio" type="radio">
+            <label  for="tls-radio" class="radio-label">Enable TLS</label>
+        </span>
+    </div>
+</div>
+<div class="col-md-12" style="margin-top:10px">
+    <input id="email-enable" type="checkbox" style="display: none" checked  />
+    <label for="email-enable">Enable send e-mail</label>
+</div>
+
+<div class="col-md-12" style='text-align: right'>
+    <!-- <button class="btn btn-mini btn-dark" id="mail-setting"><span class="glyphicon glyphicon-send"></span><span >Submit</span></button> -->
+    <button class="btn btn-mini btn-dark" id="mail-setting">
+        <span class="glyphicon glyphicon-floppy-disk"></span> 
+        <span>Save</span> 
+    </button>
+    <button class="btn btn-sm btn-dark" id="sendEmailTest">
+        <span class="glyphicon glyphicon-envelope"></span>
+        <span>Send test email...</span>
+    </button>
+    <hr>
+</div>
+
+<div class="col-md-12" id="alert">
+    <div class="alert alert-success" role="alert" id="submit-email-success" ></div>
+    <div class="alert alert-danger" role="alert" id="submit-email-fail" ></div>
+</div>
+<div id="emailTestModal" class="modal fade" tabindex="-1" role="dialog" >
+    <br><br><br><br> <br><br><br><br> <br><br> 
+    <div class="modal-dialog" role="document"  style="width: 500px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Enter email address to send test message to : </h4>                           
+                <input type="email"  class="form-control input-num-dot" id="test-receiving-email-Address"  autocomplete="off" style="width: 300px;" spellcheck="false" />
+                <br>             
+                <button class="btn btn-mini btn-dark" style = 'width: 90px'id="confirm">
+                    <span class="glyphicon glyphicon-eject"></span>
+                    <span>Send</span>
+                </button>
+                <hr>
+                <div class="alert alert-success" role="alert" id="send-test-message-success" style="display: none;"></div>
+                <!-- <div class="alert alert-danger" role="alert" id="send-test-message-server-setup-fail" style="display: none;"></div>     -->
+                <div class="alert alert-danger" role="alert" id="send-test-message-fail" style="display: none;"></div>                     
+            </div>            
+        </div>
+    </div>
+    <div class="waitingModal"><!-- Place at bottom of page -->
+        <div class="faicon">
+            Sending... 
+            <div class="fa fa-spinner fa-spin"></div>
+        </div>        
+    </div>  
+</div>

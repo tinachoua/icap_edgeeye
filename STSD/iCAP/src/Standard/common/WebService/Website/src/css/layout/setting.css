@@ -1,0 +1,170 @@
+@charset "UTF-8";
+.setting .cardbox_left {
+  overflow: hidden;
+  /*border-right: 1px dashed #bababa */
+}
+.setting .cardbox_left .nav {
+  padding: inherit;
+}
+.setting .cardbox_left ul a {
+  background: none;
+  color: #596d78;
+  height: 3rem;
+  width: 3rem;
+  line-height: 35px;
+  border-radius: 50%;
+  font-size: 2rem;
+  padding: 0;
+}
+.setting .cardbox_left ul a:hover {
+  color: var(--FONT_COLOR_E);
+  background: var(--BG_COLOR_07);
+  border: 2px solid var(--FONT_COLOR_E);
+  border-radius: 50%;
+}
+.setting .cardbox_left ul a:active {
+  color: var(--FONT_COLOR_E);
+  background: var(--BG_COLOR_07);
+  border: 2px solid var(--FONT_COLOR_E);
+  border-radius: 50%;
+}
+.setting .cardbox_left ul .active > a {
+  color: var(--FONT_COLOR_E);
+  cursor: none;
+  background-color: var(--BG_COLOR_07);
+  border: 2px solid var(--FONT_COLOR_E);
+}
+.setting .cardbox_left ul .active > a:hover {
+  border: 2px solid var(--FONT_COLOR_E);
+}
+.setting .cardbox_left .nav-tabs {
+  border-bottom: 0;
+}
+.setting .cardbox_left .nav-tabs > li {
+  float: none;
+  display: inline-block;
+}
+.setting .cardbox_left .titleicon {
+  padding: 20px 0;
+  color: var(--FONT_COLOR_E);
+}
+.setting .cardbox_right {
+  overflow: hidden;
+  border-left: 1px dashed #bababa;
+  min-height: 277px;
+}
+.setting .cardbox_right select {
+  margin-bottom: 0.5em;
+  border-radius: 3px;
+  border: 1px solid #bababa;
+  padding: 0.5em;
+}
+.setting .cardbox_right label {
+  margin-bottom: 0.25em;
+}
+.setting .cardbox_right input {
+  margin-bottom: 0.5em;
+  border-radius: 3px;
+  border: 1px solid #bababa;
+  padding: 0.5em;
+}
+.setting .cardbox_right input[type=checkbox] + label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-bottom: 0.6em;
+}
+.setting .cardbox_right input[type=checkbox] + label:before {
+  content: "\f096";
+}
+.setting .cardbox_right input[type=checkbox] + label:before {
+  letter-spacing: 10px;
+}
+.setting .cardbox_right input[type=checkbox]:checked + label:before {
+  content: "\f046";
+}
+.setting .cardbox_right input[type=checkbox]:checked + label:before {
+  letter-spacing: 5px;
+}
+
+/* DRAGGABLE START */
+#sortable, #widgetLibrary {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 2.5em;
+  float: left;
+  margin-right: 10px;
+  width: 465px;
+  background: #f1f1f1;
+  border-style: dotted;
+}
+#sortable li, #widgetLibrary li {
+  margin: 3px 3px 3px 0;
+  padding: 1px;
+  float: left;
+  width: 150px;
+  height: 110px;
+  font-size: 1.2em;
+  background: #dde2e6;
+  color: var(--FONT_COLOR_D);;
+  border-style: dashed;
+}
+#sortable big, #widgetLibrary big {
+  margin: 3px 3px 3px 0;
+  padding: 1px;
+  float: left;
+  width: 455px;
+  height: 110px;
+  font-size: 1.2em;
+  text-align: center;
+  background: #dde2e6;
+  color: var(--FONT_COLOR_D);;
+}
+
+@media (min-width: 768px) {
+  .modal-xl {
+    width: 90%;
+    max-width: 1200px;
+  }
+}
+/*Center button for edit layout */
+#parent {
+  height: 200px;
+  width: 100%;
+  position: relative;
+}
+#parent #child {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  bottom: 1px;
+  position: absolute;
+  color: #fd0d0d;
+}
+
+.subject-info-box-1, .subject-info-box-2 {
+  float: left;
+  width: 45%;
+}
+.subject-info-box-1 select, .subject-info-box-2 select {
+  height: 255px;
+  padding: 0;
+}
+.subject-info-box-1 select option, .subject-info-box-2 select option {
+  padding: 4px 10px 4px 10px;
+}
+.subject-info-box-1 select option:hover, .subject-info-box-2 select option:hover {
+  background: #eee;
+}
+
+.subject-info-arrows {
+  float: left;
+  width: 10%;
+}
+.subject-info-arrows input {
+  width: 70%;
+  margin-bottom: 5px;
+}
+
+.modal .dropdown-menu {
+  width: inherit
+}

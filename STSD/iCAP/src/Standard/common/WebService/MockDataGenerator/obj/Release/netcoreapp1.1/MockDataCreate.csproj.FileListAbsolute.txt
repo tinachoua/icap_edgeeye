@@ -1,0 +1,14 @@
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/MockDataGenerator/bin/Release/netcoreapp1.1/MockDataCreate.deps.json
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/MockDataGenerator/bin/Release/netcoreapp1.1/MockDataCreate.runtimeconfig.json
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/MockDataGenerator/bin/Release/netcoreapp1.1/MockDataCreate.runtimeconfig.dev.json
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/MockDataGenerator/bin/Release/netcoreapp1.1/MockDataCreate.dll
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/MockDataGenerator/bin/Release/netcoreapp1.1/MockDataCreate.pdb
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/MockDataGenerator/bin/Release/netcoreapp1.1/ShareLibrary.dll
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/MockDataGenerator/bin/Release/netcoreapp1.1/ShareLibrary.pdb
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/MockDataGenerator/obj/Release/netcoreapp1.1/MockDataCreate.csprojAssemblyReference.cache
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/MockDataGenerator/obj/Release/netcoreapp1.1/MockDataCreate.csproj.CoreCompileInputs.cache
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/MockDataGenerator/obj/Release/netcoreapp1.1/MockDataCreate.AssemblyInfoInputs.cache
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/MockDataGenerator/obj/Release/netcoreapp1.1/MockDataCreate.AssemblyInfo.cs
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/MockDataGenerator/obj/Release/netcoreapp1.1/MockDataCreate.csproj.CopyComplete
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/MockDataGenerator/obj/Release/netcoreapp1.1/MockDataCreate.dll
+/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/MockDataGenerator/obj/Release/netcoreapp1.1/MockDataCreate.pdb

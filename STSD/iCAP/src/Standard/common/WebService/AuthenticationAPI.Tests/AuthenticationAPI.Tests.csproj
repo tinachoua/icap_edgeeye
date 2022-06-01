@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputType>exe</OutputType>
+    <Configurations>Debug;Release;DEMO</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <ApplicationIcon />
+
+    <OutputTypeEx>exe</OutputTypeEx>
+
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Moq" Version="4.10.1" />
+    <PackageReference Include="nunit" Version="3.11.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AuthenticationAPI\AuthenticationAPI.csproj" />
+    <ProjectReference Include="..\ShareLibrary\ShareLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="mscorlib.Moles">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft Moles\MolesAssemblies\mscorlib\4.0.0.0__b77a5c561934e089\mscorlib.Moles.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

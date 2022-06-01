@@ -1,0 +1,42 @@
+<div class="device_analyzer">
+    <div class="col-md-12 pad0">
+        <div class="col-md-12 pad0">
+            <p class="col-md-3" style="border-left: 2px dashed #596D78;line-height: 40px;" id="analyzer-storage-btn">
+                Storage：
+            </p>
+            <p class="col-md-3" style="border-left: 2px dashed #596D78;" id="analyzer-stor-model"></p>
+            <p class="col-md-3" style="border-left: 2px dashed #596D78;" id="analyzer-stor-cap"></p>
+            <p class="col-md-3" style="border-left: 2px dashed #596D78;" id="analyzer-stor-sn"></p>
+        </div>
+        <div id="analyzer-data">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#tab1">Storage Analyzer</a></li>
+                <li><a data-toggle="tab" href="#tab2">Storage Lifespan</a></li>
+            </ul>
+            <div class="tab-content" *ngIf="analyzerData">
+                <div id="tab1" class="tab-pane fade in active row">
+                    <div id="analyzer-stor-tr"></div>
+                    <div id="analyzer-stor-tw"></div>
+                    <div id="analyzer-stor-sr"></div>
+                    <div id="analyzer-stor-sw"></div>
+                    <div id="analyzer-stor-rr"></div>
+                    <div id="analyzer-stor-rw"></div>
+                </div>
+                <div id="tab2" class="tab-pane fade row">
+                    <div id="analyzer-stor-health" class="gauge"></div>
+                    <div id="analyzer-stor-pe" class="gauge"></div>
+                    <div id="analyzer-stor-life"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="device_analyzer container text-center" id='unsupported-feature' style='display: none'>
+    <div class="boo-wrapper">
+        <div class="boo">
+            <img id='logo-iCAP' style="width: 140px" />
+            <div class="uns">Unsupported Feature</div>
+        </div>
+        <div class="shadow"></div>
+    </div>
+</div>

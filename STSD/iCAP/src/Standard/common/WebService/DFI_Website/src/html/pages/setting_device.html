@@ -1,0 +1,53 @@
+<div class="col-md-6">
+    <label for="text" id="devLabel">Device Name</label>
+    <select class="form-control" id="devListObj">
+    </select>
+</div>
+
+<div class="col-md-6">
+    <label for="number">Alias</label>
+    <input type="" class="form-control" id="alias" placeholder="" spellcheck="false" >
+</div>
+
+<div class="col-md-6">
+    <label for="email">Latitude</label>
+    <input readonly type="" class="form-control" id="lat" placeholder="" spellcheck="false" >
+</div>
+
+<div class="col-md-6">		
+    <label for="url">Longitude</label>
+    <input readonly type="" class="form-control" id="long" placeholder="" spellcheck="false" >
+</div>
+
+<div class="col-md-6">
+    <label for="tel">PhotoURL</label>
+    <input readonly type="" class="form-control" id="photourl" placeholder="" spellcheck="false" >
+</div>
+
+<div class="col-md-6">
+    <label for="date">Owner Name</label>
+    <input readonly type="" class="form-control" id="owner" placeholder="" spellcheck="false" >
+</div>
+
+<!--div class="col-md-12">
+    <label>Description</label>
+    <textarea class="form-control" rows="5" id="comment" style="margin-bottom: 10px;"></textarea>
+</div-->
+
+<!-- 			<div class="col-md-6">
+    <label for="date">Upload Interval (Sec.)</label>
+    <input type="" class="form-control" id="" placeholder="" [(ngModel)]="deviceProfile.UploadInt" [ngModelOptions]="{standalone: true}">
+</div> -->
+
+<div class="col-md-12" style="margin-top:15px">
+    <!-- <button class="btn btn-mini btn-dark" id="update-device" style="float:right;width:90px;margin-left: 15px"><span class = "fa fa-refresh"></span> Update</button> -->
+    <button class="btn btn-mini btn-dark" id="update-device" style="float:right;width:90px;margin-left: 15px"><span class="glyphicon glyphicon-floppy-disk"></span> Save </button>
+    <button class="btn btn-mini btn-dark" id="delete-device" style="float:right;width:90px"><span class="glyphicon glyphicon-trash"></span> Delete </button>
+    <hr style="margin-top:40px">
+    <div class="alert alert-success" role="alert" id="update-success" style="display: none;">Device successfully updated.</div>
+    <!--div class="alert alert-danger" role="alert" id="update-fail" style="display: none;">Failed to update device.</div-->
+    <div class="alert alert-warning" role="alert" id="delete-success" style="display: none;" >Device successfully deleted. The page will refresh in 5 seconds.</div>
+    <!--div class="alert alert-danger" role="alert" id="delete-fail" style="display: none;"></div>
+    <div class="alert alert-danger" role="alert" id="get-fail" style="display: none;" >Failed to retrieve device information.</div-->
+    <div class="alert alert-danger" role="alert" id="fail"style="display: none;" ></div>
+</div>

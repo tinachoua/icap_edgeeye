@@ -1,0 +1,49 @@
+<div class="col-md-12">
+    <label for="text">Login name</label>
+    <select class="form-control" id="user-list" style="width:48%">
+    </select>
+</div>
+
+<div class="col-md-12"><hr></div>
+
+<div class="col-md-6">
+    <label for="email">Employee number</label>
+    <input type="" id="employee-number" class="form-control" spellcheck="false" >
+</div>
+
+<div class="col-md-6">
+    <label for="number">Email *</label>
+    <input type="" id="email" class="form-control" placeholder="guest@example.com" spellcheck="false" >
+</div>
+
+<div class="col-md-12"><hr></div>
+
+<div class="col-md-6">
+    <label for="url">First name</label>
+    <input type="" id="first-name" class="form-control" spellcheck="false" >
+</div>
+
+<div class="col-md-6">
+    <label for="tel">Last name</label>
+    <input type="" id="last-name" class="form-control" spellcheck="false" >
+</div>
+
+<!-- <div class="col-md-12"></div> -->
+
+<div class="col-md-12" style="margin-top:15px">
+    <input id="admin-flag" type="checkbox" style="display: none">
+    <label for="admin-flag">Administrator</label>
+    <hr>
+</div>
+
+<div class="col-md-12">
+    <!-- <button class="btn btn-mini btn-dark" id="userctl-update" style="width:90px;float:right;margin-left: 15px"><span class = "fa fa-refresh"></span> Update </button> -->
+    <button class="btn btn-mini btn-dark" id="userctl-update" style="width:90px;float:right;margin-left: 15px"><span class="glyphicon glyphicon-floppy-disk"></span> Save </button>
+    <button class="btn btn-mini btn-dark" id="userctl-delete" style="width:90px;float:right"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+</div>
+
+<div class="col-md-12" style='margin-top: 15px'>
+    <div class="alert alert-success" role="alert" id="update-success" style="display: none;">User successfully updated.</div>
+    <div class="alert alert-warning" role="alert" id="delete-success" style="display: none;">User successfully deleted. The page will refresh in 5 seconds.</div>
+    <div class="alert alert-danger" role="alert" id="fail" style="display: none;"></div>
+</div>

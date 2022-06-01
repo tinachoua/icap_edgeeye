@@ -1,0 +1,189 @@
+{
+  "format": 1,
+  "restore": {
+    "/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/AuthenticationAPI/AuthenticationAPI.csproj": {}
+  },
+  "projects": {
+    "/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/AuthenticationAPI/AuthenticationAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/AuthenticationAPI/AuthenticationAPI.csproj",
+        "projectName": "AuthenticationAPI",
+        "projectPath": "/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/AuthenticationAPI/AuthenticationAPI.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/AuthenticationAPI/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/root/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp1.1"
+        ],
+        "sources": {
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp1.1": {
+            "projectReferences": {
+              "/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/ShareLibrary/ShareLibrary.csproj": {
+                "projectPath": "/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/ShareLibrary/ShareLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp1.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
+            "Microsoft.AspNetCore.StaticFiles": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[1.1.2, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.BrowserLink": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[10.0.3, )"
+            },
+            "RestSharp.NetCore": {
+              "target": "Package",
+              "version": "[105.2.4-rc4-24214-01, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          },
+          "imports": [
+            "portable-net45+win8"
+          ]
+        }
+      }
+    },
+    "/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/ShareLibrary/ShareLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/ShareLibrary/ShareLibrary.csproj",
+        "projectName": "ShareLibrary",
+        "projectPath": "/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/ShareLibrary/ShareLibrary.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/iCAP_Server/STSD/iCAP/src/Standard/common/WebService/ShareLibrary/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/root/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard1.6"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard1.6": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard1.6": {
+          "dependencies": {
+            "M2MqttDotnetCore": {
+              "target": "Package",
+              "version": "[1.0.6, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[2.0.4, )"
+            },
+            "Microsoft.AspNetCore.WebSockets": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.4.4, )"
+            },
+            "NETStandard.Library": {
+              "target": "Package",
+              "version": "[1.6.1, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[10.0.3, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql.Design": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[1.2.6, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}

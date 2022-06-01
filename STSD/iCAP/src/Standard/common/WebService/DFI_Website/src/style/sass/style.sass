@@ -1,0 +1,217 @@
+html, body
+    padding: 0
+    margin: 0
+    background: #eff3f6
+a, a:hover, a:focus
+    color: inherit
+    text-decoration: none
+    transition: all 0.3s
+/* scrollbar */
+body 
+    scrollbar-face-color: #596D78
+    scrollbar-track-color: #b8c0c8
+::-webkit-scrollbar
+    width: 6px
+    height: 5px
+::-webkit-scrollbar-thumb
+    background: #596D78
+    border-radius: 10px
+::-webkit-scrollbar-track
+    background: #b8c0c8
+
+.footer
+    padding-bottom: 30px
+
+.font_bold
+    font-weight: bold
+.pad0
+    padding: 0
+.pad5
+    padding: 5px
+.padt10
+    padding-top: 10px
+.padt15
+    padding-top: 15px
+.padt10per
+    padding-top: 10%
+.padrl10
+    padding: 0px 10px
+main
+    margin-top: 30px
+
+.map_google
+    width: 100%
+    height: 235px
+.map_vector
+    width: 100%
+    height: 100%
+    position: absolute
+    z-index: 0
+
+/* Branch, Overview */
+.branch_device, .subpanel-Overview
+    table
+        font-size: 14px
+        tr
+            background-color: rgb(255, 255, 255)
+        tr:nth-of-type(odd)
+            background-color: rgb(255, 255, 255)
+
+/* DRAGGABLE START */
+#dashboard-item
+    list-style-type: none 
+    margin: 0 
+    padding: 0 0 2.5em 
+    float: left 
+    margin-right: 10px 
+    border-style: none
+    li
+        float: left 
+        margin: 0
+        padding: 0
+        border-style: none
+#layout
+    list-style-type: none 
+    margin: 0 
+    padding: 0 0 2.5em 
+    float: left 
+    margin-right: 10px 
+    width:auto
+    background: #f1f1f1
+    border-style: none
+    li
+        float: left 
+        width: 250px 
+        height: 300px 
+        font-size: 1.2em 
+        background: #dde2e6
+        color: #16272e
+        border-style: none 
+    big
+        margin: 3px 3px 3px 0 
+        padding: 1px 
+        float: left 
+        width: 455px 
+        height: 110px 
+        font-size: 1.2em 
+        text-align: center 
+        background: #dde2e6
+        color: #16272e
+    mid
+        margin: 3px 3px 3px 0
+        padding: 1px
+        float: left
+        width: 300px
+        height: 110px
+        font-size: 1.2em
+        text-align: center
+        background: #dde2e6
+        color: #16272e
+
+@keyframes floating
+    0%
+        transform: translate3d(0, 0, 0)
+
+    45%
+        transform: translate3d(0, -10%, 0)
+
+    55%
+        transform: translate3d(0, -10%, 0)
+
+    100%
+        transform: translate3d(0, 0, 0)
+
+@keyframes floatingShadow
+    0%
+        transform: scale(1)
+
+    45%
+        transform: scale(0.85)
+
+    55%
+        transform: scale(0.85)
+
+    100%
+        transform: scale(1)
+
+.uns
+    font-size: 28px
+    color: #666666
+    margin-top: -5px
+.boo-wrapper
+    width: 100%
+    position: absolute
+    top: 45%
+    left: 50%
+    transform: translate(-50%, -50%)
+.boo
+    margin-left: auto
+    margin-right: auto
+    overflow: hidden
+    position: relative
+    animation: floating 3s ease-in-out infinite
+.shadow
+    width: 85px
+    height: 16px
+    background-color: rgba(127, 127, 127, 0.2)
+    margin-top: 10px
+    margin-right: auto
+    margin-left: auto
+    border-radius: 50%
+    animation: floatingShadow 3s ease-in-out infinite
+.dashboard-tab-click
+    text-shadow: 0px 0px 10px rgba(225, 225, 225, 1)
+
+.subpanel-Location
+    &>button
+        background: rgb(255,255,255)
+        color: #5E676C
+        border: 1px solid #5E676C
+        border-radius: 4px
+        width: 150px
+.computingModal
+    background-color: rgb(255, 255, 255)
+    height: 2px
+    margin: 1em
+    overflow: hidden
+    position: relative
+    z-index: 999
+    width: 100%
+    margin: 0
+    position: fixed
+    top: 0%
+    display: none
+
+/* loading-bar */
+.loading-bar
+    animation: side2side 4s ease-in-out infinite
+    background-color: dodgerblue
+    height: 100%
+    position: absolute
+    width: 10%
+@keyframes side2side
+    0%, 100%
+        transform: translateX(-50%)
+
+    50%
+        transform: translateX(950%)
+  
+body.computing
+    .computingModal
+        overflow: hidden
+        display: block
+        text-align: center
+
+// Group -> CPU -> Core icon
+.tab-content
+    .navbar-nav
+        &>li
+            &>a
+                padding: 0
+                &:hover
+                    background-color: rgb(255, 255, 255)
+                    color: #5A6269
+        &>.active
+            &>a
+                background-color: rgb(255, 255, 255)
+                color: #5A6269

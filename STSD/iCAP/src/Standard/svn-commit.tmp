@@ -1,0 +1,27 @@
+Modify version 1.5.2 to 1.6.0
+--This line, and those below, will be ignored--
+
+M    Makefile
+M    common/CoreService/DLM/Dockerfile
+M    common/CoreService/DLM/Reinstall.sh
+M    common/CoreService/DM/Dockerfile
+M    common/CoreService/DM/Reinstall.sh
+M    common/CoreService/DashboardAgent/Dockerfile
+M    common/CoreService/DashboardAgent/Reinstall.sh
+M    common/CoreService/DataHandler/Dockerfile
+M    common/CoreService/InnoAgeManager/Dockerfile
+M    common/CoreService/InnoAgeManager/InnoAgeStatus.cpp
+M    common/CoreService/InnoAgeManager/Reinstall.sh
+M    common/CoreService/InnoAgeManager/main.cpp
+M    common/CoreService/NotificationService/Dockerfile
+M    common/CoreService/NotificationService/Reinstall.sh
+M    common/CoreService/StorageAnalyzer/Dockerfile
+M    common/CoreService/libCommon/libWebcommand/src/WebCommand.cpp
+M    common/CoreService/libCommon/libWebcommand/src/include/WebCommand.hpp
+M    common/System/ServerInstaller/Config/close_port_adminDB.yml
+M    common/System/ServerInstaller/Config/open_port_adminDB.yml
+M    common/System/ServerInstaller/iCAP_Server_Installer.py
+M    common/System/ServerInstaller/iCAP_Server_Packer_Linux.py
+M    common/System/ServerInstaller/iCAP_Server_Packer_Windows.bat
+M    common/System/ServerInstaller/iCAP_Server_Uninstall.sh
+M    common/System/ServerInstaller/iCAP_Server_Uninstall_WIN.py

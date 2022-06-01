@@ -1,0 +1,27 @@
+<div class="col-md-6">
+    <label for="text">Default group (number:{{receivedData.length}})</label>
+    <div class="panel" dnd-sortable-container [dropZones]="['boxers-zone','delete-dropZone']" [sortableData]="listBoxers">
+        <div class="panel-body">
+            <ul class="list-group">
+                <li *ngFor="let item of listBoxers; let i = index" class="list-group-item" dnd-sortable [sortableIndex]="i">{{item}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <label for="number">Group</label>
+    <div class="panel" dnd-sortable-container [dropZones]="['boxers-zone','delete-dropZone']" [sortableData]="listTeamOne">
+        <div class="panel-body">
+            <ul class="list-group">
+                <li *ngFor="let item of listTeamOne; let i = index" class="list-group-item" dnd-sortable [sortableIndex]="i" [dragEnabled]="true" (onDropSuccess)="transferDataSuccess($event)">{{item}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="col-md-12">
+    <button class="btn btn-mini btn-dark">Submit</button>
+</div>

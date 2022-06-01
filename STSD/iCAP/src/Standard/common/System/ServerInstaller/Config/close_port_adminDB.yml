@@ -1,0 +1,23 @@
+version: "3"
+services:
+
+  adminDB:
+    image: icap_admindb:v1.6.1
+    user: root
+    container_name: adminDB
+    restart: unless-stopped
+    volumes:
+      - c:/Program Files/iCAP_Server/config:/etc/mysql/conf.d
+      - c:/Program Files/iCAP_Server/AdminDB:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin
+    command:
+      mysqld --innodb-flush-method=littlesync --innodb-use-native-aio=OFF --log_bin=ON
+    networks:
+      app_net:
+        ipv4_address: 172.30.0.3
+
+networks:
+  app_net:
+    external:
+      name: icap_net

@@ -1,0 +1,7 @@
+sequenceDiagram
+Client Service->>+API Gateway: Send authentication token
+activate API Gateway
+Note right of API Gateway: Device not exists and over limitation
+API Gateway-->>Client Service: Response HTTP 403 Forbidden
+deactivate API Gateway
+Note over Client Service, API Gateway: Response payload: {"Cmd": "Auth",<br/> "DeviceId": ""}

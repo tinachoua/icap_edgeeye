@@ -1,0 +1,232 @@
+<div class="col-md-6 col-sm-6">
+    <label for="rulelist">My Threshold Rule</label>
+    <select class="selectpicker form-control"  data-container="body"  id="rulelist" title = "--Please Select One--">    
+    </select>
+</div>
+
+<div class="col-md-2 col-sm-2">
+    <button type="button" class="btn btn-mini btn-dark" id = "create" style = "position: relative;top: 5px;width: 90px">
+        <i class="fa fa-plus" aria-hidden="true"></i> 
+        <span>Add</span>
+    </button>
+    
+    <button type="button" class="btn btn-mini btn-dark" id = "update" style = "position: relative;top: 11px;width: 90px">
+        <i class="fa fa-wrench" aria-hidden="true"></i> 
+        <span>Edit</span>
+    </button>
+</div>
+
+<div class= "col-md-12 col-sm-12">
+    <hr>
+</div>
+<div class="col-md-12 col-sm-12 row " style = 'margin: 0'>
+    <div class="subject-info-box-1">
+        <label class = 'event label-box' for="box-repo" id = "label-box-repo" size="4"></label>
+        <input class = 'event input-filter' id="search-box-repo" type="text" placeholder="Search..." autocomplete="off" style="width: 100%" spellcheck="false"/>
+        <br />
+        <font id ='find-count-repo' size="2" style = "color: #808080; font-style: italic">&nbsp</font>
+        <select multiple="multiple" id='box-repo' class="form-control box">
+        </select>
+    </div>
+    <div class="subject-info-arrows text-center">
+        <br><br><br>
+        <input type='button' id='btnAllRight' value='>>' class="btn btn-default event" /><br />
+        <input type='button' id='btnRight' value='>' class="btn btn-default event" /><br />
+        <input type='button' id='btnLeft' value='<' class="btn btn-default event" /><br />
+        <input type='button' id='btnAllLeft' value='<<' class="btn btn-default event" />
+    </div>    
+    <div class="subject-info-box-2">
+        <label for="box-target" id = "label-box-target" class = 'event label-box'></label>
+        <input id="search-box-target" type="text" placeholder="Search..." autocomplete="off" style="width: 100%" class = 'event input-filter' spellcheck="false"/>
+        <br />
+        <font id = 'find-count-target' size="2" style = "color: #808080; font-style: italic">&nbsp</font>
+        <select multiple="multiple" id='box-target' class="form-control box">
+        </select>
+    </div>
+</div>
+
+<div class="col-md-12 col-sm-12" style="margin-top:10px">
+    <label style = "color: #5e676c">You can consider that enable the rule rule or not.</label>
+    <br><br>
+</div>
+
+<div class="col-md-12 col-sm-12">
+    <input class = 'flag' id="enable-flag" type="checkbox" style="display: none" >
+    <label for="enable-flag">Enable </label>
+</div>
+
+<div class="col-lg-9 col-md-8 col-sm-9 ">
+</div>
+<div class="col-lg-3 col-md-4 col-sm-3 bottom-button-location">
+    <button type="button" class="btn btn-mini btn-dark " id="delete" style="margin-left:-21px;width: 90px">
+        <span class="glyphicon glyphicon-trash"></span> Delete 
+    </button>
+    <button type="button" class="btn btn-mini btn-dark edit-event " id ='save' style="left: 100px; position: absolute;width: 90px" >
+            <span class="glyphicon glyphicon-floppy-disk"></span> Save 
+    </button>
+</div>
+
+<div class="col-md-12 col-sm-12">
+    <br id='blank-alert' class ='alert' style='display:none;'/>
+    <div class="alert alert-danger alert-rule-setting" role="alert" id="danger-rule-setting" style="display: none;" ></div>
+    <div class="alert alert-success alert-rule-setting" role="alert" id="success-rule-setting" style="display: none;" ></div>
+</div>
+<div class="waitingModal">
+    <div class="faicon fa fa-spinner fa-spin"></div>        
+</div> 
+
+<div class="modal fade" id="rule-setting-modal" tabindex="-1" role="dialog" aria-labelledby="rule-setting-modal-label" aria-hidden="true">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="modal-title"></h4>
+            </div>
+            <div class="modal-body" style="margin-bottom:20px">
+                <div class="container-fluid" style='max-height:700px;overflow-y: auto'>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="rule-name">Threshold Rule's Name*</label>
+                            <input type="text" class="form-control rule-settings-field" id="rule-name" placeholder="" spellcheck="false"  autocomplete="off" >
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 ">        
+                            <label style = "color: #5e676c">You can select data for surveillance.</label>
+                            <br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                        <span class="btn  btn-sm btn-default border" id="normal" name='mode' >Normal</span>
+                        <span class="btn  btn-sm btn-default border" id="ratio" name='mode'>Ratio</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6" style="margin-top:20px">
+                            <label for="datalist">Source *</label>
+                            <select class="form-control"   id="datalist"   data-size="10" data-dropup-auto="false"  title = "--Please Select One--">
+                            </select>
+                        </div>
+                    </div>
+                    <div id='denominator'>
+                        <div class="row" style="margin-top:20px">
+                            <div class="col-md-12" >
+                                <label id='denominator-label' for='denominator-select'>Denominator (Ratio = Source ÷ Denominator X 100%)</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <select class="form-control"  id="denominator-select"  data-dropup-auto="false" data-size="8" title="--Please Select One--"  disabled>                        
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id='setting-field' style="height:371px;margin-top:20px">
+                    <div  id = 'type-value' style='position: ab'>
+                        <hr>
+                        <div class="row " >
+                            <div class="col-md-12 col-sm-12 ">        
+                                <label style = "color: #5e676c">Select one type and set the threshold value.</label>
+                                <label style = "color: #aca9a9; font-style: italic">When the dynamic data value achieves the condition you set, the system will send the event message and execute actions which you selected.</label>
+                                <br><br>
+                            </div>
+                        </div>
+                        <div class="row" id='duration-setting' >
+                            <div class="col-md-12" style="width:40%">
+                                <label for="duration-type-select" id='type-label'>Type*</label>
+                                <select class="form-control" id="duration-type-select"   data-size="5" data-dropup-auto="false"  title = "--Please Select One--">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top:20px" id = 'duration-value'>
+                            <div class="col-md-12">
+                                <label for="duration-value">Value *</label>
+                                <br>
+                                <input type="text" class="rule-settings-field" id="duration-value-1" placeholder="" spellcheck="false"  autocomplete="off" style="width:15%">
+                                <span id='value-second-field'>
+                                    <span style="margin-right:5px;margin-left:5px" name='between-type'>-</span>
+                                    <input name='between-type' type="text" class="rule-settings-field" id="duration-value-2" placeholder="" spellcheck="false"  autocomplete="off" style="width:15%;">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top:20px" id = 'device-status'>
+                        <hr>
+                        <div class="row " >
+                            <div class="col-md-12 col-sm-12 ">        
+                                <label style = "color: #5e676c">Select Online or Offline</label>
+                                <label style = "color: #aca9a9; font-style: italic">When the dynamic data value achieves the condition you set, the system will send the event message and execute actions which you selected.</label>
+                                <br><br>
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-md-12" style="width:40%">
+                                <select class="form-control" id="status-select"  data-dropup-auto="false"  title = "--Please Select One--">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="actions">
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 ">        
+                                <label style = "color: #5e676c">You can choose what you want to do when over threshold.</label>
+                                <br><br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="">Action *</label>
+
+                            </div>
+                        </div>
+                        <div>
+                            <div class="col-md-12">
+                                <div class="col-md-6">
+                                    <!-- <input type="checkbox" id="screenShot" style="display:none">
+                                    <label for="screenShot">Screenshot</label>
+                                    <br> -->
+                                    <input type="checkbox" id="sendEmail" style="display:none">
+                                    <label for="sendEmail">Send Email</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id='email-recipient-field'>
+                            <div class="col-md-12">
+                                <label for="">Email Recipient</label>
+                            </div>
+                            <div class="col-md-12">
+                                <textarea id="recipient-textarea" class='recipient form-control ui-widget ui-widget-content' rows="1" spellcheck="false"  ></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">                            
+                <button type="button" class="btn btn-mini btn-dark cancel" data-dismiss="modal" >
+                    <span class="glyphicon glyphicon-remove"></span>
+                     <span>Cancel</span> 
+                </button>
+                <!-- <button type="button" class="btn btn-mini btn-dark" id = "apply-rule">
+                    <span class="glyphicon glyphicon-send"></span>
+                    <span></span> 
+                </button>                -->
+            </div>
+            <div>
+                <div class="alert alert-rule alert-danger" role="alert" id="fail-rule" style="width:90%; margin: auto;"></div>
+                <div class="alert alert-rule alert-success" role="alert" id="success-rule"  style="width:90%; margin: auto;" ></div>
+                <br id="blank-alert-rule" class = "alert alert-rule" />  
+            </div>                
+        </div>      
+    </div>
+    <div class="waitingModal">
+        <div class="faicon fa fa-spinner fa-spin">                
+        </div>        
+    </div>  
+</div>

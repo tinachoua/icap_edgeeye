@@ -1,0 +1,65 @@
+<div class="col-md-12" id="login-name-frame">
+    <label for="text">Login name *</label>
+    <input required type="" class="form-control" id="login-name" placeholder=""  autocomplete="off"  spellcheck="false" style="width:48%">
+</div>
+
+<div class="col-md-12"><hr></div>
+
+<div class="col-md-6">
+    <label for="text">Employee number</label>
+    <input type="" class="form-control" id="employee-number" placeholder="" spellcheck="false" >
+</div>
+
+<div class="col-md-6" id="email-frame">
+    <label for="email">Email *</label>
+    <input type="" class="form-control" id="email" placeholder="" spellcheck="false" >
+</div>
+
+<div class="col-md-12"><hr></div>
+
+<div class="col-md-6">		
+    <label for="url">First name</label>
+    <input type="" class="form-control" id="first-name" placeholder="" spellcheck="false" >
+</div>
+
+<div class="col-md-6">
+    <label for="tel">Last name</label>
+    <input type="" class="form-control" id="last-name" placeholder="" spellcheck="false" >
+</div>
+
+<div class="col-md-12"><hr></div>
+
+<div class="col-md-6" style="display: none">
+    <label for="date">Photo URL</label>
+    <input type="" class="form-control" id="photo-url" placeholder="" spellcheck="false" >
+</div>
+
+<div class="col-md-6" id="pwd-frame">
+    <label for="date">Password *</label>
+    <input required type="password" class="form-control" id="pwd" placeholder="" autocomplete="new-password"  spellcheck="false" >
+</div>
+
+<div class="col-md-6" id="pwd-check-frame">
+    <label for="date">Verify password *</label>
+    <input required type="password" class="form-control" id="pwd-check" placeholder="" autocomplete="new-password" spellcheck="false" >
+</div>
+
+<div class="col-md-12" style="margin-top:15px">
+    <input id="admin-flag" type="checkbox" style="display: none">
+    <label for="admin-flag">Administrator</label>
+    <hr>
+</div>
+
+<!-- <div class="col-md-12">
+    <input id="email-flag" type="checkbox" style="display: none" value="1" checked>
+    <label for="email-flag">Email Notification</label>
+</div> -->
+
+<div class="col-md-12">
+    <button class="btn btn-mini btn-dark"  id="user-create" style="width:90px;float:right;margin-left: 15px"><span class="glyphicon glyphicon-send"></span><span style='margin-left:5px'>Submit</span></button>
+    <div class="alert alert-success" role="alert" id="submit-success" style="display: none;">New user created!</div>
+    <div class="alert alert-danger" role="alert" id="submit-fail" style="display: none;"></div>
+    <div class="alert alert-danger" role="alert" id="submit-name" style="display: none;"></div>
+    <div class="alert alert-danger" role="alert" id="submit-email" style="display: none;"></div>
+    <div class="alert alert-danger" role="alert" id="submit-pwd" style="display: none;"></div>
+</div>

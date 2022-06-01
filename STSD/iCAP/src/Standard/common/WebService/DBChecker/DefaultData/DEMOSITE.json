@@ -1,0 +1,402 @@
+﻿{
+  "Branch": [
+    {
+      "Id" : 1,
+      "Name": "All Devices",
+      "CompanyId": 1
+    },
+    {
+      "Id" : 2,
+      "Name": "TX2",
+      "CompanyId": 1
+    }
+  ],
+  "Dashboard":[
+    {
+      "Id" : 1,
+      "Name" : "Dashboard1",
+      "CompanyId" : 1
+    },
+    {
+      "Id" : 2,
+      "Name" : "GPU",
+      "CompanyId" : 1
+    }
+  ],
+  "Widget": [
+    {
+      "Id": 1,
+      "Name": "Storage Lifespan",
+      "DataId": null,
+      "DataCount": 1,
+      "ChartId": 2,
+      "Width": 1,
+      "SettingStr": "{\"Label\":null,\"Func\":1,\"Divider\":null}",
+      "ThresholdId": 2
+    },
+    {
+      "Id": 2,
+      "Name": "Storage Health",
+      "DataId": 42,
+      "DataCount": 1,
+      "ChartId": 6,
+      "Width": 1,
+      "SettingStr": "{\"Label\":[\"≥ 80%\",\"40% - 80%\",\"< 40%\"],\"Func\":2,\"Divider\":{\"Percentage\":[80,40], \"DenominatorId\":0}}",
+      "ThresholdId": null
+    },
+    {
+      "Id": 3,
+      "Name": "CPU Loading",
+      "DataId": 13,
+      "DataCount": 1,
+      "ChartId": 1,
+      "Width": 1,
+      "SettingStr": "{\"Label\":[\"≥ 80%\",\"60% - 80%\",\"40% - 60%\",\"20% - 40%\",\"< 20%\"],\"Func\":2,\"Divider\":{\"Percentage\":[80,60,40,20], \"DenominatorId\":0}}",
+      "ThresholdId": null
+    },
+    {
+      "Id": 4,
+      "Name": "Memory Loading",
+      "DataId": 30,
+      "DataCount": 1,
+      "ChartId": 1,
+      "Width": 1,
+      "SettingStr": "{\"Label\":[\"≥ 80%\",\"60% - 80%\",\"40% - 60%\",\"20% - 40%\",\"< 20%\"],\"Func\":2,\"Divider\":{\"Percentage\":[80,60,40,20], \"DenominatorId\":24}}",
+      "ThresholdId": null
+    },
+    {
+      "Id": 5,
+      "Name": "Google Map(S)",
+      "DataId": 5,
+      "DataCount": 1,
+      "ChartId": 5,
+      "Width": 1,
+      "SettingStr": "{\"Func\":5, \"Lat\":25.058798, \"Lng\" :121.634247}",
+      "ThresholdId": null
+    },
+    {
+      "Id": 6,
+      "Name": "Google Map(M)",
+      "DataId": 5,
+      "DataCount": 1,
+      "ChartId": 5,
+      "Width": 2,
+      "SettingStr": "{\"Func\":5, \"Lat\":25.058798, \"Lng\" :121.634247}",
+      "ThresholdId": null
+    },
+    {
+      "Id": 7,
+      "Name": "Google Map(L)",
+      "DataId": 5,
+      "DataCount": 1,
+      "ChartId": 5,
+      "Width": 4,
+      "SettingStr": "{\"Func\":5, \"Lat\":25.058798, \"Lng\" :121.634247}",
+      "ThresholdId": null
+    },
+    {
+      "Id": 8,
+      "Name": "Storage Temp.",
+      "DataId": null,
+      "DataCount": 1,
+      "ChartId": 2,
+      "Width": 1,
+      "SettingStr": "{\"Label\":null,\"Func\":1,\"Divider\":null}",
+      "ThresholdId": 1
+    },
+    {
+      "Id": 9,
+      "Name": "Device status",
+      "DataId": 105,
+      "DataCount": 1,
+      "ChartId": 8,
+      "Width": 1,
+      "SettingStr": "{\"Label\":[\"Online\",\"Offline\"],\"Func\":3,\"Divider\":{\"Boolean\":[true,false]}}",
+      "ThresholdId": null
+    },
+    {
+      "Id": 10,
+      "Name": "World Map",
+      "DataId": 5,
+      "DataCount": 1,
+      "ChartId": 9,
+      "Width": 4,
+      "SettingStr": "{\"Func\":6,\"MapIndex\":7}",
+      "ThresholdId": null
+    },
+    {
+      "Id": 11,
+      "Name": "Open Street Map",
+      "DataId": 5,
+      "DataCount": 1,
+      "ChartId": 10,
+      "Width": 4,
+      "SettingStr": "{\"Func\":5, \"Lat\":25.058798, \"Lng\" :121.634247}",
+      "ThresholdId": null
+    },
+    {
+      "Id": 12,
+      "Name": "Google Map(L)TX2",
+      "DataId": 5,
+      "DataCount": 1,
+      "ChartId": 5,
+      "Width": 4,
+      "SettingStr": "{\"Func\":5, \"Lat\":25.058798, \"Lng\" :121.634247}",
+      "ThresholdId": null
+    },
+    {
+      "Id": 13,
+      "Name": "GPU Loading",
+      "DataId": 119,
+      "DataCount": 1,
+      "ChartId": 1,
+      "Width": 1,
+      "SettingStr": "{\"Label\":[\"≥ 80 %\",\"60 % - 80 %\",\"40 % - 60 %\",\"20 % - 40 %\",\"< 20 %\"],\"Func\":2,\"Divider\":{\"Percentage\":[80.0,60.0,40.0,20.0],\"DenominatorId\":0,\"DataName\":\"Total\"}}",
+      "ThresholdId": null
+    },
+    {
+      "Id": 14,
+      "Name": "GPU Temp.",
+      "DataId": 118,
+      "DataCount": 1,
+      "ChartId": 6,
+      "Width": 1,
+      "SettingStr": "{\"Label\":[\"≥ 50 ℃\",\"< 50 ℃\"],\"Func\":4,\"Divider\":{\"Number\":[50.0]}}",
+      "ThresholdId": null
+    },
+    {
+      "Id": 15,
+      "Name": "GPU Fan Temp.",
+      "DataId": 120,
+      "DataCount": 1,
+      "ChartId": 2,
+      "Width": 1,
+      "SettingStr": "{\"Label\":[\"≥ 50 ℃\",\"< 50 ℃\"],\"Func\":4,\"Divider\":{\"Number\":[50.0]}}",
+      "ThresholdId": null
+    },
+    {
+      "Id": 16,
+      "Name": "Device Status",
+      "DataId": 105,
+      "DataCount": 1,
+      "ChartId": 8,
+      "Width": 1,
+      "SettingStr": "{\"Label\":[\"Online\",\"Offline\"],\"Func\":3,\"Divider\":{\"Boolean\":[true,false]}}",
+      "ThresholdId": null
+    },
+    {
+      "Id": 17,
+      "Name": "Storage Lifespan",
+      "DataId": 98,
+      "DataCount": 1,
+      "ChartId": 6,
+      "Width": 1,
+      "SettingStr": "{\"Label\":[\"≥ 2000 days\",\"< 2000 days\"],\"Func\":4,\"Divider\":{\"Number\":[2000.0]}}",
+      "ThresholdId": null
+    },
+    {
+      "Id": 18,
+      "Name": "Storage Health",
+      "DataId": 42,
+      "DataCount": 1,
+      "ChartId": 6,
+      "Width": 1,
+      "SettingStr": "{\"Label\":[\"≥ 80 %\",\"40 % - 80 %\",\"< 40 %\"],\"Func\":4,\"Divider\":{\"Number\":[80.0,40.0]}}",
+      "ThresholdId": null
+    },
+    {
+      "Id": 19,
+      "Name": "World Map (TX2)",
+      "DataId": 5,
+      "DataCount": 1,
+      "ChartId": 9,
+      "Width": 4,
+      "SettingStr": "{\"Func\":6,\"MapIndex\":7}",
+      "ThresholdId": null
+    },
+    {
+      "Id": 20,
+      "Name": "Gaode Map(L)",
+      "DataId": 5,
+      "DataCount": 1,
+      "ChartId": 11,
+      "Width": 4,
+      "SettingStr": "{\"Func\":5, \"Lat\":22.513274, \"Lng\" :113.915438}",
+      "ThresholdId": null
+    }
+  ],
+  "WidgetBranchElement": [
+    {
+      "Id": 1,
+      "WidgetId": 1,
+      "BranchId": 1
+    },
+    {
+      "Id": 2,
+      "WidgetId": 2,
+      "BranchId": 1
+    },
+    {
+      "Id": 3,
+      "WidgetId": 3,
+      "BranchId": 1
+    },
+    {
+      "Id": 4,
+      "WidgetId": 4,
+      "BranchId": 1
+    },
+    {
+      "Id": 5,
+      "WidgetId": 5,
+      "BranchId": 1
+    },
+    {
+      "Id": 6,
+      "WidgetId": 6,
+      "BranchId": 1
+    },
+    {
+      "Id": 7,
+      "WidgetId": 7,
+      "BranchId": 1
+    },
+    {
+      "Id": 8,
+      "WidgetId": 8,
+      "BranchId": 1
+    },
+    {
+      "Id": 9,
+      "WidgetId": 9,
+      "BranchId": 1
+    },
+    {
+      "Id": 10,
+      "WidgetId": 10,
+      "BranchId": 1
+    },
+    {
+      "Id": 11,
+      "WidgetId": 11,
+      "BranchId": 1
+    },
+    {
+      "Id": 12,
+      "WidgetId": 12,
+      "BranchId": 2
+    },
+    {
+      "Id": 13,
+      "WidgetId": 13,
+      "BranchId": 2
+    },
+    {
+      "Id": 14,
+      "WidgetId": 14,
+      "BranchId": 2
+    },
+    {
+      "Id": 15,
+      "WidgetId": 15,
+      "BranchId": 2
+    },
+    {
+      "Id": 16,
+      "WidgetId": 16,
+      "BranchId": 2
+    },
+    {
+      "Id": 17,
+      "WidgetId": 17,
+      "BranchId": 2
+    },
+    {
+      "Id": 18,
+      "WidgetId": 18,
+      "BranchId": 2
+    },
+    {
+      "Id": 19,
+      "WidgetId": 19,
+      "BranchId": 2
+    },
+    {
+      "Id": 20,
+      "WidgetId": 20,
+      "BranchId": 2
+    }
+  ],
+  "DashboardElement": [
+    {
+      "DashboardId": 1,
+      "IteratorIndex": 1,
+      "WidgetId": 9
+    },
+    {
+      "DashboardId": 1,
+      "IteratorIndex": 2,
+      "WidgetId": 3
+    },
+    {
+      "DashboardId": 1,
+      "IteratorIndex": 3,
+      "WidgetId": 4
+    },
+    {
+      "DashboardId": 1,
+      "IteratorIndex": 4,
+      "WidgetId": 1
+    },
+    {
+      "DashboardId": 1,
+      "IteratorIndex": 5,
+      "WidgetId": 2
+    },
+    {
+      "DashboardId": 1,
+      "IteratorIndex": 6,
+      "WidgetId": 8
+    },
+    {
+      "DashboardId": 1,
+      "IteratorIndex": 7,
+      "WidgetId": 7
+    },
+    {
+      "DashboardId": 2,
+      "IteratorIndex": 1,
+      "WidgetId": 16
+    },
+    {
+      "DashboardId": 2,
+      "IteratorIndex": 2,
+      "WidgetId": 13
+    },
+    {
+      "DashboardId": 2,
+      "IteratorIndex": 3,
+      "WidgetId": 15
+    },
+    {
+      "DashboardId": 2,
+      "IteratorIndex": 4,
+      "WidgetId": 14
+    },
+    {
+      "DashboardId": 2,
+      "IteratorIndex": 5,
+      "WidgetId": 17
+    },
+    {
+      "DashboardId": 2,
+      "IteratorIndex": 6,
+      "WidgetId": 18
+    },
+    {
+      "DashboardId": 2,
+      "IteratorIndex": 7,
+      "WidgetId": 19
+    }
+  ]
+}

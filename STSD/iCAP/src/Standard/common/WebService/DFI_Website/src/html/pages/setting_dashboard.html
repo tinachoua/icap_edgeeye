@@ -1,0 +1,138 @@
+<div id="time-frame" class="col-md-6">
+    <label for="text">Dashboard refresh Rate (Seconds) *</label>
+    <input class="form-control input-num" id="time">
+</div>
+<div class="col-md-12">
+    <br>
+    <button class="btn btn-mini btn-dark" id="update-dashboard" style="width:90px">
+        <!-- <span class = "fa fa-refresh"></span> Update        -->
+        <span class="glyphicon glyphicon-floppy-disk"></span> <span>Save</span> 
+    </button>
+    <hr>
+    <div class="alert alert-success" id="update-success" style="display: none;" >Dashboard settings updated successfully.</div>
+    <div class="alert alert-danger" id="update-rate" style="display: none;" ></div>
+</div>
+  
+<div class="col-md-6">
+    <label for="dashboardlist">My Dashbaord</label>
+    <select class="form-control"  data-container="body"  id="dashboardlist" title="--Please Select One--"  >    
+    </select>
+    <br><br><br>
+</div>
+<div class="col-md-12">    
+    <button type="button" class="btn btn-sm btn-dark" id="create-dashboard">
+        <span class="glyphicon glyphicon-plus"></span> 
+        <span>Add New Dashboard</span> 
+    </button>
+    <button type="button" class="btn btn-sm btn-dark" id="edit-dashboard">
+        <span class="glyphicon glyphicon-edit"></span> 
+        <span>Edit Context</span> 
+    </button>    
+    <button type="button" class="btn btn-mini btn-dark" id="delete-dashboard" style="width:90px">
+        <span class="glyphicon glyphicon-trash"></span> 
+        <span>Delete</span> 
+    </button>
+    <hr>
+    <div class="alert alert-danger alert-dashboard-setting" role="alert" id="danger-dashboard-setting" style="display: none;" ></div>
+    <div class="alert alert-success alert-dashboard-setting" role="alert" id="success-dashboard-setting" style="display: none;" ></div>
+</div>
+
+<div class="waitingModal">
+    <div class="faicon fa fa-spinner fa-spin"></div>        
+</div>  
+
+<div class="modal fade" id="create-dashboard-modal" tabindex="-1" role="dialog" aria-labelledby="create-dashboard-modal-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="margin-top:200px">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="create-dashboard-modal-label">Add New Dashboard</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="dashboard-name">Name *</label>
+                            <input type="text" class="form-control dashboard-settings-field" id="dashboard-name" placeholder="" spellcheck="false"  autocomplete="off" >
+                        </div>
+                    </div>                
+                </div>
+            </div>
+            <div class="modal-footer">                            
+                <button type="button" class="btn btn-mini btn-dark" data-dismiss="modal" >
+                    <span class="glyphicon glyphicon-remove"></span> 
+                    <span>Cancel</span> 
+                </button>
+                <button type="button" class="btn btn-mini btn-dark" id = "submit-create-dashboard">
+                    <span class="glyphicon glyphicon-send"></span> 
+                    <span>Submit</span> 
+                </button>               
+            </div>
+            <div class="alert alert-danger" role="alert" id="fail-create-dashboard" style="display: none; width:90%; margin: auto;"></div>
+            <div class="alert alert-success" role="alert" id="success-create-dashboard"  style=" display:none; width:90%; margin: auto;" >New dashboard created.</div>
+            <br id="blank-create-dashboard" style="display:none" />             
+        </div>      
+    </div>
+    <div class="waitingModal">
+        <div class="faicon fa fa-spinner fa-spin">                
+        </div>        
+    </div>  
+</div>
+    
+<div class="modal fade" id="edit-dashboard-modal" tabindex="-1" role="dialog" aria-labelledby="edit-dashboard-modal-label" aria-hidden="true" style = 'overflow-y: scroll; '>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="edit-dashboard-modal-label">Edit Context</h4>                
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="dashboard-name">Dashboard Name *</label>
+                            <input type="text" class="form-control edit-event" id="dashboard-name-edit" placeholder="" spellcheck="false"  autocomplete="off"  >                        
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row" style="height: 486px">
+                        <div class="col-md-12">
+                            <label style = "color: #5e676c">Choose the widget which you want to show on the dashboard from widget repository.</label>
+                            <br><br>
+                        </div>                        
+                        <div class="col-md-12">
+                            <label for="widgetlist">Widget Repository </label>
+                        </div>
+                        <div class="col-md-12">
+                            <select class="form-control event selectpicker"   id="widgetlist"  data-size="10"  data-dropup-auto="false"  multiple data-actions-box="true"  data-live-search="true">
+                            </select>                               
+                            <!-- <select class="selectpicker"  id="widgetlist"  multiple>
+                            </select>    -->
+                        </div>  
+                    </div>
+                </div>              
+            </div>                                 
+            <div class="modal-footer ">
+                <button type="button" class="btn btn-mini btn-dark edit-event" id ='ok-edit' >
+                        <span class="glyphicon glyphicon-ok"></span> 
+                        <span>Ok</span> 
+                </button>
+                <button type="button" class="btn btn-mini btn-dark" data-dismiss="modal"  >
+                    <span class="glyphicon glyphicon-remove"></span> 
+                    <span>Cancel</span> 
+                </button>
+                <button type="button" class="btn btn-mini btn-dark edit-event " id ='apply-edit' >
+                        <span class="glyphicon glyphicon-pencil"></span> 
+                        <span>Apply</span> 
+                </button>
+            </div>
+            <div class="alert alert-danger edit-alert" role="alert" id="fail-edit" style="display:none;width:90%; margin: auto;"></div>
+            <div class="alert alert-success edit-alert" role="alert" id="success-edit" style="display:none;width:90%; margin: auto;"></div>          
+            <br id="alert-blank-edit" class = "edit-alert" style="display:none;" >   
+        </div>
+    </div>
+</div>

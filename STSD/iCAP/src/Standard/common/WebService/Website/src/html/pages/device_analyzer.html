@@ -1,0 +1,59 @@
+<div class="device_analyzer">
+    <div class="col-md-12 pad0">
+        <!-- <p id="analyzer-storage-btn" class="col-md-3 titlebut">
+            Storage：
+        </p> -->
+
+        <div class="col-md-12 pad0">
+            <p class="col-md-3" style="border-left: 2px dashed #596D78;line-height: 40px;" id="analyzer-storage-btn">
+                Storage：
+            </p>
+            <p class="col-md-3" style="border-left: 2px dashed #596D78;" id="stor-model"></p>
+            <p class="col-md-3" style="border-left: 2px dashed #596D78;" id="stor-cap"></p>
+            <p class="col-md-3" style="border-left: 2px dashed #596D78;" id="stor-sn"></p>
+        </div>
+
+
+        <!-- <div id="analyzer-info"></div> -->
+
+        <div id="analyzer-data">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#tab1">Storage Analyzer</a></li>
+                <li><a data-toggle="tab" href="#tab2">Storage Lifespan</a></li>
+            </ul>
+            <div class="tab-content" *ngIf="analyzerData">
+                <div id="tab1" class="tab-pane fade in active row">
+                    <div id="stor-tr"></div>
+                    <div id="stor-tw"></div>
+                    <div id="stor-sr"></div>
+                    <div id="stor-sw"></div>
+                    <div id="stor-rr"></div>
+                    <div id="stor-rw"></div>
+                </div>
+
+
+                <div id="tab2" class="tab-pane fade row">
+                    <div id="stor-health" class="gauge"></div>
+                    <div id="stor-pe" class="gauge"></div>
+                    <div id="stor-life"></div>
+                </div>
+            </div>
+        </div>
+        <!-- <div id="analyzer-empty" class="col-md-12">
+            <div class="alert alert-danger" role="alert">This storage doesnot support iAnalyzer.</div>
+        </div> -->
+    </div>
+</div>
+<div class="waitingModal">
+    <div class="faicon fa fa-spinner fa-spin"></div>
+</div>
+<div class="container text-center" id='unsupported-feature'>
+    <div class="boo-wrapper">
+        <div class="boo">
+            <!-- <img style="width:140px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA7dJREFUeNrsW92N2kAQNoj3I8pbXs5XAe7guAqgg5gKzqkAU0F8FWAqiK+CmAoCHcBL3qJABWQm+oxGe/7Z9YGCo/mklcE/49n55m8X0TudTp7idtBXEyghCiVECVEoIUqIQglRQhRKiBKiUEIUSogSolBC/gMMXB/42fsY0mFKYyJOH2lkNOJPp187NWt79Gx/DyEihnRIDSK2NHwad+LcjEhJ1bTXT1kZyOBo+ELjAxk+oMFEPdB4xX1LRJHiWhECAy9BxphI2FTcF9HhK+7z6b6DZeQF+Lqpe8a41wa7rqVQ2xoS4xhVkcGgawkZjevLIw0mMbGQzQb+js9PNPISEmLIu3Oc30LoLmUGOD+xlLPF3PMGZ4kwbPRkp01IZuyUsuhFXCPuaewta0NBwvS93oJJshGeW5BRJZP1+uFABmPETlOVioWecwc9+b45PZs0pizBdggyrLspPPtbnHqFJ+SuKYuusQN8Frev0Fi0Sll4104YbQ15VWltCBtI8h7MucOozw56hsa8zjLfEIJwTuEVMmRHBjFRVcSQjBzdlyRzYYaniMDC81LDgCfxvuC99UDUuEp9Kp4bi7T6Qs9FFQ64h542tVOSeO5M+yXemsH4bISZ6KZ6yPFreBh3UxG82KwlXPh9dF8vOM3hWWYAH6E+x2dphHOHd6Hi7Jek1kYguvei5klIPRMbMkTX+kavfkn+vxcemcoXsGJsbISkB2871ExkB2+aCVL8FobMLtTEFMZcOxiuQNog03NMp/XrEERHkdemNTUiNAp2auFhqSAxbqHnwesAWpD8Zn6DktDb1rV3bFzUiABRtLF8aQLCxzdgu6GREl3TnU3NaZIlHXNTRkgRermFJ+zQmWQO3rMhRT2j0P8rjESRvgZcZB+rCGmzRsggLEfL2qlV8Q2AyQhlqhuUhI1tKIdYkT8iuqIGAgPRGjqnmAsbYtukr8XaoQ5PDt1b5dZJcXHEObCujhTbKGCYW+DcopbEtimxpJCHF+y0/sq2mJ9rXag1tHOXhbApOqEEKakuXclua44tCa+mM5u4dFkg+IivkxZFuJMYlHj9FEWPi3BcthoHeTmMvUIof6PPC7naxpojFqE+c6wzCRaMHvaS1g4R5iFy884SwoaGJ2bohng1vnSQN0e0lF1z/uGKtzYQecW2TVGzXNApQvoVqYIL8KJlATa7iBU2z1qtYnnb5kK6dAI9/UvbjUeIQglRKCFKiEIJUUIUSogSolBClBCFEqJQQpQQhRLSQfwRYAB8mZ9U1zjxegAAAABJRU5ErkJggg==" alt=""> -->
+            <img id='logo-iCAP' style="width: 140px" />
+            <div class="uns">Unsupported Feature</div>
+        </div>
+        <div class="shadow"></div>
+    </div>
+</div>

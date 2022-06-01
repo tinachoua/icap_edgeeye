@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-icon_expand">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="icon_expand" clip-path="url(#clip-icon_expand)">
+    <g id="icon_expand-2" data-name="icon_expand">
+      <g id="Rectangle_1495" data-name="Rectangle 1495" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+        <rect width="24" height="24" stroke="none"/>
+        <rect x="0.5" y="0.5" width="23" height="23" fill="none"/>
+      </g>
+      <path id="Path_79" data-name="Path 79" d="M-20350.35-3090.5l-2.85-4.5h6Z" transform="translate(20362.199 3105)" fill="#3085d6"/>
+    </g>
+  </g>
+</svg>

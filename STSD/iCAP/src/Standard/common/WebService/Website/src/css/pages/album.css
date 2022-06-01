@@ -1,0 +1,23 @@
+.thumbnail img{
+  width: 100% ;
+  max-height: 200px !important;
+  height: 200px !important;
+  background-size: cover;
+}
+div.thumbnail {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+}
+.pagination>li>a {
+  color: #333333;
+}
+.pagination>.active>a{
+  z-index: 3;
+  color: #333333 !important;
+  cursor: default;
+  background-color: #dcdcdc !important;
+  border: 1px solid #979797 !important;
+}
+
+.Block_shadow:hover {
+  box-shadow: 0 0 5px 7px rgba(0, 0, 0, 0.2);
+}

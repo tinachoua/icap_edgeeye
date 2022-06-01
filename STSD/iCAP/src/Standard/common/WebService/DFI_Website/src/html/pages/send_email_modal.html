@@ -1,0 +1,51 @@
+<div class="modal fade" id="send-email-modal" tabindex="-1" role="dialog" aria-labelledby="send-email-modal-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="send-email-modal-label">Send Message</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="emp">Receiver *</label>
+                            <select id="emp" class="selectpicker" multiple title="--Please Select One--" data-dropup-auto="false"></select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="subject" style='margin-top: 10px;'>Subject *</label>
+                            <!-- <input type="text" class="form-control dashboard-settings-field" id="subject" placeholder="" spellcheck="false"  autocomplete="off" > -->
+                            <div><textarea id="subject" rows="1" style='width: 100%' spellcheck="false"></textarea></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="content" style='margin-top: 10px;'>Message *</label>
+                            <!-- <input type="text" class="form-control dashboard-settings-field" id="content" placeholder="" spellcheck="false"  autocomplete="off" > -->
+                            <div><textarea id="content" rows="8" style='width: 100%' spellcheck="false"></textarea></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-mini btn-dark" data-dismiss="modal">
+                    <span class="glyphicon glyphicon-remove"></span> Cancel
+                </button>
+                <button type="button" class="btn btn-mini btn-dark" id="send">
+                    <span class="glyphicon glyphicon-send"></span> Send
+                </button>
+            </div>
+            <div class="alert alert-danger" role="alert" id="fail-send-email" style="display: none; width:90%; margin: auto;"></div>
+            <div class="alert alert-success" role="alert" id="success-send-email" style=" display:none; width:90%; margin: auto;">New dashboard created.</div>
+            <br class="alert" id="blank-send-email" style="display:none" />
+        </div>
+    </div>
+    <div class="waitingModal">
+        <div class="faicon fa fa-spinner fa-spin">
+        </div>
+    </div>
+</div>

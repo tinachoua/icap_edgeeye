@@ -1,0 +1,132 @@
+.subpanel-MEM .dev_overview {
+    background-color: rgb(19, 125, 125);
+}
+.subpanel-MEM .dev_overview .title {
+    color: rgb(255,255,255);
+    font-size: 24px;
+    padding: 8px 8px 8px 25px;
+}
+
+.subpanel-MEM .dev_overview .tab-content+.tab-content {
+    border-left: 4px solid rgb(90,98,105);
+    margin: 0;
+    overflow: auto;
+}
+.subpanel-MEM .dev_overview .tab-content.long {
+    height: 445px;
+}
+.subpanel-MEM .dev_overview .tab-content.short {
+    height: 155px;
+}
+.subpanel-MEM .dev_overview .table{
+    margin-bottom: 0;
+}
+.subpanel-MEM .note{
+    width: 100%;
+    text-align: right;
+}
+.subpanel-MEM .feature{
+    display: flex;
+    flex-direction: column;
+    height: 537px;
+}
+
+.subpanel-MEM .feature .item1{
+    overflow: hidden;
+    flex-basis: 228px;
+}
+.subpanel-MEM .feature .item2{
+    flex-grow: 1;
+}
+
+.inno-logo {
+    background-image: url('../../assets/innoAGE.svg');
+}
+.age-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.age-flex .item1 {
+    flex-basis: 250px;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/innoAGE.svg');
+    background-position: center;
+}
+
+.age-flex .item2 {
+    flex:1;
+}
+
+.body-wrapper{
+    padding: 30px;
+    display: flex;
+}
+
+.body-wrapper .body-left-wrapper{
+    background-color: #F6F6F6;
+}
+
+
+.body-wrapper #InnoAGE-logo{
+    width: 250px;
+    height: 161px;
+}
+
+.body-right-wrapper{
+    flex: 1;
+    padding-left: 55px;
+}
+
+.body-right-wrapper h1{
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin: 0px;
+}
+
+.body-right-wrapper .status-wrapper{
+    display: flex;
+    font: 14px;
+    color: #848484;
+    margin-top: 8px;
+}
+
+.body-right-wrapper .status-wrapper .text-wrapper{
+    margin-left: 10px;
+}
+
+.body-right-wrapper .status-wrapper  div {
+    flex-basis: 123px;
+}
+
+.led {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+.led.green{
+    background: #80db22;
+    box-shadow: 0 0 0 4px rgba(128, 219, 34, 0.33);
+}
+.led.grey{
+    background: rgb(90,98,105);
+    box-shadow: 0 0 0 4px rgba(152, 152, 152, 0.33);
+}
+.led.orange{
+    background: #F5A623;
+    box-shadow: 0 0 0 4px rgba(152, 152, 152, 0.33);
+}
+
+.body-right-wrapper .oob-wrapper{
+    margin-top: 20px;
+}
+
+
+.subpanel-OOB .table-wrapper{
+    padding: 30px;
+}
+
+

@@ -1,0 +1,33 @@
+<div>Each device will generate one event log per day under the same circumstances. A new log occurs only if the old log of the same day be solved.</div>
+<br>
+<div>Latest Event Logs: </div>
+<div>
+    <!-- <input id='count' type="text" value="100"><button id='find'>Show</button><button id='find-all' style='margin-top:5px;'>Show All</button>
+    &nbsp&nbsp<span id='alert' style='color: red'></span> -->
+    <input id='count' type="text" value="100" style="border-radius: 3px;border: 1px solid #bababa;padding: 0.2em;">
+    <button id='find' class="btn btn-mini btn-dark">Show</button>
+    <button id='find-all' class="btn btn-mini btn-dark">Show All</button>
+    <span id='alert' style='color: red'></span>
+</div>
+<!-- <div>
+    <button id = 'find-all' style = 'margin-top:5px;'>Find All</button> 
+</div> -->
+<div class="cardbox event">
+    <table id="event-table" class="table table-striped hover row-border">
+        <thead>
+            <tr>
+                <th data-sortable="true" width="10">Index</th>
+                <th data-sortable="true" width="120">TIME</th>
+                <th data-sortable="true" width="100">DEVICE</th>
+                <th data-sortable="false">DETAIL</th>
+                <th data-sortable="true" width="100">OWNER</th>
+                <th data-sortable="false" width="50">ACTION</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+<div class="waitingModal">
+    <div class="faicon fa fa-spinner fa-spin">
+    </div>
+</div>
