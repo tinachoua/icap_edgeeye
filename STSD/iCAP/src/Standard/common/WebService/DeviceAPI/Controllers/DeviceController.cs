@@ -1099,5 +1099,72 @@ namespace DeviceAPI.Controllers
                 return StatusCode(403, JsonConvert.SerializeObject(retPayload));
             }
         }
+        [HttpPost("DeviceAPI/RemoteReboot")]
+        [ProducesResponseType(202)]
+        [ProducesResponseType(403)]
+        public IActionResult RemoteReboot([FromHeader] string token, [FromBody] RemoteNativeCommand remoteCmd)
+        {
+            //List<string> devList = _add.GetList();
+
+            string user = _rcd.GetCache(0, token);
+            //_remoteCmdSender.SendRemoteNativeCommand(remoteCmd.devName, remoteCmd.cmd);
+            if (user != null)
+            {
+                Device dev = _add.Get(remoteCmd.devName);
+
+                if (dev == null)
+                {
+                    var retPayload1 = new
+                    {
+                        Response = "device not found"
+                    };
+
+                    LogAgent.WriteToLog(new LogAgent.LogFileFormat()
+                    {
+                        Direction = true,
+                        Name = user,
+                        Method = "POST",
+                        URL = "DeviceAPI/RemoteReboot",
+                        ResponseCode = 400,
+                        Remark = $"Device {remoteCmd.devName} not found."
+                    });
+
+                    return StatusCode(400, JsonConvert.SerializeObject(retPayload1));
+                }
+
+                _remoteCmdSender.SendRemoteNativeCommand(remoteCmd.devName, remoteCmd.cmd);
+
+                LogAgent.WriteToLog(new LogAgent.LogFileFormat()
+                {
+                    Direction = true,
+                    Name = user,
+                    Method = "POST",
+                    URL = "DeviceAPI/RemoteReboot",
+                    ResponseCode = 202,
+                    Remark = "Send device remote command success."
+                });
+
+                return StatusCode(202);
+            }
+            else
+            {
+                var retPayload = new
+                {
+                    Response = "authentication error"
+                };
+
+                LogAgent.WriteToLog(new LogAgent.LogFileFormat()
+                {
+                    Direction = true,
+                    Name = user,
+                    Method = "POST",
+                    URL = "DeviceAPI/RemoteReboot",
+                    ResponseCode = 403,
+                    Remark = "Request authentication token error."
+                });
+
+                return StatusCode(403, JsonConvert.SerializeObject(retPayload));
+            }
+        }
     }
 }

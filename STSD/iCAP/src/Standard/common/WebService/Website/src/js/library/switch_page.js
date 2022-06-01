@@ -21,6 +21,7 @@ import { DeviceManager as deviceManager} from '../DeviceManager';
 import {
     BG_COLOR_05
 } from "../constants/globalVariable"
+//import { NXReboot } from '../library/NXReboot';
 
 export function SwitchPage() {
     function remvoeBSDropdown() {
@@ -216,7 +217,7 @@ export function SwitchPage() {
         document.getElementById("contact-buttons-bar").style.display = 'none';
     }
 
-    function SwitchToWidgetDevice(e, event_table, clickFlag, deviceInfo, refreshFlag, deviceData, oobDirector) {
+    function SwitchToWidgetDevice(e, event_table, clickFlag, deviceInfo, refreshFlag, deviceData, oobDirector, rebootDirector) {
         var data = null;
         var data = (Boolean($(e.target).attr('data-button')) === true) ?
             JSON.parse($(e.target).attr('data-button')) : { devName: $(e.target).val() };
@@ -440,8 +441,12 @@ export function SwitchPage() {
             ooblist: device.getOOBlist(),
             devName: device.getName()
         });
+        
+        rebootDirector.setUp({
+            devName: device.getName()
+        });
 
-        initDeviceInfoPage(deviceData, deviceInfo, clickFlag, event_table, oobDirector);
+        initDeviceInfoPage(deviceData, deviceInfo, clickFlag, event_table, oobDirector, rebootDirector);
 
         $('#device-modal').click(() => {
             widgetModal.modal("show");

@@ -68,7 +68,7 @@ export var updateTwoTableData = function (devName, alias, specificDevice) {
     });
 };
 
-export var putFirstsTabs = function (deviceInfo, clickFlag, event_table, oobDirector) {
+export var putFirstsTabs = function (deviceInfo, clickFlag, event_table, oobDirector, rebootDirector) {
     const DeviceInfoWrapper = document.createElement('div');
     DeviceInfoWrapper.classList.add('device-navbar-wrapper');
 
@@ -120,7 +120,6 @@ export var putFirstsTabs = function (deviceInfo, clickFlag, event_table, oobDire
             const target = $(e.target).val();
 
             $('body').addClass('loading');
-
             promise.GetDetail = APICaller.GET(`DeviceInfoAPI/GetDetail?DeviceName=${target}`);
             promise.GetOverView = APICaller.GET(`DeviceInfoAPI/GetOverview?DeviceName=${target}`);
             promise.GetLocation = APICaller.GET(`DeviceInfoAPI/GetLocation?DeviceName=${target}`);
@@ -138,7 +137,7 @@ export var putFirstsTabs = function (deviceInfo, clickFlag, event_table, oobDire
                     img: JSON.parse(response_Img[0]),
                 };
 
-                _SwitchPage.ToWidgetDevice(e, event_table, clickFlag, deviceInfo, refreshFlag, deviceData, oobDirector);
+                _SwitchPage.ToWidgetDevice(e, event_table, clickFlag, deviceInfo, refreshFlag, deviceData, oobDirector, rebootDirector);
                 if (Boolean(refreshFlag) === false) {
                     const specificDevice = $.map(deviceInfo.record, function (item, index) {
                         if (item.devName === $(e.target).val())

@@ -9,6 +9,7 @@ export var g_AutoRefreshId;
 import { GOOGLEMAP_CHART, VECTORMAP_CHART, OPENSTREETMAP_CHART, GAODEMAP_CHART } from '../library/data_mapping';
 import '../../css/pages/device_info.css'
 import { OOBDirector } from '../library/OOB';
+import { NXReboot } from '../library/NXReboot';
 import { DeviceManager as deviceManager } from '../DeviceManager';
 import { createIndexBtn, createBody } from '../library/common';
 import { BG_COLOR_03, FONT_COLOR_A, CHART_BASE_COLOR_D } from "../constants/globalVariable";
@@ -37,12 +38,15 @@ $(document).on("reload-device-info", function (event, devName) {
     var ext_gauge_obj = [];
 
     const oobDirector = new OOBDirector();
+    const rebootDirector = new NXReboot();
+    console.log("dev info js")
     /**
      * Render Device Overview
      * @param {string} store_token The identity token
      * @param {string} devName Device name
      */
     function RenderOverview(store_token, devName) {
+        console.log("----RenderOverview");
         $.ajax({
             type: 'GET',
             url: 'DeviceInfoAPI/GetOverview?DeviceName=' + devName,
@@ -52,6 +56,7 @@ $(document).on("reload-device-info", function (event, devName) {
                 'token': store_token
             },
             success: function (response) {
+                console.log("----GetOverview?DeviceName");
                 function RenderStorageAnalysisData(data) {
                     var storName = [];
                     var storData = [];
@@ -94,6 +99,13 @@ $(document).on("reload-device-info", function (event, devName) {
                 oobDirector.setUp({
                     ooblist: device.getOOBlist(),
                     devName: device.getName(),
+                });
+                //console.log("kkkkkk")
+                //console.log(device.Status)
+                console.log("dev info page");
+                rebootDirector.setUp({
+
+                    devName: device.getName()
                 });
 
                 if (parsed_data.Alias) {
@@ -158,6 +170,7 @@ $(document).on("reload-device-info", function (event, devName) {
      * @param {string} devName Device name
      */
     function RenderInformationView(store_token, devName) {
+        console.log("get d RenderInformationView");
         $.ajax({
             type: 'GET',
             url: 'DeviceInfoAPI/GetDetail?DeviceName=' + devName,
@@ -456,6 +469,7 @@ $(document).on("reload-device-info", function (event, devName) {
                                         if (current_page == "device") {
                                             if ($("#External").is(':visible')) {
                                                 var RefreshEXTData = function (store_token, devName) {
+                                                    console.log("get d RefreshEXTData");
                                                     $.ajax({
                                                         type: 'GET',
                                                         url: 'DeviceInfoAPI/GetDetail?DeviceName=' + devName,

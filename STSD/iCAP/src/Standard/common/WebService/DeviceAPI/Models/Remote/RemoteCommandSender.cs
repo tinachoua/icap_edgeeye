@@ -44,5 +44,25 @@ namespace DeviceAPI.Models.Remote
 
             client.Publish("Remote", Encoding.UTF8.GetBytes(jsonstring));
         }
+        
+        public void SendRemoteNativeCommand(string deviceName, string RemoteCmd)
+        {
+            MqttClient client = new MqttClient(IPAddress.Parse(ServerIPAddr), ServerPort, false, null, null, new MqttSslProtocols());
+            client.Connect(Guid.NewGuid().ToString(), "admin", "AH0MBwnqi3O-9Dxlt7ZxGHBGsZC5TnEA");
+
+            var cmd = new
+            {
+                Cmd = "RemoteNative",
+                ID = deviceName,
+                Remote = new
+                {
+                    Value = RemoteCmd
+                }
+            };
+
+            string jsonstring = JsonConvert.SerializeObject(cmd);
+
+            client.Publish("Remote", Encoding.UTF8.GetBytes(jsonstring));
+        }
     }
 }

@@ -9,6 +9,7 @@ import { updateTwoTableData } from "../library/init_first_tabs";
 import { restartUpdateWidget, g_setIntervalId } from "../pages/dashboard";
 import { timeConverter } from './common';
 import { OOBDirector } from '../library/OOB';
+import { NXReboot } from '../library/NXReboot';
 import { DeviceManager as deviceManager} from '../DeviceManager';
 
 export function dataTable(id) {
@@ -142,6 +143,8 @@ export function getSuccess(response, widgetId, labelIndex) {
 
         $.when(promise.GetDetail, promise.GetOverView, promise.GetLocation, promise.GetImg).done((response_D, response_OV, response_L, response_Img) => {
             const oobDirector = new OOBDirector();
+            const rebootDirector = new NXReboot();
+
             var deviceData = {
                 detail: JSON.parse(response_D[0]),
                 overview: JSON.parse(response_OV[0]),
@@ -149,7 +152,7 @@ export function getSuccess(response, widgetId, labelIndex) {
                 img: JSON.parse(response_Img[0]),
             };
 
-            _SwitchPage.ToWidgetDevice(e, event_table, clickFlag, parsed_data, false, deviceData, oobDirector);
+            _SwitchPage.ToWidgetDevice(e, event_table, clickFlag, parsed_data, false, deviceData, oobDirector, rebootDirector);
             $(document).ready(() => {
                 updateTwoTableData(targetDevice, $(e.target).text(), specificDevice);
             });

@@ -6,7 +6,7 @@ import { autoRefresh } from "../library/init_second_tabs";
 
 export var g_device_data = {};
 
-export function initDeviceInfoPage(deviceData, parsed_data, clickFlag, event_table, oobDirector) {
+export function initDeviceInfoPage(deviceData, parsed_data, clickFlag, event_table, oobDirector, rebootDirector) {
     g_device_data = deviceData;
 
     var insertData_ov = function (parsed_data) {
@@ -77,7 +77,7 @@ export function initDeviceInfoPage(deviceData, parsed_data, clickFlag, event_tab
     if (clickFlag.deviceLink === false) {
         $('#child-page div')[0].remove();
         clickFlag.deviceLink = true;
-        putFirstsTabs(parsed_data, clickFlag, event_table, oobDirector);
+        putFirstsTabs(parsed_data, clickFlag, event_table, oobDirector, rebootDirector);
         putSecondTabs(g_device_data, oobDirector);
     } else {
         $('#tab-secondary-continer a').removeClass('hover');

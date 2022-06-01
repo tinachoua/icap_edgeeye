@@ -11,4 +11,10 @@ namespace DeviceAPI.Models.Remote
         public string target;
         public string cmd;
     }
+    
+    public class RemoteNativeCommand
+    {
+        public string devName;
+        public string cmd;
+    }
 }

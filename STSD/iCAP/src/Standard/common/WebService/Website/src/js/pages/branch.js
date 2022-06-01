@@ -4,6 +4,7 @@ import branch_page from "../../html/pages/branch.html";
 import { DEVICE_STATE } from '../library/data_define';
 import { fire } from '../library/event_handler';
 import { OOBDirector } from '../library/OOB';
+import { NXReboot } from '../library/NXReboot';
 import { DeviceManager } from '../DeviceManager';
 
 $(document).on("reload-branch", function () {
@@ -52,6 +53,7 @@ $(document).on("reload-branch", function () {
                     child_page.innerHTML = branch_page;
 
                     const oobDirector = new OOBDirector();
+                    const rebootDirector = new NXReboot();
 
                     let title_text = document.getElementById("branch-title");
                     if (title_text) {
@@ -93,6 +95,10 @@ $(document).on("reload-branch", function () {
 
                                     oobDirector.setUp({
                                         ooblist: device.getOOBlist(),
+                                        devName: device.getName()
+                                    });
+                                    
+                                    rebootDirector.setUp({
                                         devName: device.getName()
                                     });
 
